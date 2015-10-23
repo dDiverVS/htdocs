@@ -113,10 +113,8 @@ if($tipo=="fichero"){
 	<!--Seleccionar el fichero a descargar-->
 
 		<input name="descargar" type="submit" value="Descargar Archivo" /></p>
-	</form>';
-	$prueba=exec('echo %tmp%');
-	echo $prueba;
-	echo'
+	</form>
+	
 	</body>
 </html>';
 ?>
