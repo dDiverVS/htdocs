@@ -98,5 +98,5 @@ echo '
 		echo '
 		</table>
 	</body>
-</html>
+</html>';
 ?>
