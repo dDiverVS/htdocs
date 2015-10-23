@@ -1,6 +1,6 @@
 <?php
 include 'seguridad.php';
-$acceso=ftp_connect($_SESSION['direccion'],$_SESSION['puerto']);
+$acceso=ftp_connect($_SESSION['servidor'],$_SESSION['puerto']);
 if (isset($_GET['carpeta_actual'])) {
 	if ($_SESSION['carpeta_actual']=='/') {
 		$_SESSION['carpeta_actual']=$_GET['carpeta_actual'];
