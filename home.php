@@ -12,7 +12,7 @@ echo '
 		include 'conexion.php';
 		//Logotipo
 		echo'
-		<p align="center"><a href="inicio.php"> <img src="img/logo.png" title="Volver a Inicio" width="400" height="100" alt="Volver a Inicio"> </a></p>
+		<p align="center"><a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="400" height="100" alt="Volver a Inicio"> </a></p>
 		<table width="15%" border="1" align="right" cellspacing="0" cellpadding="0">
 			<tr>
 				<td><div align="center">

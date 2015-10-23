@@ -31,7 +31,7 @@ else {
 	//defino la sesión que demuestra que el usuario está autorizado
 	$_SESSION["autentificado"]= "SI";
 	$_SESSION["ultimoAcceso"]= date("Y-n-j H:i:s"); 
-	//y lo enviamos a inicio.php para comenzar a usar el servicio
-	header ("Location: inicio.php");
+	//y lo enviamos a home.php para comenzar a usar el servicio
+	header ("Location: home.php");
 }
 ?>
