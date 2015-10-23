@@ -11,9 +11,10 @@
 </head>
 
 <body bgcolor="#EFE4B0">
-  <?php include 'seguridad.php'; ?>
+  <?php include 'seguridad.php';
+  include 'conexion.php'; ?>
 <!--Logotipo-->
-  <p align="center"><a href="inicio.php"> <img src="img/logo.png" title="Volver a Inicio" width="400" height="100" alt="Volver a Inicio"> </a></p>
+  <p align="center"><a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="400" height="100" alt="Volver a Inicio"> </a></p>
   <!--Usuario actual y cierre de sesion-->
 <?php echo' 
     <table width="15%" border="1" align="right" cellspacing="0" cellpadding="0">
