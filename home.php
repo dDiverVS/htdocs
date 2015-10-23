@@ -49,17 +49,13 @@ echo '
 			<tr>
 		</table>
 		<br/>
+		<b>El directorio actual es </b>'.$_SESSION["carpeta_actual"].'
 		<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
 				<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>
 				<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></td>
 				<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
-			</tr>
-			<tr>
-				<td colspan="4">
-					<b>El directorio actual es </b>'.$_SESSION["carpeta_actual"].'
-				</td>
 			</tr>';
 		
 		$lista=ftp_nlist($conn,$_SESSION['carpeta_actual']); #Devuelve un array con los nombres de ficheros
