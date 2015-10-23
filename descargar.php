@@ -1,4 +1,9 @@
-<html>
+<?php 
+//si no indica ni que fichero ni el nuevo nombre, es dirigido a esta pagina con este esto
+if ( isset($_GET["nodescargar"])){
+if ($_GET["nodescargar"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un fichero para descargar</font></h2>";}
+
+echo '<html>
 <head>
 <title>Descargar ficheros</title>
 <link href="css/estilo.css"
@@ -6,15 +11,17 @@
 <link rel="icon" type="image/ico" href="img/favicon.ico" />
 </head>
 
-<body bgcolor="#EFE4B0">
-	<?php #Incluye el archivo de seguridad para mantener la sesion activa
+<body bgcolor="#EFE4B0">';
+	
+	 #Incluye el archivo de seguridad para mantener la sesion activa
 	include 'seguridad.php';
-	include 'conexion.php'; ?> 
+	include 'conexion.php';
+	echo'
 	<!--Logotipo-->
 	<p align="center"><a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="400" height="100" alt="Volver a Inicio"> </a></p>
 
 	<!--Usuario actual y cierre de sesion-->
-<?php echo'	
+	
 		<table width="15%" border="1" align="right" cellspacing="0" cellpadding="0">
 			<tr>
 				<td><div align="center">
@@ -22,7 +29,7 @@
 					<a href="cerrar.php" class="button"/>Cerrar Sesion</a></br>
 				</td>
 			</tr>
-		</table>';?>
+		</table>
 	</br></br>	</br></br>	</br></br>
 <!--Enlaces para acceder a diferentes opciones-->
 	<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
@@ -49,7 +56,7 @@
 	
 	<h3 align="center">Seleccione el fichero que desea descargar</h3>
 
-	<form action="renombrar2.php" align="center"  method="post" name="renombrar" id="renombrar">
+	<form action="descargar2.php" align="center"  method="post" name="descargar" id="descargar">
 	<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
 		<tr>
 			<td width="10%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Descargar</strong></font></div></td>
@@ -57,9 +64,8 @@
 			<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>
 			<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></td>
 			<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
-		</tr>
+		</tr>';
 
-	<?php
 		$lista=ftp_nlist($conn,$directorio); #Devuelve un array con los nombres de ficheros
 		foreach ($lista as $objeto) {
 			#Se leen todos los ficheros y directorios del directorios
@@ -84,19 +90,19 @@ if($tipo=="fichero"){
 		echo "
 		<tr>
 			<td>
-				<input type='radio' name='id_descargar' value='$objeto'/>
+				<input type='radio' name='id_descargar' value='".$objeto."'/>
 			</td>
 			<td>
-				$objeto
+				".$objeto."
 			</td>
 			<td>
-				$tamano
+				".$tamano."
 			</td>
 			<td>
-				$tipo
+				".$tipo."
 			</td>
 			<td>
-				$fecha
+				".$fecha."
 			</td>
 		</tr>";
 		}}
@@ -107,11 +113,10 @@ if($tipo=="fichero"){
 	<!--Seleccionar el fichero a descargar-->
 
 		<input name="descargar" type="submit" value="Descargar Archivo" /></p>
-	</form>
-</body>
+	</form>';
+	$prueba=exec('echo %tmp%');
+	echo $prueba;
+	echo'
+	</body>
 </html>';
-//si no indica ni que fichero ni el nuevo nombre, es dirigido a esta pagina con este esto
-if ( isset($_GET["nodescargar"])){
-  				if ($_GET["nodescargar"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un fichero para descargar</font></h2>";}
-
 ?>
