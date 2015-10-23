@@ -16,17 +16,17 @@ echo '
 		<table width="15%" border="1" align="right" cellspacing="0" cellpadding="0">
 			<tr>
 				<td><div align="center">
-					<p>USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b></p></br>
-					<a href="cerrar.php" class="button"/>Cerrar Sesion</a></br>
+					<p>USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b></p><br/>
+					<a href="cerrar.php" class="button"/>Cerrar Sesion</a><br/>
 				</div></td>
 			</tr>
 		</table>
-		</br>
-		</br>
-		</br>
-		</br>
-		</br>
-		</br>';
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>';
 		//Enlaces para acceder a diferentes opciones
 		echo '
 		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
