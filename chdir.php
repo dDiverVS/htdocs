@@ -1,6 +1,5 @@
 <?php
 //Fichero aún inservible
-include 'seguridad.php';
 $acceso=ftp_connect($_SESSION['servidor'],$_SESSION['puerto']);
 if (isset($_GET['carpeta_actual'])) {
 	if ($_SESSION['carpeta_actual']=='/') {
@@ -16,3 +15,13 @@ if (!ftp_chdir($acceso, $_SESSION['carpeta_actual'])) {
 }
 header ("Location: inicio.php");
 ?>
+
+
+	if (isset($_GET['carpeta_actual'])) {
+		if ($_GET['carpeta_actual']=='subir') {
+			ftp_cdup($conn);
+		}
+		else {
+			ftp_chdir($conn, $_GET['carpeta_actual']);
+		}
+	}
