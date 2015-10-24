@@ -83,7 +83,7 @@ echo '
 			if($tamano=="-0.00 Kb") # Si es -0.00 Kb se refiere a un directorio
 			{
 				$tipo="directorio";
-				$objeto="<i><a href='chdir.php?carpeta_actual=$objeto'>".$objeto."</a></i>";
+				$objeto="<i><a href='home.php?carpeta_actual=$objeto'>".$objeto."</a></i>";
 				$tamano="&nbsp;";
 				$fecha="&nbsp;";
 			}
