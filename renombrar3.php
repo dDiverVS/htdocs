@@ -48,7 +48,7 @@ echo '
         </td>
         <td>
           <div align="center">
-            <a href="renombrar.php" class="button"/><span class="add">Renombrar </span></a>
+            <a href="renombrar.php" class="button"/><span class="add"><img src="img/directorio.jpg" title="Crear directorio" width="50" height="50" alt="Crear directorio"> </span></a>
           </div>
         </td>
         <td>

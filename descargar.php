@@ -57,7 +57,7 @@ echo '
 			</td>
 			<td>
 				<div align="center">
-					<a href="crear.php" class="button"/>Crear Directorio</a>
+					<a href="crear.php" class="button"/><img src="img/directorio.jpg" title="Crear directorio" width="50" height="50" alt="Crear directorio"></a>
 				</div>
 			</td>
 			<td>
