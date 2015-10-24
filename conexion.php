@@ -18,12 +18,15 @@
 		$_SESSION['carpeta_actual']=$_SESSION['carpeta_actual'];
 	}
 
-	if (isset($_SESSION['carpeta_actual'])) {
+	if (isset ($_GET['carpeta_destino']) && isset($_SESSION['carpeta_actual'])) {
 		ftp_chdir($conn, $_SESSION['carpeta_actual']);
 	}
 	elseif (isset($_GET['subir']) && isset($_SESSION['carpeta_actual'])) {
 		ftp_chdir($conn, $_SESSION['carpeta_actual']);
 		ftp_cdup($conn);
 		$_SESSION['carpeta_actual']=ftp_pwd($conn);
+	}
+	elseif (isset($_SESSION['carpeta_actual'])) {
+		ftp_chdir($conn, $_SESSION['carpeta_actual']);
 	}
 ?>
