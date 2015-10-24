@@ -67,7 +67,7 @@ echo '
 		</table>
 		<br/>
 		<p align="center">
-		<b>El directorio actual es </b>'.$_SESSION["carpeta_destino"].'</p>
+		<b>El directorio actual es </b>'.$_SESSION["carpeta_actual"].'</p>
 		<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
