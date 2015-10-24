@@ -36,7 +36,7 @@ echo '
 		<br/>
 		<br/>
 		<br/>';
-		//Enlaces para acceder a diferentes opciones-->
+		//Enlaces para acceder a diferentes opciones
 		echo'
 		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
 			<tr>
@@ -90,7 +90,6 @@ echo '
 					#Obtiene tamaño de archivo y lo pasa a KB
 					if($tamano=="-0.00 Kb") {
 						# Si es -0.00 Kb se refiere a un directorio
-						
 						$tipo="directorio";
 						$tamano="&nbsp;";
 						$fecha="&nbsp;";
@@ -99,9 +98,6 @@ echo '
 						$fecha=date("d/m/y h:i:s", ftp_mdtm($conn,$objeto));
 						#Filemtime obtiene la fecha de modificacion del fichero; y date le da el formato de salida
 					}
-
-
-
 
 					echo "
 					<tr>
@@ -122,14 +118,14 @@ echo '
 						</td>
 					</tr>";
 					}
+
+				//Seleccionar el fichero a renombrar
 				echo '
 				</table>
 				<p align="center">
-			<!--Seleccionar el fichero a renombrar-->
 					<input name="renombrar" type="submit" value="Renombrar Archivo" />
 				</p>
 			</form>
 	</body>
 </html>';
-
 ?>

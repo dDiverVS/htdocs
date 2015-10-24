@@ -1,4 +1,3 @@
-
 <?php
 echo '
 <html>
@@ -9,8 +8,9 @@ echo '
   </head>
 
   <body bgcolor="#EFE4B0">';
-    // Si no se selecciona un fichero, salta el siguiente texto
-  
+ 
+     include 'seguridad.php';
+     include 'conexion.php';
     //Logotipo
     echo '
     <table width="100%" border="0" align="right" cellspacing="0" cellpadding="0">
@@ -33,8 +33,9 @@ echo '
     <br/>
     <br/>';
     //Enlaces para acceder a diferentes opciones
-    echo '
-    <table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
+   echo'
+    <table width="15%" border="1" align="right" cellspacing="0" cellpadding="0">
+
       <tr>
         <td>
           <div align="center">
@@ -100,9 +101,7 @@ if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
   }                                                       
 }else{ #si no esta marcado ningun fichero, se renvia a la pagina principal de borrar indicandole un mensaje
         header ("Location: borrar.php?noborrar=si "); }
-       
- 
-?> 
 
+?> 
 </body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+//Fichero aún inservible
 include 'seguridad.php';
 $acceso=ftp_connect($_SESSION['servidor'],$_SESSION['puerto']);
 if (isset($_GET['carpeta_actual'])) {

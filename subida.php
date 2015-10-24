@@ -8,19 +8,21 @@ echo '
 	</head>
 
 	<body bgcolor="#EFE4B0">';
-	//si no se ha indicado un fichero para subir, el usuario es reenviado aqui con el siguiente texto:
+		//si no se ha indicado un fichero para subir, el usuario es reenviado aqui con el siguiente texto:
 		if ( isset($_GET["noarchivo"])){
-	  	if ($_GET["noarchivo"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un fichero para subir</font></h2>";}
+		if ($_GET["noarchivo"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un fichero para subir</font></h2>";}
 		include 'seguridad.php';
-		include 'conexion.php'; 
-	//Logotipo
+		include 'conexion.php';
+		//Logotipo
 		echo '
 		<table width="100%" border="0" align="right" cellspacing="0" cellpadding="0">
 			<tr>
+
 				<td>
 					<div align="left">
 						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="300" height="100" alt="Volver a Inicio"> </a>
 					</div>
+
 				</td>
 				<td><div align="right">
 					USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
@@ -71,14 +73,11 @@ echo '
 		<h3 align="center">Suba el fichero que desee</h3>
 			<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
 				<tr>
-
 					<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
 					<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>
 					<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></td>
 					<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
-
 				</tr>';
-
 
 				$lista=ftp_nlist($conn,$directorio); #Devuelve un array con los nombres de ficheros
 				foreach ($lista as $objeto) {
@@ -97,7 +96,6 @@ echo '
 					}
 					echo "
 					<tr>
-						
 						<td>
 							".$objeto."
 						</td>
@@ -114,15 +112,15 @@ echo '
 				}
 			echo '
 			</table>
-				
 		<form action="subida2.php" method="post" name="subida" id="subida" enctype="multipart/form-data">
-			<p align="center"><font size="2" face="Verdana, Tahoma, Arial"> Elegir archivo :</br>
-				<input name="archivo" type="file"  /><br/><br/><br/>
+			<p align="center"><font size="2" face="Verdana, Tahoma, Arial"> Elegir archivo :<br/>
+				<input name="archivo" type="file"/>
+				<br/>
+				<br/>
+				<br/>
 				<input name="subir" type="submit" value="Subir Archivo"/>
 			</p>
-
 		</form>
 	</body>
 </html>';
-
 ?>
