@@ -12,12 +12,15 @@ echo '
 		include 'conexion.php';
 		//Logotipo
 		echo'
-		<p align="center">
-			<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="400" height="100" alt="Volver a Inicio"> </a>
-		</p>
-		<table width="15%" border="1" align="right" cellspacing="0" cellpadding="0">
+		
+		<table width="100%" border="0" align="right" cellspacing="0" cellpadding="0">
 			<tr>
-				<td><div align="center">
+				<td>
+					<div align="left">
+						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="300" height="100" alt="Volver a Inicio"> </a>
+					</div>
+				</td>
+				<td><div align="right">
 					USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
 					<a href="cerrar.php" class="button"/>Cerrar Sesion</a><br/>
 				</div></td>
@@ -33,19 +36,20 @@ echo '
 		echo '
 		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
 			<tr>
+
 				<td>
 					<div align="center">
-						<a href="subida.php" class="button"/>Subir Fichero</a>
+						<a href="subida.php" class="button"/><img src="img/upload_file.jpg" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
 					</div>
 				</td>
 				<td>
 					<div align="center">
-						<a href="borrar.php" class="button"/>Borrar</a>
+						<a href="borrar.php" class="button"/><img src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
 					</div>
 				</td>
 				<td>
 					<div align="center">
-						<a href="renombrar.php" class="button"/>Renombrar </a>
+						<a href="renombrar.php" class="button"/><img src="img/modificar.jpg" title="Renombrar" width="50" height="50" alt="Renombrar"> </a>
 					</div>
 				</td>
 				<td>

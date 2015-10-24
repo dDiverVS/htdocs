@@ -1,55 +1,69 @@
+<?php
+echo '
+<html>
+  <head>
+    <title>Renombrar ficheros</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
+  </head>
 
-
-<html >
-<head>
-<title>Renombrar ficheros</title>
-<link href="css/estilo.css"
-      rel="stylesheet" type="text/css">
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="icon" type="image/ico" href="img/favicon.ico" />
-</head>
-
-<body bgcolor="#EFE4B0">
-<form onsubmit="setTimeout('document.forms[0].reset()', 500)" action="renombrar3.php" method="POST" >
-  <?php #Incluye el archivo de seguridad para mantener la sesion activa
-  include 'seguridad.php';
-  include 'conexion.php'; ?> 
-  <!--Logotipo-->
-  <p align="center"><a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="400" height="100" alt="Volver a Inicio"> </a></p>
-
-  <!--Usuario actual y cierre de sesion-->
-<?php echo' 
-    <table width="15%" border="1" align="right" cellspacing="0" cellpadding="0">
+  <body bgcolor="#EFE4B0">';
+    include 'seguridad.php';
+    include 'conexion.php'; 
+    //Logotipo
+    echo'
+    <table width="100%" border="0" align="right" cellspacing="0" cellpadding="0">
       <tr>
-        <td><div align="center">
-          USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b></br></br>
-          <a href="cerrar.php" class="button"/>Cerrar Sesion</a></br>
+        <td>
+          <div align="left">
+            <a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="300" height="100" alt="Volver a Inicio"> </a>
+          </div>
         </td>
+        <td><div align="right">
+          USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
+          <a href="cerrar.php" class="button"/>Cerrar Sesion</a><br/>
+        </div></td>
       </tr>
-    </table>';?>
-  </br></br>  </br></br>  </br></br>
-<!--Enlaces para acceder a diferentes opciones-->
-   <table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><div align="center">
-        <a href="subida.php" class="button"/>Subir Fichero</a></div>
-      </td>
-      <td><div align="center">
-        <a href="borrar.php" class="button"/>Borrar</span></a></div>
-      </td>
-      <td><div align="center">
-        <a href="renombrar.php" class="button"/><span class="add">Renombrar </span></a></div>
-      </td>
-      <td><div align="center">
-        <a href="crear.php" class="button"/>Crear Directorio</a></div>
-      </td>
-      <td><div align="center">
-        <a href="descargar.php" class="button"/>Descargar</a></div>
-      </td>
-    <tr>
-  </table>
-<hr />
-  <?php
+    </table>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>';
+    //Enlaces para acceder a diferentes opciones-->
+    echo'
+    <table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+          <div align="center">
+            <a href="subida.php" class="button"/>Subir Fichero</a>
+          </div>
+        </td>
+        <td>
+          <div align="center">
+            <a href="borrar.php" class="button"/>Borrar</a>
+          </div>
+        </td>
+        <td>
+          <div align="center">
+            <a href="renombrar.php" class="button"/><span class="add">Renombrar </span></a>
+          </div>
+        </td>
+        <td>
+          <div align="center">
+            <a href="crear.php" class="button"/>Crear Directorio</a>
+          </div>
+        </td>
+        <td>
+          <div align="center">
+            <a href="descargar.php" class="button"/>Descargar</a>
+          </div>
+        </td>
+      <tr>
+    </table>
+    <br />
+    <form onsubmit="setTimeout(\'document.forms[0].reset()\', 500)" action="renombrar3.php" method="POST" >     ';
 
 //si se ha indicado un fichero y se ha pulsado enviar en renombrar.php se ejecuta lo siguiente:
 if (isset($_POST['renombrar']) && isset($_POST['id_renombrar'])){
@@ -75,11 +89,13 @@ if (isset($_POST['renombrar']) && isset($_POST['id_renombrar'])){
  else{ header ("Location: renombrar.php?norenombrar=si ");}
 //el nuevo nombre es enviado a renombrar3.php
                          echo '
-            
+    
             <p align="center">
-    <input name="renombrar2" type="submit" value="Renombrar " /></p></form> 
+              <input name="renombrar2" type="submit" value="Renombrar " />
+            </p>
+    </form> 
 
-</body>
+  </body>
 </html>';
 
 ?> 

@@ -16,15 +16,17 @@ echo '
 	include 'seguridad.php';
 	include 'conexion.php';
 	echo '
-		<p align="center">
-			<a href="home.php"><img src="img/logo.png" title="Volver a Inicio" width="400" height="100" alt="Volver a Inicio"></a>
-		</p>
-		<table width="15%" border="1" align="right" cellspacing="0" cellpadding="0">
+		<table width="100%" border="0" align="right" cellspacing="0" cellpadding="0">
 			<tr>
-				<td><div align="center">
+				<td>
+					<div align="left">
+						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="300" height="100" alt="Volver a Inicio"> </a>
+					</div>
+				</td>
+				<td><div align="right">
 					USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
 					<a href="cerrar.php" class="button"/>Cerrar Sesion</a><br/>
-				</td>
+				</div></td>
 			</tr>
 		</table>
 		<br/>
