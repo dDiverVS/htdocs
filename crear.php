@@ -77,7 +77,7 @@ echo '
 				</tr>';
 
 
-				$lista=ftp_nlist($conn,$directorio); #Devuelve un array con los nombres de ficheros
+				$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
 						foreach ($lista as $objeto) {
 							#Se leen todos los ficheros y directorios del directorios
 							$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
