@@ -26,7 +26,6 @@ else {
 	$_SESSION['servidor']=$_POST['servidor'];
 	$_SESSION['puerto']=$_POST['puerto'];
 	$_SESSION['conn']=ftp_connect($_SESSION['servidor'],$_SESSION['puerto']);
-	$_SESSION['carpeta_actual']='/';
 
 	//defino la sesión que demuestra que el usuario está autorizado
 	$_SESSION["autentificado"]= "SI";
