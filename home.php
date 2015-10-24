@@ -74,6 +74,12 @@ echo '
 				<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>
 				<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></td>
 				<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
+			</tr>
+			<tr>
+				<td><a href="home.php?subir">Subir directorio</a></td>
+				<td></td>
+				<td>directorio</td>
+				<td></td>
 			</tr>';
 		
 		$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
