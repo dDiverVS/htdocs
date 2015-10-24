@@ -76,7 +76,7 @@ echo '
 				<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
 			</tr>
 			<tr>
-				<td><a href="home.php?subir">Subir directorio</a></td>
+				<td><a href="home.php?subir=si">Subir directorio</a></td>
 				<td></td>
 				<td>directorio</td>
 				<td></td>
