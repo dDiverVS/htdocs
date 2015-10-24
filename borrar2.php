@@ -1,5 +1,3 @@
-
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Eliminar ficheros</title>
@@ -79,12 +77,6 @@ if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
         }                                                       
 }else{ #si no esta marcado ningun fichero, se renvia a la pagina principal de borrar indicandole un mensaje
         header ("Location: borrar.php?noborrar=si "); }
-       
-
-        
-
-            
 ?> 
-
 </body>
 </html>
