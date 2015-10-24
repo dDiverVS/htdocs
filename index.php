@@ -23,7 +23,7 @@ echo '
 	 		echo '
 			</tr>
 			<tr>
-				<td align="right"> Nombre o direcci&oacute; del servidor FTP:</td>
+				<td align="right"> Nombre o direcci&oacute;n del servidor FTP:</td>
 				<td><input type="text" name="servidor" size="15" maxlength="50"></td>
 			</tr>
 			<tr>
