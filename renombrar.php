@@ -48,7 +48,7 @@ echo '
 				</td>
 				<td>
 					<div align="center">
-						<a href="borrar.php" class="button"/>Borrar</a>
+						<a href="borrar.php" class="button"/><img src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
 					</div>
 				</td>
 				<td>

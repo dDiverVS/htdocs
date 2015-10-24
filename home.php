@@ -67,7 +67,7 @@ echo '
 		</table>
 		<br/>
 		<p align="center">
-		<b>El directorio actual es </b>'.$_SESSION["carpeta_actual"].'</p>
+		<b>El directorio actual es </b>'.$_SESSION["carpeta_destino"].'</p>
 		<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
@@ -84,7 +84,7 @@ echo '
 			if($tamano=="-0.00 Kb") # Si es -0.00 Kb se refiere a un directorio
 			{
 				$tipo="directorio";
-				$objeto="<i><a href='home.php?carpeta_actual=$objeto'>".$objeto."</a></i>";
+				$objeto="<i><a href='home.php?carpeta_destino=$objeto'>".$objeto."</a></i>";
 				$tamano="&nbsp;";
 				$fecha="&nbsp;";
 			}
