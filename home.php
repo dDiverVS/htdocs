@@ -27,7 +27,7 @@ echo '
 			<tr>
 				<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.png" WIDTH="16"  HEIGHT="16"/></a></td>
 				<td  bgcolor="#E0E0E0"></td>
-				<td  bgcolor="#E0E0E0"></td>
+				<td  bgcolor="#E0E0E0"  align="center"> Subir directorio</td>
 				<td  bgcolor="#E0E0E0"></td>
 			</tr>';
 		
