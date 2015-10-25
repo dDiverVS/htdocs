@@ -9,15 +9,23 @@ echo '
 						<a href="home.php"> <img class="zoomIt" src="img/logo.png" title="Volver a Inicio" width="300" height="100" alt="Volver a Inicio"> </a>
 					</div>
 				</td>
-				<td><div align="right">
+				<td>
+					<div align="center">
 					SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
 					USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
 					DIRECTORIO ACTUAL: <b>'.$_SESSION["carpeta_actual"].'</b><br/><br/>
-					<a href="cerrar.php" class="button"/><br/>
+					</div>
+				</td>
+				<td>
+					<div align="right">
+					Cerrar Sesi&oacute;n<br/><br/>
+					<a href="cerrar.php" class="button"/>
 					<img class="zoomIt" src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a><br/>
-				</div></td>
+					</div>
+				</td>
 			</tr>
 		</table>
+		<hr/>
 		<br/>
 		<br/>
 		<br/>
