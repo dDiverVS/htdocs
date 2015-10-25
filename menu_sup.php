@@ -11,6 +11,7 @@ echo '
 				</td>
 				<td><div align="right">
 					USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
+					DIRECTORIO ACTUAL: <b>'.$_SESSION["carpeta_actual"].'</b><br/><br/>
 					<a href="cerrar.php" class="button"/><br/>
 					<img class="zoomIt" src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a><br/>
 				</div></td>
