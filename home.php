@@ -16,7 +16,7 @@ echo '
 		include 'menu_sup.php';
 		echo '
 		<br/>
-		
+		<h3 align="center">Elija otro directorio o continue con el directorio actual</h3>
 		<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>

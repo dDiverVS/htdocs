@@ -13,7 +13,7 @@ echo '
 		include 'conexion.php'; 
 	
 		//Enlaces para acceder a diferentes opciones
-		<include 'menu_sup.php';
+		include 'menu_sup.php';
 
 //si el array $_FILES["archivo"] contiene un nombre, osea,  se va a subir ningun fichero:
 	if(!empty($_FILES["archivo"]["name"]))

@@ -1,17 +1,11 @@
 a.button{
-background:url(img/button.gif);
 display:block;
-color:#555555;
-font-weight:bold;
 height:30px;
 line-height:29px;
-margin-bottom:14px;
-text-decoration:none;
+margin-bottom:20px;
 width:191px;
 }
-a:hover.button{
-background-size:150%
-}
+
 .zoomIt{
 display:block!important;
 -webkit-transition:-webkit-transform 1s ease-out;
@@ -28,6 +22,4 @@ transition:transform 1s ease-out;
 transform: scale(1.1)
 }
 
-span.add{
-	color:#0066CC;
-}
+

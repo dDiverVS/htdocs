@@ -12,7 +12,7 @@ echo '
 				<td><div align="right">
 					USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
 					<a href="cerrar.php" class="button"/><br/>
-					<img src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a><br/>
+					<img class="zoomIt" src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a><br/>
 				</div></td>
 			</tr>
 		</table>
@@ -24,6 +24,11 @@ echo '
 		<br/>
 		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
 			<tr>
+				<td>
+					<div align="center">
+						<a href="home.php" class="button"/><img class="zoomIt" src="img/cambiar.png" title="Cambiar directorio " width="50" height="50" alt="Cambiar Directorio"></a>
+					</div>
+				</td>
 				<td>
 					<div align="center">
 						<a href="subida.php" class="button"/><img class="zoomIt" src="img/upload_file.jpg" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
