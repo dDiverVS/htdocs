@@ -54,7 +54,7 @@ echo '
 						echo "
 						<tr>
 							<td>
-								<input type='radio' name='id_descargar' value='".$objeto."'/>
+								<button class='descargar' type='submit' value='".$objeto."' name='id_descargar'>".$objeto."</button>
 							</td>
 							<td>
 								".$objeto."
@@ -73,10 +73,6 @@ echo '
 				}
 			echo '
 			</table>
-				<p align="center">
-							<!--Seleccionar el fichero a descargar-->
-					<input name="descargar" type="submit" value="Descargar Archivo" />
-				</p>
 		</form>
 	</body>
 </html>';
