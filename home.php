@@ -19,16 +19,16 @@ echo '
 		<h3 align="center">Elija otro directorio o continue con el directorio actual</h3>
 		<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
 			<tr>
-				<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
-				<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>
-				<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></td>
-				<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
+				<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
+				<td width="20%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>
+				<td width="20%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></td>
+				<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
 			</tr>
 			<tr>
-				<td><a href="home.php?subir">Subir directorio</a></td>
-				<td></td>
-				<td>directorio</td>
-				<td></td>
+				<td bgcolor="#E0E0E0"><a href="home.php?subir">Subir directorio</a></td>
+				<td  bgcolor="#E0E0E0"></td>
+				<td  bgcolor="#E0E0E0"></td>
+				<td  bgcolor="#E0E0E0"></td>
 			</tr>';
 		
 		$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
@@ -36,7 +36,7 @@ echo '
 			#Se leen todos los ficheros y directorios del directorios
 			$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
 			#Obtiene tamaño de archivo y lo pasa a KB
-			if($tamano=="-0.00 Kb") # Si es -0.00 Kb se refiere a un directorio
+			if($tamano=="-0.00 Kb" ) # Si es -0.00 Kb se refiere a un directorio
 			{
 				$tipo="directorio";
 				$objeto="<i><a href='home.php?carpeta_destino=".str_replace('./', '', $objeto)."'>".str_replace('./', '', $objeto)."</a></i>";
@@ -50,16 +50,16 @@ echo '
 			}
 			echo '
 			<tr>
-				<td>
+				<td  bgcolor="#E0E0E0">
 					'.str_replace('./', '', $objeto).'
 				</td>
-				<td>
+				<td bgcolor="#E0E0E0">
 					'.$tamano.'
 				</td>
-				<td>
+				<td bgcolor="#E0E0E0">
 					'.$tipo.'
 				</td>
-				<td>
+				<td  bgcolor="#E0E0E0">
 					'.$fecha.'
 				</td>
 			</tr>';

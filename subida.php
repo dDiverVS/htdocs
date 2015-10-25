@@ -21,10 +21,10 @@ echo '
 		<h3 align="center">Suba el fichero que desee</h3>
 			<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
 				<tr>
-					<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
-					<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>
-					<td width="20%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></td>
-					<td width="30%" bgcolor="#EEEFEE"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
+					<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
+					<td width="20%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>
+					<td width="20%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></td>
+					<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
 				</tr>';
 
 				$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
@@ -44,16 +44,16 @@ echo '
 					}
 					echo "
 					<tr>
-						<td>
+						<td bgcolor='#E0E0E0'>
 							".$objeto."
 						</td>
-						<td>
+						<td bgcolor='#E0E0E0'>
 							".$tamano."
 						</td>
-						<td>
+						<td bgcolor='#E0E0E0'>
 							".$tipo."
 						</td>
-						<td>
+						<td bgcolor='#E0E0E0'>
 							".$fecha."
 						</td>
 					</tr>";
