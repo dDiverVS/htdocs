@@ -40,7 +40,7 @@ echo '
 			</tr>
 			<!--<tr>
 				<td align="right" >Conexion SSL</td>
-				<td><input type="checkbox" name="SSL"/></td>
+				<td><input type="checkbox" name="SSL" value="1"/></td>
 			</tr>-->
 			<tr>
 				<td colspan="2" align="center"><input type="Submit" value="ENTRAR"></td>
