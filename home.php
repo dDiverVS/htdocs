@@ -15,7 +15,7 @@ echo '
 		//Enlaces para acceder a diferentes opciones
 		include 'menu_sup.php';
 		echo '
-		<br/>
+		
 		<h3 align="center">Elija otro directorio o continue con el directorio actual</h3>
 		<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
 			<tr>

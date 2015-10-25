@@ -43,17 +43,7 @@ echo '
 						$tamano="&nbsp;";
 						$fecha="&nbsp;";
 						 //Escaneamos el directorio
-					    $carpeta = @scandir($objeto);
-					    //Miramos si existen archivos
-					    if (count($carpeta) > 2){
-					        echo 'El directorio tiene archivos';
-					        //Miramos si existe el archivo pasado como parámetro
-					       
-					    }
-					    else
-					    {
-					        echo 'El directorio está vacío';
-					    }
+					    
 					}
 
 					   
