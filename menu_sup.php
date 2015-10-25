@@ -27,32 +27,32 @@ echo '
 		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0" >
 			<tr>
 				<td>
-					<div align="center"><p class="enlaces">Cambiar Directorio</p>
+					<div align="center"><p id="enlaces1">Cambiar Directorio</p>
 						<a href="home.php" class="button"/><img class="zoomIt" src="img/cambiar.png" title="Cambiar directorio " width="50" height="50" alt="Cambiar Directorio"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center"><p class="enlaces">Borrar</p>
+					<div align="center"><p id="enlaces2">Borrar</p>
 						<a href="borrar.php" class="button"/><img class="zoomIt" src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center"><p class="enlaces">Renombrar</p>
+					<div align="center"><p id="enlaces3">Renombrar</p>
 						<a href="renombrar.php" class="button"/><img class="zoomIt"  src="img/modificar.jpg" title="Renombrar" width="50" height="50" alt="Renombrar"> </a>
 					</div>
 				</td>
 				<td>
-					<div align="center"><p class="enlaces">Crear Directorio</p>
+					<div align="center"><p id="enlaces4">Crear Directorio</p>
 						<a href="crear.php" class="button"/><img class="zoomIt" src="img/directorio.jpg" title="Crear directorio" width="50" height="50" alt="Crear directorio"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center"><p class="enlaces">Descargar Fichero</p>
+					<div align="center"><p id="enlaces5">Descargar Fichero</p>
 						<a href="descargar.php" class="button"/><img class="zoomIt" src="img/download.png" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center"><p class="enlaces">Subir Fichero</p>
+					<div align="center"><p id="enlaces6">Subir Fichero</p>
 						<a href="subida.php" class="button"/><img class="zoomIt" src="img/upload_file.jpg" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
 					</div>
 				</td>
