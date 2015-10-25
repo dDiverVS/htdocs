@@ -32,11 +32,6 @@ echo '
 				</td>
 				<td>
 					<div align="center">
-						<a href="subida.php" class="button"/><img class="zoomIt" src="img/upload_file.jpg" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
-					</div>
-				</td>
-				<td>
-					<div align="center">
 						<a href="borrar.php" class="button"/><img class="zoomIt" src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
 					</div>
 				</td>
@@ -53,6 +48,11 @@ echo '
 				<td>
 					<div align="center">
 						<a href="descargar.php" class="button"/><img class="zoomIt" src="img/download.png" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
+					</div>
+				</td>
+				<td>
+					<div align="center">
+						<a href="subida.php" class="button"/><img class="zoomIt" src="img/upload_file.jpg" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
 					</div>
 				</td>
 			<tr>
