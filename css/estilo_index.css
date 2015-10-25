@@ -1,4 +1,4 @@
 body {
-	background-image: ('img/fondo.jpeg');
+	background-image: ('../img/fondo.jpeg');
 	background-size: 100%;
 }
