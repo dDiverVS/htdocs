@@ -25,14 +25,21 @@ echo '
 				</td>
 			</tr>
 		</table>
+
+		<br/>
+		
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
 		<hr/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
 		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0" >
+
 			<tr>
 				<td>
 					<div align="center"><p class="enlaces">Cambiar Directorio</p>
