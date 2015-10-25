@@ -12,7 +12,8 @@
 		}
 	}
 	else {
-		$_SESSION['carpeta_actual']=$_SESSION['carpeta_actual'];
+		ftp_pwd($conn);
+		//$_SESSION['carpeta_actual']=$_SESSION['carpeta_actual'];
 	}
 
 	if (isset ($_GET['carpeta_destino']) && isset($_SESSION['carpeta_actual'])) {
