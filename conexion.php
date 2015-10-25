@@ -11,9 +11,6 @@
 			$_SESSION['carpeta_actual']=$_GET['carpeta_destino'];
 		}
 	}
-	elseif (!isset($_SESSION['carpeta_actual'])) {
-		echo "0";
-	}
 	else {
 		$_SESSION['carpeta_actual']=$_SESSION['carpeta_actual'];
 	}
