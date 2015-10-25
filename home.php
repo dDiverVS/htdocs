@@ -51,7 +51,7 @@ echo '
 			echo '
 			<tr>
 				<td>
-					'.$objeto.'
+					'.str_replace('./', '', $objeto).'
 				</td>
 				<td>
 					'.$tamano.'
