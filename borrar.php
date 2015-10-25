@@ -42,7 +42,22 @@ echo '
 						$tipo="directorio";
 						$tamano="&nbsp;";
 						$fecha="&nbsp;";
+						 //Escaneamos el directorio
+					    $carpeta = @scandir($objeto);
+					    //Miramos si existen archivos
+					    if (count($carpeta) > 2){
+					        echo 'El directorio tiene archivos';
+					        //Miramos si existe el archivo pasado como parámetro
+					       
+					    }
+					    else
+					    {
+					        echo 'El directorio está vacío';
+					    }
 					}
+
+					   
+
 					else {$tipo="fichero";
 						$fecha=date("d/m/y h:i:s", ftp_mdtm($conn,$objeto));
 						#Filemtime obtiene la fecha de modificacion del fichero; y date le da el formato de salida
