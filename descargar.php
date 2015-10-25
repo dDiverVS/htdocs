@@ -54,18 +54,18 @@ echo '
 						echo "
 						<tr>
 							<td WIDTH='16'  HEIGHT='30' >
-								<button class='descargar'  type='submit' value='".$objeto."' name='id_descargar'><img src=img/download.png WIDTH='16'  HEIGHT='16'></button>
+								<button class='descargar'  type='submit' value='".$objeto."' name='id_descargar'><img src=img/download.png WIDTH='16'  HEIGHT='16'/></button>
 							</td>
-							<td bgcolor='#EEEFEE'>
+							<td bgcolor='#EEEFEE' align='center'>
 								".$objeto."
 							</td>
-							<td  bgcolor='#EEEFEE'>
+							<td  bgcolor='#EEEFEE' align='center'>
 								".$tamano."
 							</td>
-							<td  bgcolor='#EEEFEE'>
+							<td  bgcolor='#EEEFEE' align='center'>
 								".$tipo."
 							</td>
-							<td  bgcolor='#EEEFEE'>
+							<td  bgcolor='#EEEFEE' align='center'>
 								".$fecha."
 							</td>
 						</tr>";

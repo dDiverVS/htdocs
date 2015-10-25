@@ -25,7 +25,7 @@ echo '
 				<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
 			</tr>
 			<tr>
-				<td bgcolor="#E0E0E0"><a href="home.php?subir">Subir directorio</a></td>
+				<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.png" WIDTH="16"  HEIGHT="16"/></a></td>
 				<td  bgcolor="#E0E0E0"></td>
 				<td  bgcolor="#E0E0E0"></td>
 				<td  bgcolor="#E0E0E0"></td>
@@ -50,16 +50,16 @@ echo '
 			}
 			echo '
 			<tr>
-				<td  bgcolor="#E0E0E0">
+				<td  bgcolor="#E0E0E0" align="center">
 					'.str_replace('./', '', $objeto).'
 				</td>
-				<td bgcolor="#E0E0E0">
+				<td bgcolor="#E0E0E0"  align="center">
 					'.$tamano.'
 				</td>
-				<td bgcolor="#E0E0E0">
+				<td bgcolor="#E0E0E0"  align="center">
 					'.$tipo.'
 				</td>
-				<td  bgcolor="#E0E0E0">
+				<td  bgcolor="#E0E0E0"  align="center">
 					'.$fecha.'
 				</td>
 			</tr>';

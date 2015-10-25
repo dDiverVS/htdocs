@@ -53,16 +53,16 @@ echo '
 						<td bgcolor='#E0E0E0'>
 							<input type='radio' name='id_renombrar' value='$objeto'/>
 						</td>
-						<td bgcolor='#E0E0E0'>
+						<td bgcolor='#E0E0E0' align='center'>
 							".$objeto."
 						</td>
-						<td bgcolor='#E0E0E0'>
+						<td bgcolor='#E0E0E0' align='center'>
 							".$tamano."
 						</td>
-						<td bgcolor='#E0E0E0'>
+						<td bgcolor='#E0E0E0' align='center'>
 							".$tipo."
 						</td>
-						<td bgcolor='#E0E0E0'>
+						<td bgcolor='#E0E0E0' align='center'>
 							".$fecha."
 						</td>
 					</tr>";
