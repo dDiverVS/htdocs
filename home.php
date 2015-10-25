@@ -51,16 +51,16 @@ echo '
 			echo '
 			<tr>
 				<td>
-					'$objeto'
+					'.$objeto.'
 				</td>
 				<td>
-					'$tamano'
+					'.$tamano.'
 				</td>
 				<td>
-					'$tipo'
+					'.$tipo.'
 				</td>
 				<td>
-					'$fecha'
+					'.$fecha.'
 				</td>
 			</tr>';
 			}
