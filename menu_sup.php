@@ -24,7 +24,7 @@ echo '
 				</td>
 				<td>
 					<div align="center">
-						<a href="descargar.php" class="button"/>Descargar</a>
+						<a href="descargar.php" class="button"/><img src="img/download.png" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
 					</div>
 				</td>
 			<tr>
