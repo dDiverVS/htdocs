@@ -37,7 +37,7 @@ echo '
 		<br/>
 		<br/>
 		<br/>
-		<hr/>
+		
 		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0" >
 
 			<tr>
