@@ -33,37 +33,9 @@ echo '
     <br/>
     <br/>';
     //Enlaces para acceder a diferentes opciones-->
+    include 'menu_sup.php';
     echo'
-    <table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
-      <tr>
-        <td>
-          <div align="center">
-            <a href="subida.php" class="button"/>Subir Fichero</a>
-          </div>
-        </td>
-        <td>
-          <div align="center">
-            <a href="borrar.php" class="button"/><img src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
-          </div>
-        </td>
-        <td>
-          <div align="center">
-            <a href="renombrar.php" class="button"/><span class="add">Renombrar </span></a>
-          </div>
-        </td>
-        <td>
-          <div align="center">
-            <a href="crear.php" class="button"/><img src="img/directorio.jpg" title="Crear directorio" width="50" height="50" alt="Crear directorio"></a>
-          </div>
-        </td>
-        <td>
-          <div align="center">
-            <a href="descargar.php" class="button"/>Descargar</a>
-          </div>
-        </td>
-      <tr>
-    </table>
-    <br />
+    
     <form onsubmit="setTimeout(\'document.forms[0].reset()\', 500)" action="renombrar3.php" method="POST" >     ';
 
 //si se ha indicado un fichero y se ha pulsado enviar en renombrar.php se ejecuta lo siguiente:

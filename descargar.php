@@ -37,39 +37,9 @@ echo '
 		<br/>
 		<br/>';
 		//Enlaces para acceder a diferentes opciones
-		echo '
-	<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
-		<tr>
-			<td>
-				<div align="center">
-					<a href="subida.php" class="button"/>Subir Fichero</a>
-				</div>
-			</td>
-			<td>
-				<div align="center">
-					<a href="borrar.php" class="button"/><img src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
-				</div>
-			</td>
-			<td>
-				<div align="center">
-					<a href="renombrar.php" class="button"/>Renombrar </a>
-				</div>
-			</td>
-			<td>
-				<div align="center">
-					<a href="crear.php" class="button"/><img src="img/directorio.jpg" title="Crear directorio" width="50" height="50" alt="Crear directorio"></a>
-				</div>
-			</td>
-			<td>
-				<div align="center">
-					<a href="descargar.php" class="button"/><span class="add">Descargar</span></a>
-				</div>
-			</td>
-		<tr>
-	</table>
-	<br/>
-
 	
+	include 'menu_sup.php';
+		echo '
 	<h3 align="center">Seleccione el fichero que desea descargar</h3>
 
 		<form action="descargar2.php" align="center"  method="post" name="descargar" id="descargar">
