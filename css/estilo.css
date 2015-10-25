@@ -9,10 +9,7 @@ margin-bottom:14px;
 text-decoration:none;
 width:191px;
 }
-a:hover.button{
-background-size:150%
-}
-img:hover.button {
+img:hover {
 	height: 120%;
 	width: 120%;
 }
