@@ -4,8 +4,9 @@ echo '
 <head>
 	<title align="center">FTP-WEB</title>
 	<link rel="icon" type="image/ico" href="img/favicon.ico" />
+	<link href="css/estilo_index.css" rel="stylesheet" type="text/css">
 </head>
-<body  background="img/fondo.jpeg">
+<body>
 	<!--Formulario de acceso al servidor FTP-->
 	<form action="acceso.php" method="POST" >
 		<h1 align="center"> FTP-WEB</h1>
