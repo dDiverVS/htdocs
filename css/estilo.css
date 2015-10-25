@@ -29,7 +29,7 @@ button.descargar {
 	height: 100%;
 	vertical-align: middle;
 	background: #CCFFCC;
-	background-image: url('../img/download.png');
+	
 	background-repeat: no-repeat;
 }
 button.descargar:hover {
@@ -38,7 +38,7 @@ button.descargar:hover {
 	height: 100%;
 	vertical-align: middle;
 	background: #FFFFFF;
-	background-image: url('../img/download.png');
+	
 	background-repeat: no-repeat;
 }
 p.enlaces{
