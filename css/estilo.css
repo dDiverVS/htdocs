@@ -12,6 +12,10 @@ width:191px;
 a:hover.button{
 background-size:150%
 }
+img:hover.button {
+	height: 120%;
+	width: 120%;
+}
 span.add{
 	color:#0066CC;
 }
