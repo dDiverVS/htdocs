@@ -10,6 +10,7 @@ echo '
 					</div>
 				</td>
 				<td><div align="right">
+					SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
 					USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
 					DIRECTORIO ACTUAL: <b>'.$_SESSION["carpeta_actual"].'</b><br/><br/>
 					<a href="cerrar.php" class="button"/><br/>
@@ -23,35 +24,35 @@ echo '
 		<br/>
 		<br/>
 		<br/>
-		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0">
+		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0" >
 			<tr>
 				<td>
-					<div align="center">
+					<div align="center"><p class="enlaces">Cambiar Directorio</p>
 						<a href="home.php" class="button"/><img class="zoomIt" src="img/cambiar.png" title="Cambiar directorio " width="50" height="50" alt="Cambiar Directorio"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center">
+					<div align="center"><p class="enlaces">Borrar</p>
 						<a href="borrar.php" class="button"/><img class="zoomIt" src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center">
+					<div align="center"><p class="enlaces">Renombrar</p>
 						<a href="renombrar.php" class="button"/><img class="zoomIt"  src="img/modificar.jpg" title="Renombrar" width="50" height="50" alt="Renombrar"> </a>
 					</div>
 				</td>
 				<td>
-					<div align="center">
+					<div align="center"><p class="enlaces">Crear Directorio</p>
 						<a href="crear.php" class="button"/><img class="zoomIt" src="img/directorio.jpg" title="Crear directorio" width="50" height="50" alt="Crear directorio"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center">
+					<div align="center"><p class="enlaces">Descargar Fichero</p>
 						<a href="descargar.php" class="button"/><img class="zoomIt" src="img/download.png" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center">
+					<div align="center"><p class="enlaces">Subir Fichero</p>
 						<a href="subida.php" class="button"/><img class="zoomIt" src="img/upload_file.jpg" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
 					</div>
 				</td>
