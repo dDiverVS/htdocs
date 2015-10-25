@@ -15,28 +15,7 @@ echo '
         if ($_GET["norenombrar2"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un nombre nuevo para renombrar</font></h2>";}
 		include 'seguridad.php';
 		include 'conexion.php'; 
-		//Logotipo
-		echo'
-		<table width="100%" border="0" align="right" cellspacing="0" cellpadding="0">
-			<tr>
-				<td>
-					<div align="left">
-						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="300" height="100" alt="Volver a Inicio"> </a>
-					</div>
-				</td>
-				<td><div align="right">
-					USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
-					<a href="cerrar.php" class="button"/><br/>
-					<img src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a><br/>
-				</div></td>
-			</tr>
-		</table>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>';
+		
 		//Enlaces para acceder a diferentes opciones
 		include 'menu_sup.php';
 		//Seleccion fichero/directorio a renombrar

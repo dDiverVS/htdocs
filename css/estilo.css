@@ -9,10 +9,25 @@ margin-bottom:14px;
 text-decoration:none;
 width:191px;
 }
-img:hover {
-	height: 120%;
-	width: 120%;
+a:hover.button{
+background-size:150%
 }
+.zoomIt{
+display:block!important;
+-webkit-transition:-webkit-transform 1s ease-out;
+-moz-transition:-moz-transform 1s ease-out;
+-o-transition:-o-transform 1s ease-out;
+-ms-transition:-ms-transform 1s ease-out;
+transition:transform 1s ease-out;
+}
+.zoomIt:hover{
+-moz-transform: scale(1.1);
+-webkit-transform: scale(1.1);
+-o-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1)
+}
+
 span.add{
 	color:#0066CC;
 }
