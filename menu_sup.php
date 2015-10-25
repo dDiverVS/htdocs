@@ -6,7 +6,7 @@ echo '
 			<tr>
 				<td>
 					<div align="left">
-						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="300" height="100" alt="Volver a Inicio"> </a>
+						<a href="home.php"> <img class="zoomIt" src="img/logo.png" title="Volver a Inicio" width="300" height="100" alt="Volver a Inicio"> </a>
 					</div>
 				</td>
 				<td><div align="right">
