@@ -9,7 +9,9 @@ echo '
 
   <body bgcolor="#EFE4B0">';
   
-   
+     include 'seguridad.php';
+     include 'conexion.php';
+    
     //Enlaces para acceder a diferentes opciones
     include 'menu_sup.php';
 
