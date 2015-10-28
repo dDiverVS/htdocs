@@ -24,7 +24,7 @@ echo '
 		echo '
 		<h3 align="center">Indique el nombre del fichero a eliminar</h3>
 		<form action="borrar2.php" align="center"  method="post" name="borrar_ftp" id="borrar_ftp">
-			<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
+			<table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Borrar</strong></font></div></td>
 					<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>

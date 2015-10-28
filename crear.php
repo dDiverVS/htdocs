@@ -19,7 +19,7 @@ echo '
 		include 'menu_sup.php';
 		echo'	
 		<h3 align="center">Indique el nombre del directorio que desee crear</h3>
-			<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
+			<table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
 					<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>

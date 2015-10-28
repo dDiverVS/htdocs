@@ -56,16 +56,16 @@ echo '
 							<td WIDTH='16'  HEIGHT='30' >
 								<button class='descargar'  type='submit' value='".$objeto."' name='id_descargar'><img src=img/download.png WIDTH='16'  HEIGHT='16'/></button>
 							</td>
-							<td bgcolor='#EEEFEE' align='center'>
+							<td bgcolor='#E0E0E0' align='center'>
 								".$objeto."
 							</td>
-							<td  bgcolor='#EEEFEE' align='center'>
+							<td  bgcolor='#E0E0E0' align='center'>
 								".$tamano."
 							</td>
-							<td  bgcolor='#EEEFEE' align='center'>
+							<td  bgcolor='#E0E0E0' align='center'>
 								".$tipo."
 							</td>
-							<td  bgcolor='#EEEFEE' align='center'>
+							<td  bgcolor='#E0E0E0' align='center'>
 								".$fecha."
 							</td>
 						</tr>";

@@ -22,7 +22,7 @@ echo '
 		echo'
 		<h3 align="center">Seleccione el fichero que desea renombrar</h3>
 		<form action="renombrar2.php" align="center"  method="post" name="renombrar" id="renombrar">
-			<table width="69%" border="1" align="center" cellspacing="0" cellpadding="0">
+			<table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Renombrar</strong></font></div></td>
 					<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
