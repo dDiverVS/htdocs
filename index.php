@@ -13,7 +13,7 @@ echo '
 		<table align="center" width="300" cellspacing="2" cellpadding="2" border="0">
 			<tr>
 				</br>
-					<td colspan="10" align="center"> <b> Indique su usuario del servicio FTP</b>
+					<td colspan="10" align="center" class="indique"> <b> ACCESO AL CLIENTE FTP</b>
 				</td>';
 				
 				if ( isset($_GET["errorconexion"])){# si la direccion FTP es erronea o no hay acceso al servidor, aparece este mensaje
