@@ -1,8 +1,8 @@
 body {
 	background-image: url('../img/fondo.jpeg');
-	background-size: 100%;
+	background-size: 85%;
 	font: 150% sans-serif; 
-	color: white; 
+	color: #b2ff66; 
 	text-shadow: black 0.1em 0.1em 0.2em;
 	}
 h1 {
@@ -11,7 +11,7 @@ h1 {
 	text-shadow: black 0.1em 0.1em 0.2em;
 	}
 .indique{
-	font: 150% sans-serif; 
+	font: 100% sans-serif; 
 	color: black; 
 	text-shadow: black 0.1em 0.1em 0.2em;
 	}
@@ -19,4 +19,10 @@ tr:hover{
 	
 	color: orange; 
 	text-shadow: black 0.1em 0.1em 0.2em;
+}
+.botonlogin{
+	background-image: url('../img/login.png'); 
+	width: 69px; 
+	height: 75px; 
+	border-width: 5px;
 }
