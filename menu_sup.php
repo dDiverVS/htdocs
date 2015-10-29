@@ -39,35 +39,57 @@ echo '
 		<br/>
 		
 		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0" >
-
+			<tr>
+				<th class="enlaces">
+					Cambiar Directorio
+				</th>
+				<th class="enlaces">
+					Crear Directorio
+				</th>
+				<th class="enlaces">
+					Renombrar
+				</th>
+				<th class="enlaces">
+					Borrar
+				</th>
+				<th class="enlaces">
+					Descargar fichero
+				</th>
+				<th class="enlaces">
+					Subir fichero
+				</th>
+				
 			<tr>
 				<td>
-					<div align="center"><p class="enlaces">Cambiar Directorio</p>
+					<div align="center">
+
 						<a href="home.php" class="button"/><img class="zoomIt" src="img/cambiar.png" title="Cambiar directorio " width="50" height="50" alt="Cambiar Directorio"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center"><p class="enlaces">Borrar</p>
-						<a href="borrar.php" class="button"/><img class="zoomIt" src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
-					</div>
-				</td>
-				<td>
-					<div align="center"><p class="enlaces">Renombrar</p>
-						<a href="renombrar.php" class="button"/><img class="zoomIt"  src="img/modificar.jpg" title="Renombrar" width="50" height="50" alt="Renombrar"> </a>
-					</div>
-				</td>
-				<td>
-					<div align="center"><p class="enlaces">Crear Directorio</p>
+					<div align="center">
 						<a href="crear.php" class="button"/><img class="zoomIt" src="img/directorio.jpg" title="Crear directorio" width="50" height="50" alt="Crear directorio"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center"><p class="enlaces">Descargar Fichero</p>
+					<div align="center">
+						<a href="renombrar.php" class="button"/><img class="zoomIt"  src="img/modificar.jpg" title="Renombrar" width="50" height="50" alt="Renombrar"> </a>
+					</div>
+				</td>
+				<td>
+					<div align="center">
+						<a href="borrar.php" class="button"/><img class="zoomIt" src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
+					</div>
+				</td>
+				
+				
+				<td>
+					<div align="center">
 						<a href="descargar.php" class="button"/><img class="zoomIt" src="img/download.png" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
 					</div>
 				</td>
 				<td>
-					<div align="center"><p class="enlaces">Subir Fichero</p>
+					<div align="center">
 						<a href="subida.php" class="button"/><img class="zoomIt" src="img/upload_file.jpg" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
 					</div>
 				</td>
