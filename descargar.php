@@ -52,7 +52,7 @@ echo '
 
 					if($tipo=="fichero"){
 						echo "
-						<tr>
+						<tr class='tabla'>
 							<td WIDTH='16'  HEIGHT='30' >
 								<button class='descargar'  type='submit' value='".$objeto."' name='id_descargar'><img src=img/download.png WIDTH='16'  HEIGHT='16'/></button>
 							</td>
