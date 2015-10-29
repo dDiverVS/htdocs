@@ -49,7 +49,7 @@ echo '
 					}
 
 					echo "
-					<tr>
+					<tr class='tabla'>
 						<td bgcolor='#E0E0E0'>
 							<input type='radio' name='id_renombrar' value='$objeto'/>
 						</td>

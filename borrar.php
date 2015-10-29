@@ -55,7 +55,7 @@ echo '
 
 					// Mostrar los resultados en la tabla y envio 
 					echo "
-					<tr>
+					<tr class='tabla'>
 						<td bgcolor='#E0E0E0'>
 							<input type='checkbox' name='id_borrar[]' value='".$objeto."'/>
 						</td>

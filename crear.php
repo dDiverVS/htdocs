@@ -44,7 +44,7 @@ echo '
 								#Filemtime obtiene la fecha de modificacion del fichero; y date le da el formato de salida
 							}
 							echo "
-							<tr>
+							<tr class='tabla'>
 								
 								<td bgcolor='#E0E0E0' align='center'>
 									".$objeto."
