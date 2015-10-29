@@ -47,10 +47,7 @@ th.enlaces{
     color: green;
    	
 }
-tr.tabla:hover{
+tr:hover{
 font-style:arial;
     color: green;	
-    background: white;
-	
-	background-repeat: no-repeat;
 }
