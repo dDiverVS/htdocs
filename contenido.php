@@ -29,7 +29,7 @@ echo '
 <h2>Directorios</h2>
 <table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
 	<th colspan="2">
-		<td width="80%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
+		<div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div>
 	</th>
 	<tr>
 		<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.png" WIDTH="16"  HEIGHT="16"/></a></td>
