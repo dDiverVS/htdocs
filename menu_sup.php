@@ -41,9 +41,7 @@ echo '
 		
 		<table width="30%" border="0" align="center" cellspacing="0" cellpadding="0" >
 			<tr>
-				<th class="enlaces">
-					Cambiar Directorio
-				</th>
+				
 				<th class="enlaces">
 					Crear Directorio
 				</th>
@@ -61,61 +59,51 @@ echo '
 				</th>
 				
 			<tr>
-				<td>
-					<div align="center">
-
-						<a href="home.php" class="button"/><img class="zoomIt" ';
-						if (strpos($url,'home')!== false) {
+				
+				<td ';if (strpos($url,'crear')!== false) {
 							echo 'class="seleccionado" ';
 						}
-						echo 'src="img/cambiar.png" title="Cambiar directorio " width="50" height="50" alt="Cambiar Directorio"></a>
+					echo '>
+					<div align="center">
+						<a href="crear.php" class="button"/><img class="zoomIt" src="img/directorio.jpg" title="Crear directorio" width="50" height="50" alt="Crear directorio"></a>
 					</div>
 				</td>
-				<td>
-					<div align="center">
-						<a href="crear.php" class="button"/><img class="zoomIt"  ';
-						if (strpos($url,'crear')!== false) {
-							echo 'class="seleccionado" ';
-						}
-						echo ' src="img/directorio.jpg" title="Crear directorio" width="50" height="50" alt="Crear directorio"></a>
-					</div>
-				</td>
-				<td>
-					<div align="center">
-						<a href="renombrar.php" class="button"/><img class="zoomIt" ';
+				<td  ';
 						if (strpos($url,'renombrar')!== false) {
 							echo 'class="seleccionado" ';
 						}
-						echo '	src="img/modificar.jpg" title="Renombrar" width="50" height="50" alt="Renombrar"> </a>
+						echo '>
+					<div align="center">
+						<a href="renombrar.php" class="button"/><img class="zoomIt"	src="img/modificar.jpg" title="Renombrar" width="50" height="50" alt="Renombrar"> </a>
 					</div>
 				</td>
-				<td>
-					<div align="center">
-						<a href="borrar.php" class="button"/><img class="zoomIt" ';
+				<td ';
 						if (strpos($url,'borrar')!== false) {
 							echo 'class="seleccionado" ';
 						}
-						echo 'src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
+						echo '>
+					<div align="center">
+						<a href="borrar.php" class="button"/><img class="zoomIt" src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
 					</div>
 				</td>
 				
 				
-				<td>
-					<div align="center">
-						<a href="descargar.php" class="button"/><img class="zoomIt"  ';
+				<td  ';
 						if (strpos($url,'descargar')!== false) {
 							echo 'class="seleccionado" ';
 						}
-						echo 'src="img/download.png" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
+						echo '>
+					<div align="center">
+						<a href="descargar.php" class="button"/><img class="zoomIt" src="img/download.png" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
 					</div>
 				</td>
-				<td>
-					<div align="center">
-						<a href="subida.php" class="button"/><img class="zoomIt"  ';
+				<td  ';
 						if (strpos($url,'subida')!== false) {
 							echo 'class="seleccionado" ';
 						}
-						echo 'src="img/upload_file.jpg" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
+						echo '>
+					<div align="center">
+						<a href="subida.php" class="button"/><img class="zoomIt" src="img/upload_file.jpg" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
 					</div>
 				</td>
 			<tr>
