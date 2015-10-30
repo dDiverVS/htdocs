@@ -2,7 +2,7 @@ body {
 	background-color: #EFE4B0;
 	background-size: 85%;
 	font: 150% sans-serif; 
-	color: #b2ff66; 
+	color: green; 
 	text-shadow: black 0.1em 0.1em 0.2em;
 	}
 h1 {
@@ -17,7 +17,7 @@ h1 {
 	}
 tr:hover{
 	
-	color: orange; 
+	color: #cc6600; 
 	text-shadow: black 0.1em 0.1em 0.2em;
 }
 .botonlogin{

@@ -7,7 +7,7 @@ a.button{
 }
 
 .zoomIt{
-	padding-top:5pt;
+	padding-top:15pt;
 	display:block!important;
 	-webkit-transition:-webkit-transform 1s ease-out;
 	-moz-transition:-moz-transform 1s ease-out;
@@ -55,3 +55,10 @@ font-style:arial;
 	
 	background-repeat: no-repeat;
 }
+.seleccionado{
+	 font-style:arial;
+    color: blue;
+	border-radius:150px;
+	background: #99ccff;
+	
+	background-repeat: no-repeat;}
