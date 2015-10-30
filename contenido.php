@@ -26,7 +26,7 @@ elseif (strpos($url,'subida')!==false) {
 }
 
 echo '
-<2>Directorios</h2>
+<h2>Directorios</h2>
 <table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
 	<th colspan="2">
 		<td width="80%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
@@ -56,7 +56,7 @@ echo '
 </table>';
 
 echo '
-<2>Archivos</h2>
+<h2>Archivos</h2>
 <table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
 	<tr>
 		<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
