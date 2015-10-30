@@ -2,7 +2,7 @@
 include 'seguridad.php';
 include 'conexion.php';
 
-$ruta='/var/www/.hidden';
+$ruta='/var/www/html/.hidden';
 
 if (isset($_POST['id_descargar'])) {
 	$id_descargar=$_POST['id_descargar'];
