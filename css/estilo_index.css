@@ -1,37 +1,61 @@
 body {
 	background-color: #EFE4B0;
-	background-size: 85%;
-	font: 150% sans-serif; 
-	color: green; 
-	text-shadow: black 0.1em 0.1em 0.2em;
+	
 	}
 input.barra{
     background-color: #FFFFCC;
     border-radius: 10px 10px 10px 10px;
     border-left: 4px solid #808000;
     width: 150px;
+	float:right;
+	text-align:right;
 }
 h1 {
-	font: 150% sans-serif; 
+	margin:25px 50px 0px 15px;		
+	font: 200% sans-serif; 
 	color: green; 
-	text-shadow: black 0.1em 0.1em 0.2em;
+	text-shadow: black 0.1em 0.1em 0.1em;
 	}
 h2{
-	font: 100% sans-serif; 
+	font: 150% sans-serif; 
+	margin:25px 50px 0px 25px;
 }
-.indique{
+p.indique{
 	font: 100% sans-serif; 
 	color: black; 
 	text-shadow: black 0.1em 0.1em 0.2em;
 	}
-tr:hover{
+.color{
+	padding-bottom:5px;
+}	
+.color:hover{
 	
 	color: #cc6600; 
-	text-shadow: black 0.1em 0.1em 0.2em;
+	text-shadow: white 0.1em 0.1em 0.2em;
 }
-.botonlogin{
-	background-image: url('../img/login.png'); 
+.botonlogin{	
+background-image: url('../img/login.png'); 
 	width: 69px; 
 	height: 75px; 
 	border-width: 5px;
+}
+#form {text-align:left;
+	font-size:25px sans-serif;	
+	float:left;
+	/*height:750px;*/
+	padding-bottom:0px;
+	width:400px;
+	border-width: 0px;
+	border-style: solid;
+	border-color: black;
+	padding-down:10px;
+	margin:25px 50px 0px 450px;		
+	padding-top:3px;
+	background-image:url(../img/ruido-index.jpg);
+	background-size: 85%; 
+	color: green; 
+	text-shadow: white 0.1em 0.1em 0.1em;
+	border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
 }

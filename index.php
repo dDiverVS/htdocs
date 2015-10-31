@@ -8,46 +8,53 @@ echo '
 </head>
 <body>
 	<!--Formulario de acceso al servidor FTP-->
-	<form action="acceso.php" method="POST" >
-		<h1 align="center"> FTP-WEB</h1>
-		<table align="center" width="300" cellspacing="2" cellpadding="2" border="0">
-			<tr>
-				</br>
-					<td colspan="10" align="center" class="indique"> <b> ACCESO AL CLIENTE FTP</b>
-				</td>';
-				
-				if ( isset($_GET["errorconexion"])){# si la direccion FTP es erronea o no hay acceso al servidor, aparece este mensaje
+	
+	
+		<h1 align="center"> FTP-WEB</h1>';
+		if ( isset($_GET["errorconexion"])){# si la direccion FTP es erronea o no hay acceso al servidor, aparece este mensaje
 		  		if ($_GET["errorconexion"]=="si") echo "<h2 align='center'><font color='red'>No se ha podido realizar la conexion a dicha direcci&oacute;n</font></h2>";}
 				#Si el usuario o contraseña de dicho servidor son erroneas, aparece este mensaje 
 				if ( isset($_GET["errorusuario"])){
 	 			if ($_GET["errorusuario"]=="si") echo "<h2 align='center' ><font color='red'>Datos incorrectos.Introduzca usuario o contrase&ntilde;a correcta</font></h2>";}
-	 		echo '
-			</tr>
-			<tr>
-				<td align="right"> Nombre o direcci&oacute;n del servidor FTP:</td>
-				<td><input type="text" class="barra" name="servidor" size="15" maxlength="50"></td>
-			</tr>
-			<tr>
-				<td align="right" >Puerto: (21 por defecto)</td>
-				<td><input type="text" class="barra" name="puerto" size="15" maxlength="50" Value="21"></td>
-			</tr>
-			<tr>
-				<td align="right"> Usuario:</td>
-				<td><input type="Text" class="barra" name="usuario" size="15" maxlength="50"></td>
-			</tr>
-			<tr>
-				<td align="right" >Contrase&ntilde;a:</td>
-				<td><input type="password" class="barra" name="contrasena" size="15" maxlength="50"></td>
-			</tr>
-			<tr>
-				<td align="right" >Conexion SSL</td>
-				<td><input type="checkbox" name="SSL" value="1"/></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><input type="Submit" value="" class="botonlogin"></td>
-			</tr>
-		</table>
+				echo '
+		<div id="form">
+		<form action="acceso.php" method="POST" >
+					<p align="center" class="indique"> <b> ACCESO AL CLIENTE FTP</b></p></br>
+				
+				
+	 		
+				<p align="left" class="color">			
+				 Nombre o direcci&oacute;n del servidor FTP:
+				
+					<input type="text" class="barra" name="servidor" size="15" maxlength="50">
+				</p>				
+				<p align="left" class="color">Puerto: (21 por defecto)
+				
+					<input type="text" class="barra" name="puerto" size="15" maxlength="50" Value="21">
+				</p>
+				
+				<p align="left" class="color"> Usuario:
+				
+					<input type="Text" class="barra" name="usuario" size="15" maxlength="50">
+				</p>
+							
+				<p align="left" class="color">Contrase&ntilde;a:
+				
+					<input type="password" class="barra" name="contrasena" size="15" maxlength="50">
+				</p>
+				
+				<p align="center" class="color">Conexion SSL
+				</p>
+				<p align="center" class="color">
+					<input align="center" type="checkbox" name="SSL" value="1"/>
+				</p>
+				
+					
+				<p align="center" class="color">		
+				<input type="Submit" value="" class="botonlogin">
+				</p>
 	</form>
+	</div>
 </body>
 </html>';
 ?>
