@@ -5,6 +5,12 @@ body {
 	color: green; 
 	text-shadow: black 0.1em 0.1em 0.2em;
 	}
+input.barra{
+    background-color: #FFFFCC;
+    border-radius: 10px 10px 10px 10px;
+    border-left: 5px solid #808000;
+    width: 150px;
+}
 h1 {
 	font: 150% sans-serif; 
 	color: green; 
