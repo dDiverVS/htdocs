@@ -7,16 +7,44 @@ a.button{
 }
 body {
 	font-family:sans-serif;}
-body td.datos{
-	padding-right:25pt;
-	font-family: cursive; 
+body p.datos{
+	position:relative;
+	top:10 px;
+	left:10px;
+	text-align:left;
+	float:left;
+	margin-left:10px;
+	font-family: sans-serif; 
 	font-size:10px;
+	border-left:1px solid black;
+	border-top:1px solid black;
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+	padding:10px;
+	
+}
+body p.logo{
+	position:relative;
+	top:10 px;
+	left:350px;
+	float:left;
+	alignment-adjust:auto;
+	
+}
+ p.enlaces{
+	position:relative;
+	top:10 px;
+	left:750px;
+	float:left;
+	text-align:left;
+	color: green;
+	font-family:sans-serif;
 }
 input.barra
 	{
     background-color: #FFFFCC;
-   border-radius: 10px 10px 10px 10px;
-    border-left: 5px solid #808000;
+    border-radius: 10px 10px 10px 10px;
+    border-left: 4px solid #808000;
     width: 230px;
 }
 .zoomIt{
@@ -46,7 +74,6 @@ button.descargar {
 	height: 100%;
 	vertical-align: middle;
 	background: #CCFFCC;
-	
 	background-repeat: no-repeat;
 }
 button.descargar:hover {
@@ -54,44 +81,33 @@ button.descargar:hover {
 	width: 100%;
 	height: 100%;
 	vertical-align: middle;
-	background: #FFFFFF;
-	
+	background: #FFFFFF;	
 	background-repeat: no-repeat;
 }
 th.enlaces{
-	
-    
     color: green;
    	
 }
 tr.tabla:hover{
-font-style:arial;
+	font-style:arial;
     color: green;	
     background: white;
-	
 	background-repeat: no-repeat;
 }
 .seleccionado{
-	
-
-
-background: rgba(179,220,237,1);
-background: -moz-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179,220,237,1)), color-stop(50%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
-background: -webkit-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-background: -o-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-background: -ms-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 );
-
-
-		border-radius:150px;
-	}
+	background: rgba(179,220,237,1);
+	background: -moz-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179,220,237,1)), color-stop(50%, 				rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
+	background: -webkit-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+	background: -o-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+	background: -ms-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+	background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 );
+	border-radius:150px;
+}
 .seleccionado2{
 	background:url(../img/ruido.png);
 	border-radius: 10px 10px 10px 10px;
--moz-border-radius: 10px 10px 10px 10px;
--webkit-border-radius: 10px 10px 10px 10px;
-
-
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
 }

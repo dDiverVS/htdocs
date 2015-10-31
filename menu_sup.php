@@ -1,32 +1,28 @@
 <?php
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 echo '
-
-		
-		<table width="100%" border="0" align="right" cellspacing="0" cellpadding="0">
-			<tr>
-				<td class="datos">
-					<div align="left">
+		  		<p class="datos" align="center">
+					
 						SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
 						USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
 						DIRECTORIO ACTUAL: <b>'.$_SESSION["carpeta_actual"].'</b><br/><br/>
 						
-					</div>
-				</td>
-				<td>
-					<div align="center">
-						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="200" height="100" alt="Volver a Inicio"> </a>
-					</div>
-				</td>
-				<th class="enlaces">
-					<div align="right">
+					
+				</p>
+			
+		
+				<p class="logo">
+					
+						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="350" height="100" alt="Volver a Inicio"> </a>
+					
+				</p>
+				<p class="enlaces" align="left">
+					
 					Cerrar Sesi&oacute;n<br/><br/>
 					<a href="cerrar.php" class="button"/>
 					<img class="zoomIt" src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a><br/>
-					</div>
-				</td>
-			</tr>
-		</table>
+				
+				</p>
 
 		<br/>
 		<br/>

@@ -8,7 +8,7 @@ body {
 input.barra{
     background-color: #FFFFCC;
     border-radius: 10px 10px 10px 10px;
-    border-left: 5px solid #808000;
+    border-left: 4px solid #808000;
     width: 150px;
 }
 h1 {
@@ -16,6 +16,9 @@ h1 {
 	color: green; 
 	text-shadow: black 0.1em 0.1em 0.2em;
 	}
+h2{
+	font: 100% sans-serif; 
+}
 .indique{
 	font: 100% sans-serif; 
 	color: black; 
