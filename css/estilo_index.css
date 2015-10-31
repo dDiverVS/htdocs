@@ -12,7 +12,7 @@ input.barra{
 }
 h1 {position:relative;
 	top:1%;
-	left:33%;
+	left:30%;
 	width:450px;
 	font: 200% sans-serif; 
 	color: green; 
@@ -43,7 +43,7 @@ background-image: url('../img/login.png');
 }
 #form {position:relative;
 	top:5%;
-	left:33%;
+	left:30%;
 	text-align:left;
 	font:75% sans-serif;	
 	float:left;

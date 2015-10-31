@@ -1,31 +1,31 @@
 <?php
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-echo '
-		  		<p class="datos" align="center">
+echo '			
+		  		<span class="datos" >
 					
 						SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
 						USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
 						DIRECTORIO ACTUAL: <b>'.$_SESSION["carpeta_actual"].'</b><br/><br/>
 						
 					
-				</p>
+				</span>
 			
 		
-				<p class="logo">
+				<span class="logo" >
 					
-						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="350" height="100" alt="Volver a Inicio"> </a>
+						<a href="home.php"> <img src="img/logo.png" alig title="Volver a Inicio" width="350" height="100" alt="Volver a Inicio"> </a>
 					
-				</p>
-				<p class="enlaces" align="left">
+				</span>
+				<span class="enlaces" >
 					
 					<b>Cerrar Sesi&oacute;n</b>
-				</p>
-				<p class="mover" align="center">
-					<a href="cerrar.php" class="button"/>
-					<img class="zoomIt"  src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a><br/>
+				</span>
+				<span class="iconocerrar" >
+					<a href="cerrar.php" class="button">
+					<img class="zoomIt"   src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
 				
-				</p>
-
+				</span>
+			
 		<br/>
 		<br/>
 		<br/>
