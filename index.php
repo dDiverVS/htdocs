@@ -10,14 +10,15 @@ echo '
 	<!--Formulario de acceso al servidor FTP-->
 	
 	
-		<h1 align="center"> FTP-WEB</h1>';
+		<h1 align="center"> FTP-WEB</h1>
+		<div id="form">';
 		if ( isset($_GET["errorconexion"])){# si la direccion FTP es erronea o no hay acceso al servidor, aparece este mensaje
 		  		if ($_GET["errorconexion"]=="si") echo "<h2 align='center'><font color='red'>No se ha podido realizar la conexion a dicha direcci&oacute;n</font></h2>";}
 				#Si el usuario o contraseña de dicho servidor son erroneas, aparece este mensaje 
 				if ( isset($_GET["errorusuario"])){
 	 			if ($_GET["errorusuario"]=="si") echo "<h2 align='center' ><font color='red'>Datos incorrectos.Introduzca usuario o contrase&ntilde;a correcta</font></h2>";}
 				echo '
-		<div id="form">
+		
 		<form action="acceso.php" method="POST" >
 					<p align="center" class="indique"> <b> ACCESO AL CLIENTE FTP</b></p></br>
 				

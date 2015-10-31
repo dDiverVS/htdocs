@@ -18,9 +18,9 @@ h1 {position:relative;
 	color: green; 
 	text-shadow: black 0.1em 0.1em 0.1em;
 	}
-h2{
+h2 {
 	font: 150% sans-serif; 
-	margin:25px 50px 0px 25px;
+	
 }
 p.indique{
 	font: 100% sans-serif; 
