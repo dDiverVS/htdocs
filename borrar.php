@@ -58,6 +58,7 @@ echo '
 					<tr class='tabla'>
 						<td bgcolor='#E0E0E0'>
 							<input type='checkbox' name='id_borrar[]' value='".$objeto."'/>
+
 						</td>
 						<td bgcolor='#E0E0E0'>
 							".$objeto."

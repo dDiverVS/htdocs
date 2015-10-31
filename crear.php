@@ -67,7 +67,7 @@ echo '
 					</table>
 		<form action='crear2.php' onsubmit='setTimeout('document.forms[0].reset()', 2000)'  method='post' name='crear_ftp' id='crear_ftp'>
 			<p align='center'>
-				<input name='crear' align='center' type='text' title='El nombre de los directorios no pueden contener \\ /:?*><\"|' pattern='[^\"\\x5c \"\x22 \"\x2f \"\x3a \"\x3f \"\x2a \"\x3c \"\x3e \"\x7c]+' /> 
+				<input class='barra' name='crear' align='center' type='text' title='El nombre de los directorios no pueden contener \\ /:?*><\"|' pattern='[^\"\\x5c \"\x22 \"\x2f \"\x3a \"\x3f \"\x2a \"\x3c \"\x3e \"\x7c]+' /> 
 				<input name='envio' align='center' type='submit' value='Crear Directorio' />
 			</p>
 		</form>

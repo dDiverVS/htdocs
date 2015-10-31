@@ -25,19 +25,19 @@ echo '
 			</tr>
 			<tr>
 				<td align="right"> Nombre o direcci&oacute;n del servidor FTP:</td>
-				<td><input type="text" name="servidor" size="15" maxlength="50"></td>
+				<td><input type="text" class="barra" name="servidor" size="15" maxlength="50"></td>
 			</tr>
 			<tr>
 				<td align="right" >Puerto: (21 por defecto)</td>
-				<td><input type="text" name="puerto" size="15" maxlength="50" Value="21"></td>
+				<td><input type="text" class="barra" name="puerto" size="15" maxlength="50" Value="21"></td>
 			</tr>
 			<tr>
 				<td align="right"> Usuario:</td>
-				<td><input type="Text" name="usuario" size="15" maxlength="50"></td>
+				<td><input type="Text" class="barra" name="usuario" size="15" maxlength="50"></td>
 			</tr>
 			<tr>
 				<td align="right" >Contrase&ntilde;a:</td>
-				<td><input type="password" name="contrasena" size="15" maxlength="50"></td>
+				<td><input type="password" class="barra" name="contrasena" size="15" maxlength="50"></td>
 			</tr>
 			<tr>
 				<td align="right" >Conexion SSL</td>
