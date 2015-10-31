@@ -6,13 +6,14 @@ input.barra{
     background-color: #FFFFCC;
     border-radius: 10px;
     border-left: 4px solid #808000;
-    width: 25%;
+    width: 20%;
 	float:right;
 	text-align:right;
 }
-h1 {
+h1 {position:relative;
+	top:1%;
+	left:33%;
 	width:450px;
-	margin:0% 10% 0% 30%;
 	font: 200% sans-serif; 
 	color: green; 
 	text-shadow: black 0.1em 0.1em 0.1em;
@@ -40,11 +41,13 @@ background-image: url('../img/login.png');
 	height: 75px; 
 	border-width: 5px;
 }
-#form {text-align:left;
+#form {position:relative;
+	top:5%;
+	left:33%;
+	text-align:left;
 	font:75% sans-serif;	
 	float:left;
-	width:475px;
-	margin:0% 10% 0% 30%;			
+	width:500px;
 	background-image:url(../img/ruido-index.jpg);
 	background-size: 100%; 
 	color: green; 
