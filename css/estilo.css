@@ -16,34 +16,35 @@ body p.datos{
 	margin-left:10px;
 	font-family: sans-serif; 
 	font-size:10px;
-	border-left:1px solid black;
-	border-top:1px solid black;
-	border-right:1px solid black;
-	border-bottom:1px solid black;
-	padding:10px;
-	
+	border:1px dotted white;
+	padding:10px;	
 }
 body p.logo{
 	position:relative;
-	top:10 px;
+	top:10px;
 	left:350px;
 	float:left;
-	alignment-adjust:auto;
 	
 }
  p.enlaces{
 	position:relative;
-	top:10 px;
-	left:750px;
+	top:10px;
+	left:700px;
 	float:left;
 	text-align:left;
 	color: green;
 	font-family:sans-serif;
 }
+p.mover{
+	position:relative;
+	float:left;
+	top:35px;
+	left:550px;
+}
 input.barra
 	{
     background-color: #FFFFCC;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     border-left: 4px solid #808000;
     width: 230px;
 }
@@ -107,7 +108,7 @@ tr.tabla:hover{
 }
 .seleccionado2{
 	background:url(../img/ruido.png);
-	border-radius: 10px 10px 10px 10px;
-	-moz-border-radius: 10px 10px 10px 10px;
-	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius:10px ;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px ;
 }

@@ -23,7 +23,7 @@ h2{
 p.indique{
 	font: 100% sans-serif; 
 	color: black; 
-	text-shadow: black 0.1em 0.1em 0.2em;
+	text-shadow: white 0.1em 0.1em 0.2em;
 	}
 .color{
 	padding-bottom:5px;
@@ -42,12 +42,7 @@ background-image: url('../img/login.png');
 #form {text-align:left;
 	font-size:25px sans-serif;	
 	float:left;
-	/*height:750px;*/
-	padding-bottom:0px;
 	width:400px;
-	border-width: 0px;
-	border-style: solid;
-	border-color: black;
 	padding-down:10px;
 	margin:25px 50px 0px 450px;		
 	padding-top:3px;
@@ -55,7 +50,7 @@ background-image: url('../img/login.png');
 	background-size: 85%; 
 	color: green; 
 	text-shadow: white 0.1em 0.1em 0.1em;
-	border-radius: 10px 10px 10px 10px;
--moz-border-radius: 10px 10px 10px 10px;
--webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 }

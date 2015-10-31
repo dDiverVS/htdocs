@@ -18,9 +18,11 @@ echo '
 				</p>
 				<p class="enlaces" align="left">
 					
-					Cerrar Sesi&oacute;n<br/><br/>
+					<b>Cerrar Sesi&oacute;n</b>
+				</p>
+				<p class="mover" align="center">
 					<a href="cerrar.php" class="button"/>
-					<img class="zoomIt" src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a><br/>
+					<img class="zoomIt"  src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a><br/>
 				
 				</p>
 
