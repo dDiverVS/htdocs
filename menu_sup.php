@@ -66,7 +66,7 @@ echo '
 					<div align="center">
 						<a href="descargar.php" class="button"/><img class="zoomIt ';
 						if (strpos($url,'descargar')!== false) {
-							echo 'seleccionado2" ';
+							echo 'seleccionado2';
 						}
 						echo ' " src="img/download.png" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
 					</div>
@@ -75,7 +75,7 @@ echo '
 					<div align="center">
 						<a href="subida.php" class="button"/><img class="zoomIt ';
 						if (strpos($url,'subida')!== false) {
-							echo 'seleccionado2" ';
+							echo 'seleccionado2';
 						}
 						echo '" src="img/upload_file.jpg" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
 					</div>
@@ -84,7 +84,7 @@ echo '
 					<div align="center">
 						<a href="borrar.php" class="button"/><img class="zoomIt ';
 						if (strpos($url,'borrar')!== false) {
-							echo 'seleccionado2" ';
+							echo 'seleccionado2';
 						}
 						echo ' " src="img/borrar.jpg" title="Borrar" width="50" height="50" alt="Borrar"></a>
 					</div>
@@ -93,7 +93,7 @@ echo '
 					<div align="center">
 						<a href="crear.php" class="button"/><img class="zoomIt ';
 						if (strpos($url,'crear')!== false) {
-							echo 'seleccionado2" ';
+							echo 'seleccionado2';
 						}
 						echo '"   src="img/directorio.jpg" title="Crear directorio" width="50" height="50" alt="Crear directorio"></a>
 					</div>
