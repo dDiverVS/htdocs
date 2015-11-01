@@ -53,10 +53,6 @@ echo '
 					<td class="contenido"> Subir directorio</td>
 					<td class="contenido"></td>
 					<td class="contenido"></td>
-					<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.PNG" WIDTH="16"  HEIGHT="16"/></a></td>
-					<td bgcolor="#E0E0E0"  align="center"> Subir directorio</td>
-					<td></td>
-					<td></td>
 				</tr>';
 			
 			//Obtenemos y listamos directorios
