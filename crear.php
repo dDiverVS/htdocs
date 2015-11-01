@@ -13,6 +13,7 @@ echo '
 		if ($_GET["nocrear"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un nombre de directorio a crear</font></h2>";}
 		include 'seguridad.php';
 		include 'conexion.php'; 
+		include 'menu_sup.php';
 		include 'contenido.php';
 	echo'
 	</body>
