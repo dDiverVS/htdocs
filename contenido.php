@@ -74,9 +74,6 @@ echo '
 						}
 						if (strpos($url,'renombrar')!== false) {
 							echo '
-							<td WIDTH="16" HEIGHT="30" class="contenido">
-								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16"  HEIGHT="16"/></button>
-							</td>
 							<td WIDTH="16" HEIGHT="30">
 								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.PNG WIDTH="16"  HEIGHT="16"/></button>
 							</td>';
@@ -112,18 +109,12 @@ echo '
 					}
 					if (strpos($url,'descargar')!== false) {
 						echo '
-						<td class="contenido" WIDTH="16"  HEIGHT="30" >
-							<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.PNG WIDTH="16"  HEIGHT="16"/></button>
-						</td>
 						<td WIDTH="16"  HEIGHT="30" >
 							<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.PNG WIDTH="16"  HEIGHT="16"/></button>
 						</td>';
 					}
 					if (strpos($url,'renombrar')!== false) {
 						echo '
-						<td class="contenido" WIDTH="16" HEIGHT="30">
-							<button class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16" HEIGHT="16"/></button>
-						</td>
 						<td WIDTH="16" HEIGHT="30">
 							<button class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.PNG WIDTH="16" HEIGHT="16"/></button>
 						</td>';
