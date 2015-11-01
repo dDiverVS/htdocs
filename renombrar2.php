@@ -18,7 +18,7 @@ echo '
     <form onsubmit="setTimeout(\'document.forms[0].reset()\', 500)" action="renombrar3.php" method="POST" >     ';
 
 //si se ha indicado un fichero y se ha pulsado enviar en renombrar.php se ejecuta lo siguiente:
-if (isset($_POST['renombrar']) && isset($_POST['id_renombrar'])){
+if ( isset($_POST['id_renombrar'])){
 
 //recogemos el nombre antiguo del fichero en una variable de sesion que se conservará para el siguiente fichero
 	$_SESSION['nombreantiguo']=$_POST['id_renombrar'];

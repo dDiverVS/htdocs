@@ -50,9 +50,8 @@ echo '
 
 					echo "
 					<tr class='tabla'>
-						<td bgcolor='#E0E0E0'>
-							<input type='radio' name='id_renombrar' value='$objeto'/>
-						</td>
+						<td WIDTH='16'  HEIGHT='30' >
+								<button class='renombrar'  type='submit' value='".$objeto."' name='id_renombrar'><img src=img/modificar.jpg WIDTH='16'  HEIGHT='16'/></button>
 						<td bgcolor='#E0E0E0' align='center'>
 							".$objeto."
 						</td>
@@ -71,9 +70,6 @@ echo '
 				//Seleccionar el fichero a renombrar
 				echo '
 				</table>
-				<p align="center">
-					<input name="renombrar" type="submit" value="Renombrar Archivo" />
-				</p>
 			</form>
 	</body>
 </html>';
