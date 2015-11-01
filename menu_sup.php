@@ -1,6 +1,6 @@
 <?php
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-echo '
+echo '			
 		  		<span class="datos" >
 						<!--SISTEMA: <b>'.php_uname("s").'</b><br/><br/>-->
 						SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
@@ -25,39 +25,39 @@ echo '
 		<br/>
 		<table width="30%" border="0" align="center" cellspacing="3" cellpadding="3" >
 			<tr>
-				<th class="enlaces ';
+				<th class="enlaces" ';
 						if (strpos($url,'descargar')!== false) {
-							echo 'seleccionado" ';
+							echo 'class="seleccionado"';
 						}
-						echo '">
+						echo '>
 					Descargar fichero
 				</th>
-				<th class="enlaces ';
+				<th class="enlaces" ';
 						if (strpos($url,'subida')!== false) {
-							echo 'seleccionado" ';
+							echo 'class="seleccionado"';
 						}
-						echo '">
+						echo '>
 					Subir fichero
 				</th>
-				<th class="enlaces ';
+				<th class="enlaces" ';
 						if (strpos($url,'borrar')!== false) {
-							echo 'seleccionado" ';
+							echo 'class="seleccionado"';
 						}
-						echo '">
+						echo '>
 					Borrar
 				</th>
-				<th class="enlaces ';
+				<th class="enlaces" ';
 						if (strpos($url,'crear')!== false) {
-							echo 'seleccionado" ';
+							echo 'class="seleccionado"';
 						}
 						echo '" >
 					Crear Directorio
 				</th>
-				<th class="enlaces ';
+				<th class="enlaces" ';
 						if (strpos($url,'renombrar')!== false) {
-							echo 'seleccionado" ';
+							echo 'class="seleccionado"';
 						}
-						echo '">
+						echo '>
 					Renombrar
 				</th>
 			</tr>
