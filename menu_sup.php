@@ -1,11 +1,13 @@
 <?php
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+
 echo '			
 		  		<span class="datos" >
-					
+						<!--SISTEMA: <b>'.php_uname("s").'</b><br/><br/>-->
 						SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
 						USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
 						DIRECTORIO ACTUAL: <b>'.$_SESSION["carpeta_actual"].'</b><br/><br/>
+						
 						
 					
 				</span>
