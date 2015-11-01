@@ -88,7 +88,14 @@ echo '
 					#Filemtime obtiene la fecha de modificacion del fichero; y date le da el formato de salida
 				}
 				echo '
-				<tr class="tabla">
+				<tr class="tabla">';
+				if (strpos($url,'borrar')!== false) {
+					echo '
+					<td bgcolor="#E0E0E0">
+						<input type="checkbox" name="id_borrar[]"" value="'.$objeto.'"/>
+					</td>';
+				}
+				echo '
 					<td  bgcolor="#E0E0E0" align="center">
 						'.str_replace('./', '', $objeto).'
 					</td>
