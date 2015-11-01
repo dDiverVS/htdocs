@@ -49,17 +49,14 @@ echo '
 					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
 				</tr>
 				<tr>
-<<<<<<< HEAD
 					<td class="contenido"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.PNG" WIDTH="16"  HEIGHT="16"/></a></td>
 					<td class="contenido"> Subir directorio</td>
 					<td class="contenido"></td>
 					<td class="contenido"></td>
-=======
 					<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.PNG" WIDTH="16"  HEIGHT="16"/></a></td>
 					<td bgcolor="#E0E0E0"  align="center"> Subir directorio</td>
 					<td></td>
 					<td></td>
->>>>>>> origin/master
 				</tr>';
 			
 			//Obtenemos y listamos directorios
@@ -81,13 +78,11 @@ echo '
 						}
 						if (strpos($url,'renombrar')!== false) {
 							echo '
-<<<<<<< HEAD
 							<td WIDTH="16" HEIGHT="30" class="contenido">
 								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16"  HEIGHT="16"/></button>
-=======
+							</td>
 							<td WIDTH="16" HEIGHT="30">
 								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.PNG WIDTH="16"  HEIGHT="16"/></button>
->>>>>>> origin/master
 							</td>';
 						}
 						echo '
@@ -121,24 +116,20 @@ echo '
 					}
 					if (strpos($url,'descargar')!== false) {
 						echo '
-<<<<<<< HEAD
 						<td class="contenido" WIDTH="16"  HEIGHT="30" >
 							<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.PNG WIDTH="16"  HEIGHT="16"/></button>
-=======
+						</td>
 						<td WIDTH="16"  HEIGHT="30" >
 							<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.PNG WIDTH="16"  HEIGHT="16"/></button>
->>>>>>> origin/master
 						</td>';
 					}
 					if (strpos($url,'renombrar')!== false) {
 						echo '
-<<<<<<< HEAD
 						<td class="contenido" WIDTH="16" HEIGHT="30">
 							<button class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16" HEIGHT="16"/></button>
-=======
+						</td>
 						<td WIDTH="16" HEIGHT="30">
 							<button class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.PNG WIDTH="16" HEIGHT="16"/></button>
->>>>>>> origin/master
 						</td>';
 					}
 					echo '
