@@ -62,8 +62,8 @@ echo '
 				$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
 				foreach ($lista_bruta as $comprobacion) {
 					if ($comprobacion[0]=='d') { //Compruebo si es un directorio
-						$objeto=str_replace('./', '',$lista['$x']);
-						$objeto2="<i><a href='home.php?carpeta_destino=".str_replace('./', '',$lista['$x'])."'>".str_replace('./', '',$lista['$x'])."</a></i>";
+						$objeto=str_replace('./', '',$lista[$x]);
+						$objeto2="<i><a href='home.php?carpeta_destino=".str_replace('./', '',$lista[$x])."'>".str_replace('./', '',$lista[$x])."</a></i>";
 						echo '
 						<tr class="tabla">';
 						if (strpos($url,'borrar')!== false) {
@@ -96,7 +96,7 @@ echo '
 			$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
 			foreach ($lista_bruta as $comprobacion) {
 				if ($comprobacion[0]=='-') {
-					$objeto=$lista['$x'];
+					$objeto=$lista[$x];
 					$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
 					$fecha=date("d/m/y h:i:s", ftp_mdtm($conn,$objeto));
 					echo '
