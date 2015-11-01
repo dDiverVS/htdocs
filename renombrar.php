@@ -19,58 +19,7 @@ echo '
 		include 'menu_sup.php';
 		//Seleccion fichero/directorio a renombrar
 		include 'contenido.php';
-		echo'
-		<h3 align="center">Seleccione el fichero que desea renombrar</h3>
-		<form action="renombrar2.php" align="center"  method="post" name="renombrar" id="renombrar">
-			<table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
-				<tr>
-					<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Renombrar</strong></font></div></td>
-					<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
-					<td width="20%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>
-					<td width="20%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></td>
-					<td width="20%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
-				</tr>';
-
-				$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
-				foreach ($lista as $objeto) {
-					#Se leen todos los ficheros y directorios del directorios
-					$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
-				
-					#Obtiene tamaño de archivo y lo pasa a KB
-					if($tamano=="-0.00 Kb") {
-						# Si es -0.00 Kb se refiere a un directorio
-						$tipo="directorio";
-						$tamano="&nbsp;";
-						$fecha="&nbsp;";
-					}
-					else {$tipo="fichero";
-						$fecha=date("d/m/y h:i:s", ftp_mdtm($conn,$objeto));
-						#Filemtime obtiene la fecha de modificacion del fichero; y date le da el formato de salida
-					}
-
-					echo "
-					<tr class='tabla'>
-						<td WIDTH='16'  HEIGHT='30' >
-								<button class='renombrar'  type='submit' value='".$objeto."' name='id_renombrar'><img src=img/modificar.jpg WIDTH='16'  HEIGHT='16'/></button>
-						<td bgcolor='#E0E0E0' align='center'>
-							".$objeto."
-						</td>
-						<td bgcolor='#E0E0E0' align='center'>
-							".$tamano."
-						</td>
-						<td bgcolor='#E0E0E0' align='center'>
-							".$tipo."
-						</td>
-						<td bgcolor='#E0E0E0' align='center'>
-							".$fecha."
-						</td>
-					</tr>";
-					}
-
-				//Seleccionar el fichero a renombrar
-				echo '
-				</table>
-			</form>
+echo '
 	</body>
 </html>';
 ?>
