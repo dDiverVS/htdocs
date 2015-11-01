@@ -3,6 +3,7 @@ include 'seguridad.php';
 include 'conexion.php';
 
 //Version Windows
+if (strpos(php_uname("s"),"Windows")!==false) {
 $ruta='C:"'.'xampp"'.'htdocs"'.'.hidden"';
 $ruta2=addslashes($ruta);
 $ruta3=str_replace('"', '', $ruta2);
@@ -25,16 +26,17 @@ if (isset($_POST['id_descargar'])) {
 			}
 			else {
 				exec('del "'.$fichero.'" /Q /F');
-				header ('location: http://localhost/descargar.php');
+				header ('location: ./descargar.php');
 			}
 		}
 	}
-	header ('location: http://localhost/descargar.php?descarga="correcta"');
+	header ('location: ./descargar.php?descarga="correcta"');
 }
-
+}
+else{
 
 //version linux
-/*$ruta='/var/www/html/.hidden';
+$ruta='/var/www/html/.hidden';
 
 if (isset($_POST['id_descargar'])) {
 	$id_descargar=$_POST['id_descargar'];
@@ -53,10 +55,11 @@ if (isset($_POST['id_descargar'])) {
 			}
 			else {
 				exec('rm "'.$fichero.'"');
-				header ('location: http://localhost/descargar.php');
+				header ('location: ./descargar.php');
 			}
 		}
 	}
-	header ('location: http://localhost/descargar.php?descarga="correcta"');
-}*/
+	header ('location: ./descargar.php?descarga="correcta"');
+}
+}
 ?>
