@@ -26,16 +26,21 @@ elseif (strpos($url,'subida')!==false) {
 }
 
 echo '
-<h2>Directorios</h2>
 <table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
-	<th colspan="2">
-		<div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div>
-	</th>
+	<tr>
+		<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></th>
+		<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></th>
+		<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tamaño</strong></font></div></th>
+		<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
+	</tr>
 	<tr>
 		<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.png" WIDTH="16"  HEIGHT="16"/></a></td>
 		<td bgcolor="#E0E0E0"  align="center"> Subir directorio</td>
+		<td></td>
+		<td></td>
 	</tr>';
 
+//Obtenemos y listamos directorios
 $lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
 foreach ($lista as $objeto) {
 	#Se leen todos los ficheros y directorios del directorios
@@ -44,27 +49,19 @@ foreach ($lista as $objeto) {
 	if($tamano=="-0.00 Kb" ) # Si es -0.00 Kb se refiere a un directorio
 	{
 		$objeto="<i><a href='home.php?carpeta_destino=".str_replace('./', '', $objeto)."'>".str_replace('./', '', $objeto)."</a></i>";
-	echo '
+		echo '
 	<tr class="tabla">
 		<td  bgcolor="#E0E0E0" align="center">
 			'.str_replace('./', '', $objeto).'
 		</td>
+		<td>Directorio</td>
+		<td></td>
+		<td></td>
 	</tr>';
 	}
 }
-echo '
-</table>';
 
-echo '
-<h2>Archivos</h2>
-<table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
-	<tr>
-		<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></td>
-		<td width="20%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></td>
-		<td width="30%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></td>
-	</tr>
-';
-
+//Obtenemos ficheros y aplicamos función dependiendo de la URL
 $lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
 foreach ($lista as $objeto) {
 	#Se leen todos los ficheros y directorios del directorios
@@ -79,6 +76,7 @@ foreach ($lista as $objeto) {
 		<td  bgcolor="#E0E0E0" align="center">
 			'.str_replace('./', '', $objeto).'
 		</td>
+		<td>Fichero</td>
 		<td bgcolor="#E0E0E0"  align="center">
 			'.$tamano.'
 		</td>
