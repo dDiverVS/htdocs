@@ -57,16 +57,49 @@ echo '
 			
 			//Obtenemos y listamos directorios
 			if (strpos($url,'borrar')!==false || strpos($url,'crear')!==false || strpos($url,'home')!==false || strpos($url,'renombrar')!==false || strpos($url,'subida')!==false) {
+				$x=0;
 				$lista_bruta=ftp_rawlist($conn,'.');
 				$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
-				foreach ($lista as $objeto) {
-					#Se leen todos los ficheros y directorios del directorios
-					$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
-					#Obtiene tamaño de archivo y lo pasa a KB
-					if($tamano=="-0.00 Kb" ) # Si es -0.00 Kb se refiere a un directorio
-					{
-						$objeto="<i><a href='home.php?carpeta_destino=".str_replace('./', '', $objeto)."'>".str_replace('./', '', $objeto)."</a></i>";
+				foreach ($lista_bruta as $comprobacion) {
+					if ($comprobacion[0]=='d') { //Compruebo si es un directorio
+						$objeto=str_replace('./', '',$lista['$x']);
+						$objeto2="<i><a href='home.php?carpeta_destino=".str_replace('./', '',$lista['$x'])."'>".str_replace('./', '',$lista['$x'])."</a></i>";
 						echo '
+						<tr class="tabla">';
+						if (strpos($url,'borrar')!== false) {
+							echo '
+							<td bgcolor="#E0E0E0">
+								<input type="checkbox" name="id_borrar[]"" value="'.$objeto.'"/>
+							</td>';
+						}
+						if (strpos($url,'renombrar')!== false) {
+							echo '
+							<td WIDTH="16" HEIGHT="30">
+								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16"  HEIGHT="16"/></button>
+							</td>';
+						}
+						echo '
+							<td  bgcolor="#E0E0E0" align="center">
+								'.str_replace('./', '', $objeto2).'
+							</td>
+							<td>Directorio</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>';
+					}
+					++$x;
+				}
+			}
+			//Obtenemos ficheros y aplicamos función dependiendo de la URL
+			$x=0;
+			$lista_bruta=ftp_rawlist($conn,'.');
+			$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
+			foreach ($lista_bruta as $comprobacion) {
+				if ($comprobacion[0]=='-') {
+					$objeto=$lista['$x'];
+					$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
+					$fecha=date("d/m/y h:i:s", ftp_mdtm($conn,$objeto));
+					echo '
 					<tr class="tabla">';
 					if (strpos($url,'borrar')!== false) {
 						echo '
@@ -76,69 +109,31 @@ echo '
 					}
 					if (strpos($url,'descargar')!== false) {
 						echo '
-						<td>
+						<td WIDTH="16"  HEIGHT="30" >
+							<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.png WIDTH="16"  HEIGHT="16"/></button>
 						</td>';
 					}
 					if (strpos($url,'renombrar')!== false) {
 						echo '
 						<td WIDTH="16" HEIGHT="30">
-							<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16"  HEIGHT="16"/></button>
+							<button class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16" HEIGHT="16"/></button>
 						</td>';
 					}
 					echo '
 						<td  bgcolor="#E0E0E0" align="center">
 							'.str_replace('./', '', $objeto).'
 						</td>
-						<td>Directorio</td>
-						<td></td>
-						<td></td>
+						<td>Fichero</td>
+						<td bgcolor="#E0E0E0"  align="center">
+							'.$tamano.'
+						</td>
+						<td  bgcolor="#E0E0E0"  align="center">
+							'.$fecha.'	
+						</td>
 					</tr>';
-					}
 				}
+				++$x;
 			}
-			//Obtenemos ficheros y aplicamos función dependiendo de la URL
-			$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
-			foreach ($lista as $objeto) {
-				#Se leen todos los ficheros y directorios del directorios
-				$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
-				#Obtiene tamaño de archivo y lo pasa a KB
-				if($tamano!=="-0.00 Kb" ) {
-					$fecha=date("d/m/y h:i:s", ftp_mdtm($conn,$objeto));
-					#Filemtime obtiene la fecha de modificacion del fichero; y date le da el formato de salida
-				}
-				echo '
-				<tr class="tabla">';
-				if (strpos($url,'borrar')!== false) {
-					echo '
-					<td bgcolor="#E0E0E0">
-						<input type="checkbox" name="id_borrar[]"" value="'.$objeto.'"/>
-					</td>';
-				}
-				if (strpos($url,'descargar')!== false) {
-					echo '
-					<td WIDTH="16"  HEIGHT="30" >
-						<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.png WIDTH="16"  HEIGHT="16"/></button>
-					</td>';
-				}
-				if (strpos($url,'renombrar')!== false) {
-					echo '
-					<td WIDTH="16" HEIGHT="30">
-						<button class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16" HEIGHT="16"/></button>
-					</td>';
-				}
-				echo '
-					<td  bgcolor="#E0E0E0" align="center">
-						'.str_replace('./', '', $objeto).'
-					</td>
-					<td>Fichero</td>
-					<td bgcolor="#E0E0E0"  align="center">
-						'.$tamano.'
-					</td>
-					<td  bgcolor="#E0E0E0"  align="center">
-						'.$fecha.'	
-					</td>
-				</tr>';
-				}
 			echo '
 			</table>';
 			if (strpos($url, 'borrar')!==false) {
