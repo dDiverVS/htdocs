@@ -102,7 +102,7 @@ echo '
 					<div align="center">
 						<a href="renombrar.php" class="button"/><img class="zoomIt';
 						if (strpos($url,'renombrar')!== false) {
-							echo 'seleccionado2" ';
+							echo ' seleccionado2';
 						}
 						echo '" src="img/modificar.jpg" title="Renombrar" width="50" height="50" alt="Renombrar"> </a>
 					</div>
