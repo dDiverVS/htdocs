@@ -20,7 +20,8 @@ elseif (strpos($url,'home')!==false) {
 }
 elseif (strpos($url,'renombrar')!==false) {
 	echo '
-	<h3 align="center">Seleccione el fichero que desea renombrar</h3>';
+	<h3 align="center">Seleccione el fichero que desea renombrar</h3>
+	<form action="renombrar2.php" align="center"  method="post" name="renombrar" id="renombrar">';
 }
 elseif (strpos($url,'subida')!==false) {
 	echo '
@@ -38,7 +39,9 @@ echo '
 				if (strpos($url, 'descargar')!==false) {
 					echo '<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Descargar</strong></font></div></td>';
 				}
-			
+				if (strpos($url, 'renombrar')!==false) {
+					echo '<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Renombrar</strong></font></div></td>';
+				}			
 				echo '
 					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></th>
 					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></th>
@@ -73,6 +76,12 @@ echo '
 					echo '
 					<td>
 					</td>';
+				}
+				if (strpos($url,'renombrar')!== false) {
+					echo '
+					<td WIDTH="16"  HEIGHT="30" >
+								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16"  HEIGHT="16"/></button>
+					<td bgcolor="#E0E0E0" align="center">';
 				}
 				echo '
 					<td  bgcolor="#E0E0E0" align="center">
@@ -109,6 +118,12 @@ echo '
 						<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.png WIDTH="16"  HEIGHT="16"/></button>
 					</td>';
 				}
+				if (strpos($url,'renombrar')!== false) {
+					echo '
+					<td WIDTH="16"  HEIGHT="30" >
+								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16"  HEIGHT="16"/></button>
+					<td bgcolor="#E0E0E0" align="center">';
+				}
 				echo '
 					<td  bgcolor="#E0E0E0" align="center">
 						'.str_replace('./', '', $objeto).'
@@ -118,7 +133,7 @@ echo '
 						'.$tamano.'
 					</td>
 					<td  bgcolor="#E0E0E0"  align="center">
-						'.$fecha.'
+						'.$fecha.'	
 					</td>
 				</tr>';
 				}
@@ -130,14 +145,19 @@ echo '
 				<input name="Borrar" type="submit" value="Borrar Archivo"/>
 			</p>
 			</form>';
-}
-if (strpos($url, 'crear')!==false) {
-		echo '
-		<form action="crear2.php" onsubmit="setTimeout("document.forms[0].reset()", 2000)"  method="post" name="crear_ftp" id="crear_ftp">
-			<p align="center">
-				<input class="barra" name="crear" align="center" type="text" title="El nombre de los directorios no pueden contener \\ /:?*><\"|" pattern="[^\"\\x5c \"\x22 \"\x2f \"\x3a \"\x3f \"\x2a \"\x3c \"\x3e \"\x7c]+" /> 
-				<input name="envio" align="center" type="submit" value="Crear Directorio" />
-			</p>
-		</form>';
-	}
+			}
+		
+			if (strpos($url, 'crear')!==false) {
+			echo '
+			<form action="crear2.php" onsubmit="setTimeout("document.forms[0].reset()", 2000)"  method="post" name="crear_ftp" id="crear_ftp">
+				<p align="center">
+					<input class="barra" name="crear" align="center" type="text" title="El nombre de los directorios no pueden contener \\ /:?*><\"|" pattern="[^\"\\x5c \"\x22 \"\x2f \"\x3a \"\x3f \"\x2a \"\x3c \"\x3e \"\x7c]+" /> 
+					<input name="envio" align="center" type="submit" value="Crear Directorio" />
+				</p>
+			</form>';
+			}
+			if (strpos($url, 'renombrar')!==false) {
+				echo '
+			</form>';
+			}
 ?>

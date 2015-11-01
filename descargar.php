@@ -15,9 +15,6 @@ echo '
 	//Incluye el archivo de seguridad para mantener la sesion activa
 	include 'seguridad.php';
 	include 'conexion.php';
-	
-		//Enlaces para acceder a diferentes opciones
-	
 	include 'menu_sup.php';
 	include  'contenido.php';
 	echo '

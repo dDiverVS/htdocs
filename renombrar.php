@@ -15,10 +15,10 @@ echo '
         if ($_GET["norenombrar2"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un nombre nuevo para renombrar</font></h2>";}
 		include 'seguridad.php';
 		include 'conexion.php'; 
-		
 		//Enlaces para acceder a diferentes opciones
 		include 'menu_sup.php';
 		//Seleccion fichero/directorio a renombrar
+		include 'contenido.php';
 		echo'
 		<h3 align="center">Seleccione el fichero que desea renombrar</h3>
 		<form action="renombrar2.php" align="center"  method="post" name="renombrar" id="renombrar">
