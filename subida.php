@@ -63,7 +63,11 @@ echo '
 		<form action="subida2.php" method="post" name="subida" id="subida" enctype="multipart/form-data">
 			<p align="center">
 				<label>Archivo 1</label>
-				<input name="archivo" type="file"/>
+				<input name="archivo1" type="file"/><br/>
+				<label>Archivo 2</label>
+				<input name="archivo2" type="file"/><br/>
+				<label>Archivo 3</label>
+				<input name="archivo3" type="file"/><br/>
 				<br/>
 				<br/>
 				<br/>

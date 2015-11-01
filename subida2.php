@@ -14,30 +14,50 @@ echo '
 	
 		//Enlaces para acceder a diferentes opciones
 		include 'menu_sup.php';
-
+$x=0;
 //si el array $_FILES["archivo"] contiene un nombre, osea,  se va a subir ningun fichero:
-	if(!empty($_FILES["archivo"]["name"]))
+	if(!empty($_FILES["archivo1"]["name"]))
 	{
 		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo"]["name"]);
-
+		$file = $_FILES["archivo1"]["tmp_name"];
+		$base_archivo = basename($_FILES["archivo1"]["name"]);
 
 		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo"]);
-		ftp_quit($conn);
-
+		unset($_FILES["archivo1"]);
+		if(empty($_FILES["archivo2"]["name"]) && empty($_FILES["archivo3"]["name"])) ftp_quit($conn);
+			if ($upload==true) $x++;
 	}
-		//si no se ha indicado un fichero para subir, se redirecciona al usuario a la pagina de subida.php
-	else {header ("Location: subida.php?noarchivo=si ");
+
+if(!empty($_FILES["archivo2"]["name"]))
+	{
+		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
+		$file = $_FILES["archivo2"]["tmp_name"];
+		$base_archivo = basename($_FILES["archivo2"]["name"]);
+
+		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
+		unset($_FILES["archivo2"]);
+		if(empty($_FILES["archivo3"]["name"])) ftp_quit($conn);
+			if ($upload==true) $x++;
+	}
+
+if(!empty($_FILES["archivo3"]["name"]))
+	{
+		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
+		$file = $_FILES["archivo3"]["tmp_name"];
+		$base_archivo = basename($_FILES["archivo3"]["name"]);
+
+		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
+		unset($_FILES["archivo3"]);
+		ftp_quit($conn);
+			if ($upload==true) $x++;
 	}
 
 	//si la subida del fichero es exitosa, se le indica al usuario con un texto afirmativo.En caso contrario, se le comunica con un texto de error	
-	if ($upload==true) {
-			echo "<h2 align='center'><font color='green'>El fichero <strong><font color='black'>".$base_archivo." </font></strong> se ha subido correctamente</font></h2>";
+	if ($x!==0) {
+			echo "<h2 align='center'><font color='green'>Se han subido ".$x." ficheros correctamente</h2>";
 	} 
 	else { 
-			echo "<h2 align='center'><font color='red'>El fichero <font color='black'>".$base_archivo."</font> no se ha subido</font></h2> ";
+			echo "<h2 align='center'><font color='red'>No se ha subido ningún fichero, inténtelo de nuevo</h2> ";
 	}
 
 ?> 
