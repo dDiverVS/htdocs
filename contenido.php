@@ -11,7 +11,8 @@ elseif (strpos($url,'crear')!==false) {
 }
 elseif (strpos($url,'descargar')!==false) {
 	echo '
-	<h3 align="center">Seleccione el fichero que desea descargar</h3>';
+	<h3 align="center">Seleccione el fichero que desea descargar</h3>
+	<form action="descargar2.php" align="center"  method="post" name="descargar" id="descargar">';
 }
 elseif (strpos($url,'home')!==false) {
 	echo '
@@ -34,7 +35,9 @@ echo '
 					echo '
 					<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Borrar</strong></font></div></td>';
 				}
-				
+				if (strpos($url, 'descargar')!==false) {
+					echo '<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Descargar</strong></font></div></td>';
+				}
 			
 				echo '
 					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></th>
@@ -66,6 +69,11 @@ echo '
 						<input type="checkbox" name="id_borrar[]"" value="'.$objeto.'"/>
 					</td>';
 				}
+				if (strpos($url,'descargar')!== false) {
+					echo '
+					<td>
+					</td>';
+				}
 				echo '
 					<td  bgcolor="#E0E0E0" align="center">
 						'.str_replace('./', '', $objeto).'
@@ -93,6 +101,12 @@ echo '
 					echo '
 					<td bgcolor="#E0E0E0">
 						<input type="checkbox" name="id_borrar[]"" value="'.$objeto.'"/>
+					</td>';
+				}
+				if (strpos($url,'descargar')!== false) {
+					echo '
+					<td WIDTH="16"  HEIGHT="30" >
+						<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.png WIDTH="16"  HEIGHT="16"/></button>
 					</td>';
 				}
 				echo '
