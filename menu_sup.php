@@ -72,9 +72,8 @@ echo '
 						echo '">
 					Renombrar
 				</th>
-				
-				
-				
+			</tr>
+
 			<tr>
 				<td>
 					<div align="center">
