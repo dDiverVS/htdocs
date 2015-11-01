@@ -1,40 +1,28 @@
 <?php
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-
-echo '			
+echo '
 		  		<span class="datos" >
 						<!--SISTEMA: <b>'.php_uname("s").'</b><br/><br/>-->
 						SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
 						USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
 						DIRECTORIO ACTUAL: <b>'.$_SESSION["carpeta_actual"].'</b><br/><br/>
-						
-						
-					
 				</span>
-			
-		
 				<span class="logo" >
-					
 						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="350" height="100" alt="Volver a Inicio"> </a>
-					
 				</span>
 				<span class="enlaces" >
-					
 					<b>Cerrar Sesi&oacute;n</b>
 				</span>
 				<span class="iconocerrar" >
 					<a href="cerrar.php" class="button">
 					<img class="zoomIt"   src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
-				
 				</span>
-			
 		<br/>
 		<br/>
 		<br/>
 		<br/>
 		<br/>
 		<br/>
-		
 		<table width="30%" border="0" align="center" cellspacing="3" cellpadding="3" >
 			<tr>
 				<th class="enlaces ';
@@ -73,7 +61,6 @@ echo '
 					Renombrar
 				</th>
 			</tr>
-
 			<tr>
 				<td>
 					<div align="center">
@@ -120,11 +107,7 @@ echo '
 						echo '" src="img/modificar.jpg" title="Renombrar" width="50" height="50" alt="Renombrar"> </a>
 					</div>
 				</td>
-				
-				
-				
-				
-			<tr>
+			</tr>
 		</table>
 ';
 ?>
