@@ -79,9 +79,9 @@ echo '
 				}
 				if (strpos($url,'renombrar')!== false) {
 					echo '
-					<td WIDTH="16"  HEIGHT="30" >
-								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16"  HEIGHT="16"/></button>
-					<td bgcolor="#E0E0E0" align="center">';
+					<td WIDTH="16" HEIGHT="30">
+						<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16"  HEIGHT="16"/></button>
+					</td>';
 				}
 				echo '
 					<td  bgcolor="#E0E0E0" align="center">
