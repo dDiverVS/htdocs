@@ -3,7 +3,7 @@ echo '
 <html>
 	<head>
 		<title>Renombrar ficheros</title>
-		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+		<link href="css/estilo.css" rel="stylesheet" type="text/css"/>
 		<link rel="icon" type="image/ico" href="img/favicon.ico" />
 	</head>
 

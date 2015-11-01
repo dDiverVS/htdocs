@@ -3,7 +3,7 @@ $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 if (strpos($url,'borrar')!== false) {
 	echo '
 	<h3 align="center">Indique el nombre del fichero a eliminar</h3>
-	<form action="borrar2.php" align="center"  method="post" name="borrar_ftp" id="borrar_ftp">';
+	<form action="borrar2.php" method="post" name="borrar_ftp" id="borrar_ftp">';
 }
 elseif (strpos($url,'crear')!==false) {
 	echo '
@@ -12,7 +12,7 @@ elseif (strpos($url,'crear')!==false) {
 elseif (strpos($url,'descargar')!==false) {
 	echo '
 	<h3 align="center">Seleccione el fichero que desea descargar</h3>
-	<form action="descargar2.php" align="center"  method="post" name="descargar" id="descargar">';
+	<form action="descargar2.php" method="post" name="descargar" id="descargar">';
 }
 elseif (strpos($url,'home')!==false) {
 	echo '
@@ -21,7 +21,7 @@ elseif (strpos($url,'home')!==false) {
 elseif (strpos($url,'renombrar')!==false) {
 	echo '
 	<h3 align="center">Seleccione el fichero que desea renombrar</h3>
-	<form action="renombrar2.php" align="center"  method="post" name="renombrar" id="renombrar">';
+	<form action="renombrar2.php" method="post" name="renombrar" id="renombrar">';
 }
 elseif (strpos($url,'subida')!==false) {
 	echo '

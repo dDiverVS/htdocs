@@ -15,7 +15,7 @@ echo '
 		
 				<span class="logo" >
 					
-						<a href="home.php"> <img src="img/logo.png" alig title="Volver a Inicio" width="350" height="100" alt="Volver a Inicio"> </a>
+						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="350" height="100" alt="Volver a Inicio"> </a>
 					
 				</span>
 				<span class="enlaces" >
