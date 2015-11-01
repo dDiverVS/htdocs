@@ -49,10 +49,10 @@ echo '
 					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
 				</tr>
 				<tr>
-					<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.png" WIDTH="16"  HEIGHT="16"/></a></td>
-					<td bgcolor="#E0E0E0"  align="center"> Subir directorio</td>
-					<td></td>
-					<td></td>
+					<td class="contenido"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.png" WIDTH="16"  HEIGHT="16"/></a></td>
+					<td class="contenido"> Subir directorio</td>
+					<td class="contenido"></td>
+					<td class="contenido"></td>
 				</tr>';
 			
 			//Obtenemos y listamos directorios
@@ -68,23 +68,23 @@ echo '
 						<tr class="tabla">';
 						if (strpos($url,'borrar')!== false) {
 							echo '
-							<td bgcolor="#E0E0E0">
+							<td class="contenido">
 								<input type="checkbox" name="id_borrar[]"" value="'.$objeto.'"/>
 							</td>';
 						}
 						if (strpos($url,'renombrar')!== false) {
 							echo '
-							<td WIDTH="16" HEIGHT="30">
+							<td WIDTH="16" HEIGHT="30" class="contenido">
 								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16"  HEIGHT="16"/></button>
 							</td>';
 						}
 						echo '
-							<td  bgcolor="#E0E0E0" align="center">
+							<td class="contenido">
 								'.str_replace('./', '', $objeto2).'
 							</td>
-							<td>Directorio</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td class="contenido">Directorio</td>
+							<td class="contenido">&nbsp;</td>
+							<td class="contenido">&nbsp;</td>
 						</tr>';
 					}
 					++$x;
@@ -103,31 +103,31 @@ echo '
 					<tr class="tabla">';
 					if (strpos($url,'borrar')!== false) {
 						echo '
-						<td bgcolor="#E0E0E0">
+						<td class="contenido">
 							<input type="checkbox" name="id_borrar[]"" value="'.$objeto.'"/>
 						</td>';
 					}
 					if (strpos($url,'descargar')!== false) {
 						echo '
-						<td WIDTH="16"  HEIGHT="30" >
+						<td class="contenido" WIDTH="16"  HEIGHT="30" >
 							<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.png WIDTH="16"  HEIGHT="16"/></button>
 						</td>';
 					}
 					if (strpos($url,'renombrar')!== false) {
 						echo '
-						<td WIDTH="16" HEIGHT="30">
+						<td class="contenido" WIDTH="16" HEIGHT="30">
 							<button class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16" HEIGHT="16"/></button>
 						</td>';
 					}
 					echo '
-						<td  bgcolor="#E0E0E0" align="center">
+						<td  class="contenido">
 							'.str_replace('./', '', $objeto).'
 						</td>
-						<td>Fichero</td>
-						<td bgcolor="#E0E0E0"  align="center">
+						<td class="contenido">Fichero</td>
+						<td class="contenido">
 							'.$tamano.'
 						</td>
-						<td  bgcolor="#E0E0E0"  align="center">
+						<td class="contenido">
 							'.$fecha.'	
 						</td>
 					</tr>';

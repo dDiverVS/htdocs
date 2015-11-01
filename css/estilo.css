@@ -105,3 +105,8 @@ tr.tabla:hover{
 	-moz-border-radius:10px;
 	-webkit-border-radius: 10px ;
 }
+
+.contenido {
+	background-color: #E0E0E0;
+	text-align: center;
+}
