@@ -100,7 +100,7 @@ tr.tabla:hover{
 	border-radius:150px;
 }
 .seleccionado2{
-	background:url(../img/ruido.png);
+	background:url(../img/ruido.PNG);
 	border-radius:10px ;
 	-moz-border-radius:10px;
 	-webkit-border-radius: 10px ;

@@ -49,7 +49,7 @@ echo '
 					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
 				</tr>
 				<tr>
-					<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.jpg" WIDTH="16"  HEIGHT="16"/></a></td>
+					<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.PNG" WIDTH="16"  HEIGHT="16"/></a></td>
 					<td bgcolor="#E0E0E0"  align="center"> Subir directorio</td>
 					<td></td>
 					<td></td>
@@ -75,7 +75,7 @@ echo '
 						if (strpos($url,'renombrar')!== false) {
 							echo '
 							<td WIDTH="16" HEIGHT="30">
-								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16"  HEIGHT="16"/></button>
+								<button class="renombrar"  type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.PNG WIDTH="16"  HEIGHT="16"/></button>
 							</td>';
 						}
 						echo '
@@ -110,13 +110,13 @@ echo '
 					if (strpos($url,'descargar')!== false) {
 						echo '
 						<td WIDTH="16"  HEIGHT="30" >
-							<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.jpg WIDTH="16"  HEIGHT="16"/></button>
+							<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.PNG WIDTH="16"  HEIGHT="16"/></button>
 						</td>';
 					}
 					if (strpos($url,'renombrar')!== false) {
 						echo '
 						<td WIDTH="16" HEIGHT="30">
-							<button class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.jpg WIDTH="16" HEIGHT="16"/></button>
+							<button class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.PNG WIDTH="16" HEIGHT="16"/></button>
 						</td>';
 					}
 					echo '

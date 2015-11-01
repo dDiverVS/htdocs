@@ -36,7 +36,7 @@ p.indique{
 	text-shadow: white 0.1em 0.1em 0.2em;
 }
 .botonlogin{	
-background-image: url('../img/login.png'); 
+background: url(../img/login.PNG); 
 	width: 69px; 
 	height: 75px; 
 	border-width: 5px;
@@ -48,7 +48,7 @@ background-image: url('../img/login.png');
 	font:75% sans-serif;	
 	float:left;
 	width:500px;
-	background-image:url(../img/ruido-index.jpg);
+	background-image:url(../img/ruido-index.PNG);
 	background-size: 100%; 
 	color: green; 
 	text-shadow: white 0.1em 0.1em 0.1em;
