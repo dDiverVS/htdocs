@@ -2,7 +2,8 @@
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 if (strpos($url,'borrar')!== false) {
 	echo '
-	<h3 align="center">Indique el nombre del fichero a eliminar</h3>';
+	<h3 align="center">Indique el nombre del fichero a eliminar</h3>
+	<form action="borrar2.php" align="center"  method="post" name="borrar_ftp" id="borrar_ftp">';
 }
 elseif (strpos($url,'crear')!==false) {
 	echo '
@@ -26,65 +27,87 @@ elseif (strpos($url,'subida')!==false) {
 }
 
 echo '
-<table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
-	<tr>
-		<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></th>
-		<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></th>
-		<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tamaño</strong></font></div></th>
-		<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
-	</tr>
-	<tr>
-		<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.png" WIDTH="16"  HEIGHT="16"/></a></td>
-		<td bgcolor="#E0E0E0"  align="center"> Subir directorio</td>
-		<td></td>
-		<td></td>
-	</tr>';
-
-//Obtenemos y listamos directorios
-$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
-foreach ($lista as $objeto) {
-	#Se leen todos los ficheros y directorios del directorios
-	$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
-	#Obtiene tamaño de archivo y lo pasa a KB
-	if($tamano=="-0.00 Kb" ) # Si es -0.00 Kb se refiere a un directorio
-	{
-		$objeto="<i><a href='home.php?carpeta_destino=".str_replace('./', '', $objeto)."'>".str_replace('./', '', $objeto)."</a></i>";
-		echo '
-	<tr class="tabla">
-		<td  bgcolor="#E0E0E0" align="center">
-			'.str_replace('./', '', $objeto).'
-		</td>
-		<td>Directorio</td>
-		<td></td>
-		<td></td>
-	</tr>';
-	}
+			<table width="80%" border="1" align="center" cellspacing="0" cellpadding="0">
+				<tr>';
+				
+				if (strpos($url,'borrar')!== false) {
+					echo '
+					<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Borrar</strong></font></div></td>';
+				}
+				
+			
+				echo '
+					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></th>
+					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></th>
+					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tamaño</strong></font></div></th>
+					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
+				</tr>
+				<tr>
+					<td bgcolor="#E0E0E0"  align="center"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.png" WIDTH="16"  HEIGHT="16"/></a></td>
+					<td bgcolor="#E0E0E0"  align="center"> Subir directorio</td>
+					<td></td>
+					<td></td>
+				</tr>';
+			
+			//Obtenemos y listamos directorios
+			$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
+			foreach ($lista as $objeto) {
+				#Se leen todos los ficheros y directorios del directorios
+				$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
+				#Obtiene tamaño de archivo y lo pasa a KB
+				if($tamano=="-0.00 Kb" ) # Si es -0.00 Kb se refiere a un directorio
+				{
+					$objeto="<i><a href='home.php?carpeta_destino=".str_replace('./', '', $objeto)."'>".str_replace('./', '', $objeto)."</a></i>";
+					echo '
+				<tr class="tabla">';
+				if (strpos($url,'borrar')!== false) {
+					echo '
+					<td bgcolor="#E0E0E0">
+						<input type="checkbox" name="id_borrar[]"" value="'.$objeto.'"/>
+					</td>';
+				}
+				echo '
+					<td  bgcolor="#E0E0E0" align="center">
+						'.str_replace('./', '', $objeto).'
+					</td>
+					<td>Directorio</td>
+					<td></td>
+					<td></td>
+				</tr>';
+				}
+			}
+			
+			//Obtenemos ficheros y aplicamos función dependiendo de la URL
+			$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
+			foreach ($lista as $objeto) {
+				#Se leen todos los ficheros y directorios del directorios
+				$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
+				#Obtiene tamaño de archivo y lo pasa a KB
+				if($tamano!=="-0.00 Kb" ) {
+					$fecha=date("d/m/y h:i:s", ftp_mdtm($conn,$objeto));
+					#Filemtime obtiene la fecha de modificacion del fichero; y date le da el formato de salida
+				}
+				echo '
+				<tr class="tabla">
+					<td  bgcolor="#E0E0E0" align="center">
+						'.str_replace('./', '', $objeto).'
+					</td>
+					<td>Fichero</td>
+					<td bgcolor="#E0E0E0"  align="center">
+						'.$tamano.'
+					</td>
+					<td  bgcolor="#E0E0E0"  align="center">
+						'.$fecha.'
+					</td>
+				</tr>';
+				}
+			echo '
+			</table>';
+			if (strpos($url, 'borrar')!==false) {
+				echo '
+			<p align="center">
+				<input name="Borrar" type="submit" value="Borrar Archivo"/>
+			</p>
+			</form>';
 }
-
-//Obtenemos ficheros y aplicamos función dependiendo de la URL
-$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
-foreach ($lista as $objeto) {
-	#Se leen todos los ficheros y directorios del directorios
-	$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";
-	#Obtiene tamaño de archivo y lo pasa a KB
-	if($tamano!=="-0.00 Kb" ) {
-		$fecha=date("d/m/y h:i:s", ftp_mdtm($conn,$objeto));
-		#Filemtime obtiene la fecha de modificacion del fichero; y date le da el formato de salida
-	}
-	echo '
-	<tr class="tabla">
-		<td  bgcolor="#E0E0E0" align="center">
-			'.str_replace('./', '', $objeto).'
-		</td>
-		<td>Fichero</td>
-		<td bgcolor="#E0E0E0"  align="center">
-			'.$tamano.'
-		</td>
-		<td  bgcolor="#E0E0E0"  align="center">
-			'.$fecha.'
-		</td>
-	</tr>';
-	}
-echo '
-</table>';
 ?>
