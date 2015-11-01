@@ -1,5 +1,5 @@
 <?php
-echo '
+echo '<!DOCTYPE html>
 <html>
 	<head>
 		<title>Descargar ficheros</title>
