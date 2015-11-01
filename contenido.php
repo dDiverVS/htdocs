@@ -52,7 +52,12 @@ echo '
 					<td class="contenido"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.PNG" WIDTH="16"  HEIGHT="16"/></a></td>
 					<td class="contenido"> Subir directorio</td>
 					<td class="contenido"></td>
-					<td class="contenido"></td>
+					<td class="contenido"></td>';
+					if (strpos($url,'borrar')!==false || strpos($url,'renombrar')!==false || strpos($url,'descargar')!==false) {
+						echo '
+					<td class="contenido"></td>';
+					}
+				echo'
 				</tr>';
 			
 			//Obtenemos y listamos directorios
