@@ -43,10 +43,10 @@ echo '
 					echo '<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Renombrar</strong></font></div></td>';
 				}			
 				echo '
-					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></th>
-					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></th>
-					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tamaño</strong></font></div></th>
-					<th><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
+					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></th>
+					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></th>
+					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tamaño</strong></font></div></th>
+					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
 				</tr>
 				<tr>
 					<td class="contenido"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.PNG" WIDTH="16"  HEIGHT="16"/></a></td>
