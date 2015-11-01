@@ -8,14 +8,14 @@ echo '
 						DIRECTORIO ACTUAL: <b>'.$_SESSION["carpeta_actual"].'</b><br/><br/>
 				</span>
 				<span class="logo" >
-						<a href="home.php"> <img src="img/logo.png" title="Volver a Inicio" width="350" height="100" alt="Volver a Inicio"> </a>
+						<a href="home.php"> <img src="img/logo.jpg" title="Volver a Inicio" width="350" height="100" alt="Volver a Inicio"> </a>
 				</span>
 				<span class="enlaces" >
 					<b>Cerrar Sesi&oacute;n</b>
 				</span>
 				<span class="iconocerrar" >
 					<a href="cerrar.php" class="button">
-					<img class="zoomIt"   src="img/exit.png" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
+					<img class="zoomIt"   src="img/exit.jpg" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
 				</span>
 		<br/>
 		<br/>
@@ -68,7 +68,7 @@ echo '
 						if (strpos($url,'descargar')!== false) {
 							echo ' seleccionado2';
 						}
-						echo ' " src="img/download.png" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
+						echo ' " src="img/download.jpg" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
 					</div>
 				</td>
 				<td>
