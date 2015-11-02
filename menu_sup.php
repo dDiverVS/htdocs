@@ -25,39 +25,39 @@ echo '
 		<br/>
 		<table width="30%" border="0" align="center" cellspacing="3" cellpadding="3" >
 			<tr>
-				<th class="enlaces" ';
+				<th class="enlaces';
 						if (strpos($url,'descargar')!== false) {
-							echo 'class="seleccionado"';
+							echo ' seleccionado';
 						}
-						echo '>
+						echo '">
 					Descargar fichero
 				</th>
-				<th class="enlaces" ';
+				<th class="enlaces';
 						if (strpos($url,'subida')!== false) {
-							echo 'class="seleccionado"';
+							echo ' seleccionado';
 						}
-						echo '>
+						echo '">
 					Subir fichero
 				</th>
-				<th class="enlaces" ';
+				<th class="enlaces';
 						if (strpos($url,'borrar')!== false) {
-							echo 'class="seleccionado"';
+							echo ' seleccionado';
 						}
-						echo '>
+						echo '">
 					Borrar
 				</th>
-				<th class="enlaces" ';
+				<th class="enlaces';
 						if (strpos($url,'crear')!== false) {
-							echo 'class="seleccionado"';
+							echo ' seleccionado';
 						}
 						echo ' >
 					Crear Directorio
 				</th>
-				<th class="enlaces" ';
+				<th class="enlaces';
 						if (strpos($url,'renombrar')!== false) {
-							echo 'class="seleccionado"';
+							echo ' seleccionado';
 						}
-						echo '>
+						echo '">
 					Renombrar
 				</th>
 			</tr>
