@@ -50,7 +50,7 @@ echo '
 						if (strpos($url,'crear')!== false) {
 							echo ' seleccionado';
 						}
-						echo ' >
+						echo '">
 					Crear Directorio
 				</th>
 				<th class="enlaces';
