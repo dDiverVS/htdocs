@@ -115,13 +115,13 @@ echo '
 					if (strpos($url,'descargar')!== false) {
 						echo '
 						<td WIDTH="16"  HEIGHT="30" >
-							<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.PNG WIDTH="16"  HEIGHT="16"/></button>
+							<button "Descargar '.$objeto.'" alt="Descargar '.$objeto.'" class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.PNG WIDTH="16"  HEIGHT="16"/></button>
 						</td>';
 					}
 					if (strpos($url,'renombrar')!== false) {
 						echo '
 						<td WIDTH="16" HEIGHT="30">
-							<button class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.PNG WIDTH="16" HEIGHT="16"/></button>
+							<button title="Renombrar '.$objeto.'" alt="Renombrar '.$objeto.'" class="renombrar" type="submit" value="'.$objeto.'" name="id_renombrar"><img src=img/modificar.PNG WIDTH="16" HEIGHT="16"/></button>
 						</td>';
 					}
 					echo '
@@ -144,7 +144,8 @@ echo '
 			if (strpos($url, 'borrar')!==false) {
 				echo '
 			<p align="center">
-				<input name="Borrar" type="submit" value="Borrar Archivo"/>
+			<button   title="Borrar fichero/s" alt="Borrar fichero/s" type="submit" value="" name="Borrar"><img src=img/check.PNG WIDTH="30"  HEIGHT="30"/></button>
+				
 			</p>
 			</form>';
 			}
@@ -153,8 +154,8 @@ echo '
 			echo '
 			<form action="crear2.php" onsubmit="setTimeout("document.forms[0].reset()", 2000)"  method="post" name="crear_ftp" id="crear_ftp">
 				<p align="center">
-					<input class="barra" name="crear" align="center" type="text" title="El nombre de los directorios no pueden contener \\ /:?*><\"|" pattern="[^\"\\x5c \"\x22 \"\x2f \"\x3a \"\x3f \"\x2a \"\x3c \"\x3e \"\x7c]+" /> 
-					<input name="envio" align="center" type="submit" value="Crear Directorio" />
+					<input class="barra" name="crear" align="center" type="text" title="El nombre de los directorios no pueden contener \\ /:?*><\"|" pattern="[^\"\\x5c \"\x22 \"\x2f \"\x3a \"\x3f \"\x2a \"\x3c \"\x3e \"\x7c]+" /> <br/><br/>
+					<button  title="Crear directorio" alt="Crear directorio" type="submit" value="'.$objeto.'" name="envio"><img src=img/check.PNG WIDTH="30"  HEIGHT="30"/></button>
 				</p>
 			</form>';
 			}

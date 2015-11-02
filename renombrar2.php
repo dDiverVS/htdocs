@@ -15,7 +15,7 @@ echo '<!DOCTYPE html>
     include 'menu_sup.php';
     echo'
     
-    <form onsubmit="setTimeout(\'document.forms[0].reset()\', 500)" action="renombrar3.php" method="POST" >     ';
+    <form  action="renombrar3.php" method="POST" >     ';
 
 //si se ha indicado un fichero y se ha pulsado enviar en renombrar.php se ejecuta lo siguiente:
 if ( isset($_POST['id_renombrar'])){
@@ -43,7 +43,8 @@ if ( isset($_POST['id_renombrar'])){
                          echo '
     
             <p align="center">
-              <input name="renombrar2" type="submit" value="Renombrar " />
+			<button title="Renombrar" alt="Renombrar"  type="submit" value="" name="renombrar2"><img src=img/check.PNG WIDTH="30"  HEIGHT="30"/></button>
+              
             </p>
     </form> 
 

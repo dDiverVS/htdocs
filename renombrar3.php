@@ -23,7 +23,7 @@ echo '<!DOCTYPE html>
   //si es renombrable, mostramos un texto afirmativo, en caso contrario indicamos que no se ha realizado
   		if  (ftp_rename($conn, $_SESSION['nombreantiguo'], $nombrenuevo))  { 
         
-        echo "<h2 align='center'><font color='green'>El nombre del fichero  <strong><font color='black'>".$_SESSION['nombreantiguo']."</strong></font> ha cambiado por <font color='black'>".$nombrenuevo." </font>correctamente</h2>";
+        echo "<h2 align='center'><font color='green'>El nombre del fichero/directorio  <strong><font color='black'>".$_SESSION['nombreantiguo']."</strong></font> ha cambiado por <font color='black'>".$nombrenuevo." </font>correctamente</h2>";
       }  
        else {  echo "<h2 align='center'><font color='red'>No se ha podido cambiar el nombre del fichero/directorio </font><strong><font color='black'>". $_SESSION['nombreantiguo']."</strong></h2>";
       }

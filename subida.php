@@ -71,7 +71,7 @@ echo '<!DOCTYPE html>
 				<br/>
 				<br/>
 				<br/>
-				<input name="subir" type="submit" value="Subir Archivo"/>
+				<button class="subir"   type="submit" value="" name="subir"><img src=img/check.PNG WIDTH="30"  HEIGHT="30" title="Subir fichero/s" alt="Subir fichero/s"/></button>
 			</p>
 		</form>
 	</body>
