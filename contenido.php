@@ -151,13 +151,13 @@ echo '
 			}
 		
 			if (strpos($url, 'crear')!==false) {
-			echo '
-			<form action="crear2.php" onsubmit="setTimeout("document.forms[0].reset()", 2000)"  method="post" name="crear_ftp" id="crear_ftp">
-				<p align="center">
-					<input class="barra" name="crear" align="center" type="text" title="El nombre de los directorios no pueden contener \\ /:?*><\"|" pattern="[^\"\\x5c \"\x22 \"\x2f \"\x3a \"\x3f \"\x2a \"\x3c \"\x3e \"\x7c]+" /> <br/><br/>
-					<button  title="Crear directorio" alt="Crear directorio" type="submit" value="'.$objeto.'" name="envio"><img src=img/check.PNG WIDTH="30"  HEIGHT="30"/></button>
+			echo "
+			<form action='crear2.php' method='post' name='crear_ftp' id='crear_ftp'>
+				<p align='center'>
+					<input class='barra' name='crear' align='center' type='text' title='El nombre de los directorios no pueden contener \\ /:?*><\"|' pattern='[^\"\\x5c \"\x22 \"\x2f \"\x3a \"\x3f \"\x2a \"\x3c \"\x3e \"\x7c]+' /> <br/><br/>
+					<button  title='Crear directorio' alt='Crear directorio' type='submit' value='' name='envio'><img src=img/check.PNG WIDTH='30'  HEIGHT='30'/></button>
 				</p>
-			</form>';
+			</form>";
 			}
 			if (strpos($url, 'renombrar')!==false) {
 				echo '
