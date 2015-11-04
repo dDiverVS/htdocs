@@ -23,6 +23,7 @@ $x=0;
 /*if (($_FILES["archivo1"]["size"] + $_FILES["archivo2"]["size"] + $_FILES["archivo3"]["size"]) > $upload_mb){ header ("Location: subida.php?tamano=si ");}
 else{*/
 //si el array $_FILES["archivo"] contiene un nombre, osea,  se va a subir ningun fichero:
+if ((empty($_FILES["archivo1"]["name"])) && (empty($_FILES["archivo2"]["name"])) && (empty($_FILES["archivo3"]["name"]))) header ("Location: subida.php?noarchivo=si ");
 
 	if(!empty($_FILES["archivo1"]["name"]))
 	{
@@ -67,7 +68,7 @@ if(!empty($_FILES["archivo3"]["name"]))
 	else { 
 			echo "<h2 align='center'><font color='red'>No se ha subido ningún fichero, inténtelo de nuevo</h2> ";
 	}
-if (empty($_FILES["archivo1"]["name"]) && empty($_FILES["archivo2"]["name"]) && empty($_FILES["archivo3"]["name"])) header ("Location: subida.php?noarchivo=si ");
+
 ?> 
 
 </body>
