@@ -1,6 +1,7 @@
 <?php
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 echo '			
+
 		  		<span class="datos" >
 						
 						SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
@@ -14,7 +15,8 @@ echo '
 					<b>Cerrar Sesi&oacute;n</b>
 				</span>
 				<span class="iconocerrar" >
-					<a href="cerrar.php" class="button">
+				
+					<a href="cerrar.php" class="button" onclick="return confirmar()">    
 					<img class="zoomIt"   src="img/exit.PNG" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
 				</span>
 		<br/>
@@ -109,5 +111,6 @@ echo '
 				</td>
 			</tr>
 		</table>
+		
 ';
 ?>

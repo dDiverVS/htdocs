@@ -144,7 +144,7 @@ echo '
 			if (strpos($url, 'borrar')!==false) {
 				echo '
 			<p align="center">
-			<button   title="Borrar fichero/s" alt="Borrar fichero/s" type="submit" value="" name="Borrar"><img src=img/check.PNG WIDTH="30"  HEIGHT="30"/></button>
+			<button onclick="return borrar()"  title="Borrar fichero/s" alt="Borrar fichero/s" type="submit" value="" name="Borrar"><img src=img/check.PNG WIDTH="30"  HEIGHT="30"/></button>
 				
 			</p>
 			</form>';

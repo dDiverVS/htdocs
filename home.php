@@ -5,6 +5,7 @@ echo '<!DOCTYPE html>
 		<title>Ficheros del Usuario</title>
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
 		<link rel="icon" type="image/ico" href="img/favicon.ico" />
+		<script type="text/javascript" src="jscript/utiles.js"> </script>
 	</head>
 	<body bgcolor="#EFE4B0">';
 		#Incluye el archivo de seguridad para mantener la sesion activa
