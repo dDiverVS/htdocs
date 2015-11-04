@@ -68,7 +68,7 @@ echo '
 				foreach ($lista_bruta as $comprobacion) {
 					if ($comprobacion[0]=='d') { //Compruebo si es un directorio
 						$objeto=str_replace('./', '',$lista[$x]);
-						$objeto2="<i><a href='home.php?carpeta_destino=".str_replace('./', '',$lista[$x])."'>".str_replace('./', '',$lista[$x])."</a></i>";
+						$objeto2="<i><a href='home.php?carpeta_destino=".str_replace('./', '',$lista[$x])."' class='lila'>".str_replace('./', '',$lista[$x])." </a></i>";
 						echo '
 						<tr class="tabla">';
 						if (strpos($url,'borrar')!== false) {
