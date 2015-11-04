@@ -67,7 +67,7 @@ if(!empty($_FILES["archivo3"]["name"]))
 	else { 
 			echo "<h2 align='center'><font color='red'>No se ha subido ningún fichero, inténtelo de nuevo</h2> ";
 	}
-
+if (empty($_FILES["archivo1"]["name"]) && empty($_FILES["archivo2"]["name"]) && empty($_FILES["archivo3"]["name"])) header ("Location: subida.php?noarchivo=si ");
 ?> 
 
 </body>

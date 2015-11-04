@@ -66,7 +66,7 @@ echo '<!DOCTYPE html>
 		<form action="subida2.php" method="post" name="subida" id="subida" enctype="multipart/form-data">
 			<p align="center">
 				<label>Archivo 1</label>
-				<input name="archivo1" type="file"/><br/>
+				<input name="archivo1" type="file" /><br/>
 				<label>Archivo 2</label>
 				<input name="archivo2" type="file"/><br/>
 				<label>Archivo 3</label>
@@ -85,4 +85,5 @@ $memory_limit = (int)(ini_get('memory_limit'));
 $upload_mb = min($max_upload, $max_post, $memory_limit);
  
 echo "Tamaño maximo permitido <strong>$upload_mb Mb</strong><br>";
+
 ?>
