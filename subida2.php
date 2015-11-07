@@ -19,7 +19,7 @@ echo '<!DOCTYPE html>
 	
 		//Enlaces para acceder a diferentes opciones
 		include 'menu_sup.php';
-$x=0;
+
 //Opcion a modificar para controlar el tamaño total de las subidas
 /*if (($_FILES["archivo1"]["size"] + $_FILES["archivo2"]["size"] + $_FILES["archivo3"]["size"]) > $upload_mb){ header ("Location: subida.php?tamano=si ");}
 else{*/
@@ -33,9 +33,10 @@ if ((empty($_FILES["archivo1"]["name"])) && (empty($_FILES["archivo2"]["name"]))
 		$base_archivo = basename($_FILES["archivo1"]["name"]);
 
 		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo1"]);
+		//unset($_FILES["archivo1"]);
 		if(empty($_FILES["archivo2"]["name"]) && empty($_FILES["archivo3"]["name"])) ftp_quit($conn);
-			if ($upload==true) $x++;
+			if ($upload==true) {echo "<h2 align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</h2></font>";}
+			else echo "<h2 align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</h2></font>";
 	}
 
 if(!empty($_FILES["archivo2"]["name"]))
@@ -47,7 +48,8 @@ if(!empty($_FILES["archivo2"]["name"]))
 		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
 		unset($_FILES["archivo2"]);
 		if(empty($_FILES["archivo3"]["name"])) ftp_quit($conn);
-			if ($upload==true) $x++;
+			if ($upload==true){ echo "<h2 align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</h2></font>";}
+			else echo "<h2 align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</h2></font>";
 	}
 
 if(!empty($_FILES["archivo3"]["name"]))
@@ -59,16 +61,11 @@ if(!empty($_FILES["archivo3"]["name"]))
 		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
 		unset($_FILES["archivo3"]);
 		ftp_quit($conn);
-			if ($upload==true) $x++;
+			if ($upload==true){ echo "<h2 align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</h2></font>";}
+			else echo "<h2 align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</h2></font>";
 	}
 //}
-	//si la subida del fichero es exitosa, se le indica al usuario con un texto afirmativo.En caso contrario, se le comunica con un texto de error	
-	if ($x!==0) {
-			echo "<h2 align='center'><font color='green'>Se han subido ".$x." ficheros correctamente</h2>";
-	} 
-	else { 
-			echo "<h2 align='center'><font color='red'>No se ha subido ningún fichero, inténtelo de nuevo</h2> ";
-	}
+	
 
 ?> 
 
