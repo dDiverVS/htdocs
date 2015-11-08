@@ -26,6 +26,11 @@ elseif (strpos($url,'renombrar')!==false) {
 elseif (strpos($url,'subida')!==false) {
 	echo '
 	<h3 align="center">Suba el fichero que desee</h3>';
+	$max_upload = (int)(ini_get('upload_max_filesize'));
+	$max_post = (int)(ini_get('post_max_size'));
+	$memory_limit = (int)(ini_get('memory_limit'));
+	$upload_mb = min($max_upload, $max_post, $memory_limit);
+	echo "<p align='center'>Tama&ntilde;o m&aacute;ximo permitido <strong>$upload_mb Mb</strong></p>";
 }
 
 echo '
@@ -87,7 +92,7 @@ echo '
 							<td class="contenido">
 								'.str_replace('./', '', $objeto2).'
 							</td>
-							<td class="contenido"><img src="img/normal_folder.PNG" width="30" height="30"</td>
+							<td class="contenido"><img src="img/normal_folder.PNG" width="20" height="20"</td>
 							<td class="contenido">&nbsp;</td>
 							<td class="contenido">&nbsp;</td>
 						</tr>';
@@ -128,7 +133,7 @@ echo '
 						<td  class="contenido">
 							'.str_replace('./', '', $objeto).'
 						</td>
-						<td class="contenido"><img src="img/normal_file.PNG" width="30" height="30"></td>
+						<td class="contenido"><img src="img/normal_file.PNG" width="20" height="20"></td>
 						<td class="contenido">
 							'.$tamano.'
 						</td>
@@ -143,7 +148,7 @@ echo '
 			</table>';
 			if (strpos($url, 'subida')!==false) {
 		echo '
-			<form action="subida2.php" method="post" name="subida" id="subida" enctype="multipart/form-data">
+			<form action="subida2.php" method="post" name="subida" id="subida" enctype="multipart/form-data" >
 			<p align="center">
 				<label>Archivo 1</label>
 				<input name="archivo1" type="file" /><br/>
@@ -158,12 +163,9 @@ echo '
 			</p>
 		</form>';
 	
-$max_upload = (int)(ini_get('upload_max_filesize'));
-$max_post = (int)(ini_get('post_max_size'));
-$memory_limit = (int)(ini_get('memory_limit'));
-$upload_mb = min($max_upload, $max_post, $memory_limit);
+
  
-echo "Tama&ntilde;o m&aacute;ximo permitido <strong>$upload_mb Mb</strong><br>";}
+}
 			if (strpos($url, 'borrar')!==false) {
 				echo '
 			<p align="center">
