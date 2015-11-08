@@ -32,6 +32,8 @@ span.datos{
 	border:1px dotted white;
 	text-align:left;
 	float:left;
+	border-radius:10px;
+	background-image:url(../img/ruido2.PNG);
 }
 span.logo{
 	margin:0% 5% 0% 20%;
