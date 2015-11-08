@@ -15,6 +15,7 @@ echo '<!DOCTYPE html>
     
     //Enlaces para acceder a diferentes opciones
     include 'menu_sup.php';
+echo "<table width='60%' border='0' align='center' cellspacing='0' cellpadding='2' class='fondotabla'><tr class='fondotabla' >";
 
 //recogemos el nombre introducido en formulario
 $crear=$_POST['crear'];
@@ -22,10 +23,10 @@ $crear=$_POST['crear'];
 if ( isset($crear) and $crear!=""){
 //si se ha creado correctamente muestra un texto y si no otro diferente
 		if (ftp_mkdir($conn, $crear)) {
-      echo "<h2 align='center'><font color='green'>El directorio <strong><font color='black'>".$crear." </font></strong> se ha creado correctamente</font></h2>";
+      echo "<tr class='fondotabla' ><td align='center'><font color='green'>El directorio <strong><font color='black'>".$crear." </font></strong> se ha creado correctamente</font></td></tr>";
      								  }
 		else {
-      echo "<h2 align='center'><font color='red'>El directorio <strong><font color='black'>".$crear."</font> </strong>  no se ha creado correctamente</font></h2>"	;}
+      echo "<tr class='fondotabla' ><td align='center'><font color='red'>El directorio <strong><font color='black'>".$crear."</font> </strong>  no se ha creado correctamente</font></td></tr>"	;}
     }
 //si no se ha escrito ningun  nombre de directorio, se le redirige a la pagina de crear.php con su correspondiente mensaje aclaratorio
 else{header ("Location: crear.php?nocrear=si ");
@@ -35,6 +36,6 @@ else{header ("Location: crear.php?nocrear=si ");
 
 
 ?> 
-
+</table>
 </body>
 </html>

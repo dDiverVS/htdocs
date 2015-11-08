@@ -18,7 +18,7 @@ echo '<!DOCTYPE html>
    include 'menu_sup.php';
 
 // si se ha indicado algun fichero y se ha pulsado a enviar, recoge cada elemento indicado para borrar del array y por cada valor, se introduce en la variable  $borrar
-
+echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='2' class='fondotabla'><tr class='fondotabla' >";
 if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
 	foreach ($_POST['id_borrar'] as $borrar)  {
 
@@ -29,9 +29,9 @@ if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
    
 		          if (ftp_delete($conn, $borrar)==true) { 
       
-                           echo "<h2 align='center'><font color='green'>El fichero <strong><font color='black'>".$borrar." </font></strong> se ha eliminado correctamente</font></h2>";
+                           echo "<tr class='fondotabla' ><td ><font color='green'>El fichero <strong><font color='black'>".$borrar." </font></strong> se ha eliminado correctamente</font></td></tr>";
               }  
-               else {      echo "<h2 align='center'><font color='red'>El fichero <strong><font color='black'>".$borrar." </font></strong>  no se ha eliminado correctamente</font></h2>";
+               else {      echo "<tr class='fondotabla'><td ><font color='red'>El fichero <strong><font color='black'>".$borrar." </font></strong>  no se ha eliminado correctamente</font></td></tr>";
               }
 
       }
@@ -42,9 +42,9 @@ if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
       
 
                if (ftp_rmdir($conn, $borrar)==true) { 
-               echo "<h2 align='center'><font color='green'>El directorio <strong><font color='black'>".$borrar." </font></strong> se ha eliminado correctamente</font></h2>";
+               echo "<tr class='fondotabla'><td ><font color='green'>El directorio <strong><font color='black'>".$borrar." </font></strong> se ha eliminado correctamente</font></td></tr>";
                }  
-               else {      echo "<h2 align='center'><font color='red'>El directorio <strong><font color='black'>".$borrar." </font></strong>  no se ha eliminado correctamente o no esta vacio</font></h2>";
+               else {      echo "<tr class='fondotabla'><td ><font color='red'>El directorio <strong><font color='black'>".$borrar." </font></strong>  no se ha eliminado correctamente o no esta vacio</font></td></tr>";
                }
                                    
     
@@ -53,6 +53,7 @@ if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
 }else{ #si no esta marcado ningun fichero, se renvia a la pagina principal de borrar indicandole un mensaje
         header ("Location: borrar.php?noborrar=si "); }
 
-?> 
+?>
+</table>
 </body>
 </html>

@@ -1,6 +1,20 @@
 .lila:active,.lila:link,.lila:visited{
 color:#cc6600;
+}
 
+table.fondotabla{
+	margin-top:15px;
+	background-color:#D3D3D3;
+	font:20px sans-serif;
+	border-radius:10px;}
+tr.fondotabla{
+	border-radius:10px;}	
+}
+.fondotabla2{
+	background-color:#D3D3D3;
+	margin-top:25px;
+	font:25px sans-serif;
+	border-radius:10px;
 }
 a.button{
 	display:block;

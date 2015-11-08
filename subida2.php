@@ -25,6 +25,7 @@ echo '<!DOCTYPE html>
 else{*/
 //si el array $_FILES["archivo"] contiene un nombre, osea,  se va a subir ningun fichero:
 if ((empty($_FILES["archivo1"]["name"])) && (empty($_FILES["archivo2"]["name"])) && (empty($_FILES["archivo3"]["name"]))) header ("Location: subida.php?noarchivo=si ");
+echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='2' class='fondotabla'><tr class='fondotabla' >";
 
 	if(!empty($_FILES["archivo1"]["name"]))
 	{
@@ -33,10 +34,10 @@ if ((empty($_FILES["archivo1"]["name"])) && (empty($_FILES["archivo2"]["name"]))
 		$base_archivo = basename($_FILES["archivo1"]["name"]);
 
 		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		//unset($_FILES["archivo1"]);
+		unset($_FILES["archivo1"]);
 		if(empty($_FILES["archivo2"]["name"]) && empty($_FILES["archivo3"]["name"])) ftp_quit($conn);
-			if ($upload==true) {echo "<h2 align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</h2></font>";}
-			else echo "<h2 align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</h2></font>";
+			if ($upload==true) {echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
+			else echo "<tr class='fondotabla' ><td align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
 	}
 
 if(!empty($_FILES["archivo2"]["name"]))
@@ -48,8 +49,8 @@ if(!empty($_FILES["archivo2"]["name"]))
 		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
 		unset($_FILES["archivo2"]);
 		if(empty($_FILES["archivo3"]["name"])) ftp_quit($conn);
-			if ($upload==true){ echo "<h2 align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</h2></font>";}
-			else echo "<h2 align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</h2></font>";
+			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
+			else echo "<tr class='fondotabla' ><td align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
 	}
 
 if(!empty($_FILES["archivo3"]["name"]))
@@ -61,8 +62,8 @@ if(!empty($_FILES["archivo3"]["name"]))
 		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
 		unset($_FILES["archivo3"]);
 		ftp_quit($conn);
-			if ($upload==true){ echo "<h2 align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</h2></font>";}
-			else echo "<h2 align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</h2></font>";
+			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
+			else echo "<tr class='fondotabla' ><td align='center'><font color='red>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
 	}
 //}
 	

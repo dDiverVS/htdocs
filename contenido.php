@@ -2,7 +2,7 @@
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 if (strpos($url,'borrar')!== false) {
 	echo '
-	<h3 align="center">Indique el nombre del fichero a eliminar</h3>
+	<h3 align="center">Seleccione el fichero o ficheros que desee eliminar</h3>
 	<form action="borrar2.php" method="post" name="borrar_ftp" id="borrar_ftp">';
 }
 elseif (strpos($url,'crear')!==false) {
@@ -45,7 +45,7 @@ echo '
 				echo '
 					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></th>
 					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></th>
-					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tamaño</strong></font></div></th>
+					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></th>
 					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
 				</tr>
 				<tr>
@@ -141,6 +141,29 @@ echo '
 			}
 			echo '
 			</table>';
+			if (strpos($url, 'subida')!==false) {
+		echo '
+			<form action="subida2.php" method="post" name="subida" id="subida" enctype="multipart/form-data">
+			<p align="center">
+				<label>Archivo 1</label>
+				<input name="archivo1" type="file" /><br/>
+				<label>Archivo 2</label>
+				<input name="archivo2" type="file"/><br/>
+				<label>Archivo 3</label>
+				<input name="archivo3" type="file"/><br/>
+				<br/>
+				<br/>
+				<br/>
+				<button class="subir"   type="submit" value="" name="subir"><img src=img/check.PNG WIDTH="30"  HEIGHT="30" title="Subir fichero/s" alt="Subir fichero/s"/></button>
+			</p>
+		</form>';
+	
+$max_upload = (int)(ini_get('upload_max_filesize'));
+$max_post = (int)(ini_get('post_max_size'));
+$memory_limit = (int)(ini_get('memory_limit'));
+$upload_mb = min($max_upload, $max_post, $memory_limit);
+ 
+echo "Tama&ntilde;o m&aacute;ximo permitido <strong>$upload_mb Mb</strong><br>";}
 			if (strpos($url, 'borrar')!==false) {
 				echo '
 			<p align="center">
