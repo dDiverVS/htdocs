@@ -34,19 +34,19 @@ echo '
 				
 				if (strpos($url,'borrar')!==false) {
 					echo '
-					<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Borrar</strong></font></div></td>';
+					<th width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Borrar</strong></font></div></th>';
 				}
 				if (strpos($url, 'descargar')!==false) {
-					echo '<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Descargar</strong></font></div></td>';
+					echo '<th width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Descargar</strong></font></div></th>';
 				}
 				if (strpos($url, 'renombrar')!==false) {
-					echo '<td width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Renombrar</strong></font></div></td>';
+					echo '<th width="10%" bgcolor="#CCE5FF"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Renombrar</strong></font></div></th>';
 				}			
 				echo '
-					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></th>
-					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></th>
-					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></th>
-					<th class="contenido"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
+					<th class="contenido2"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Nombre</strong></font></div></th>
+					<th class="contenido2"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tipo</strong></font></div></th>
+					<th class="contenido2"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Tama&ntilde;o</strong></font></div></th>
+					<th class="contenido2"><div align="center"><font size="2" face="Verdana, Tahoma, Arial"><strong>Fecha</strong></font></div></th>
 				</tr>
 				<tr>
 					<td class="contenido"><a href="home.php?subir" id="subirdirectorio"><img src="img/up.PNG" WIDTH="16"  HEIGHT="16"/></a></td>
@@ -87,7 +87,7 @@ echo '
 							<td class="contenido">
 								'.str_replace('./', '', $objeto2).'
 							</td>
-							<td class="contenido">Directorio</td>
+							<td class="contenido"><img src="img/normal_folder.PNG" width="30" height="30"</td>
 							<td class="contenido">&nbsp;</td>
 							<td class="contenido">&nbsp;</td>
 						</tr>';
@@ -128,7 +128,7 @@ echo '
 						<td  class="contenido">
 							'.str_replace('./', '', $objeto).'
 						</td>
-						<td class="contenido">Fichero</td>
+						<td class="contenido"><img src="img/normal_file.PNG" width="30" height="30"></td>
 						<td class="contenido">
 							'.$tamano.'
 						</td>
@@ -177,7 +177,7 @@ echo "Tama&ntilde;o m&aacute;ximo permitido <strong>$upload_mb Mb</strong><br>";
 			echo "
 			<form action='crear2.php' method='post' name='crear_ftp' id='crear_ftp'>
 				<p align='center'>
-					<input class='barra' name='crear' align='center' type='text' title='El nombre de los directorios no pueden contener \\ /:?*><\"|' pattern='[^\"\\x5c \"\x22 \"\x2f \"\x3a \"\x3f \"\x2a \"\x3c \"\x3e \"\x7c]+' /> <br/><br/>
+					<input class='barra' name='crear' align='center' type='text' title='El nombre de los directorios no pueden contener \\/:?*><\"|' pattern='[^\"\\x5c\"\x22\"\x2f\"\x3a\"\x3f\"\x2a\"\x3c\"\x3e\"\x7c]+' /> <br/><br/>
 					<button  title='Crear directorio' alt='Crear directorio' type='submit' value='' name='envio'><img src=img/check.PNG WIDTH='30'  HEIGHT='30'/></button>
 				</p>
 			</form>";
