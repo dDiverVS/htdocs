@@ -34,7 +34,7 @@ if (!empty($_FILES['archivo3'])) {
 }
 
 if ($tamanototal>=200*MB) {
-	header('location:subida.php/tamanototal=max');
+	header('location:./subida.php/tamanototal=max');
 	exit();
 }
 
