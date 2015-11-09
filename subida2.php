@@ -19,9 +19,23 @@ echo '<!DOCTYPE html>
 	
 		//Enlaces para acceder a diferentes opciones
 		include 'menu_sup.php';
+		define('MB', 1048576);
 
 //Opcion a modificar para controlar el tamaño total de las subidas
 //if (($_FILES["archivo1"]["size"]) + ($_FILES["archivo2"]["size"]) + ($_FILES["archivo3"]["size"]) > 2048000 ){ header ("Location: subida.php?tamano=si ");}
+if (!empty($_FILES['archivo1'])) {
+	$tamanototal=$_FILES['archivo1']['size'];
+}
+if (!empty($_FILES['archivo2'])) {
+	$tamanototal=$tamanototal+$_FILES['archivo2']['size'];
+}
+if (!empty($_FILES['archivo3'])) {
+	$tamanototal=$tamanototal+$_FILES['archivo3']['size'];
+}
+
+if ($tamanototal>=200*MB) {
+	header('location:subida.php/tamanototal="200"');
+}
 
 //si el array $_FILES["archivo"] contiene un nombre, osea,  se va a subir ningun fichero:
 if ((empty($_FILES["archivo1"]["name"])) && (empty($_FILES["archivo2"]["name"])) && (empty($_FILES["archivo3"]["name"]))) header ("Location: subida.php?noarchivo=si ");
