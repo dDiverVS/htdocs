@@ -35,6 +35,7 @@ if (!empty($_FILES['archivo3'])) {
 
 if ($tamanototal>=200*MB) {
 	header('location:subida.php/tamanototal=max');
+	exit();
 }
 
 //si el array $_FILES["archivo"] contiene un nombre, osea,  se va a subir ningun fichero:
