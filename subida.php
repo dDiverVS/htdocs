@@ -14,8 +14,7 @@ echo '<!DOCTYPE html>
 			
 
 		if ($_GET["noarchivo"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un fichero para subir</font></h2>";}
-		if ( isset($_GET["tamano"])){
-		if ($_GET["tamano"]=="si") echo "<h2 align='center'><font color='red'>Capacidad de subida superada</font></h2>";}
+		if ( isset($_GET["tamanototal"])){echo "<h2 align='center'><font color='red'>Capacidad de subida superada</font></h2>";}
 		
 		include 'seguridad.php';
 		include 'conexion.php';
