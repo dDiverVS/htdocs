@@ -6,7 +6,7 @@ echo '
 						
 						SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
 						USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
-						DIRECTORIO ACTUAL: <b>'.$_SESSION["carpeta_actual"].'</b><br/><br/>
+						DIRECTORIO ACTUAL: <b>'.str_replace('//', '/',$_SESSION["carpeta_actual"]).'</b><br/><br/>
 				</span>
 				</div>
 				<span class="logo" >
