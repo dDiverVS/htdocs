@@ -16,6 +16,7 @@ echo '<!DOCTYPE html>
     include 'menu_sup.php';
 
 //si se ha pulsado el boton de enviar en renombrar2.php y el nuevo nombre no esta vacio:
+echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='2' class='fondotabla'><tr class='fondotabla' >";
 
   if ( isset($_POST['id_renombrar2']) && $_POST['id_renombrar2']!='') {
 
@@ -25,9 +26,9 @@ echo '<!DOCTYPE html>
   		if  (ftp_rename($conn, $_SESSION['nombreantiguo'], $nombrenuevo))  { 
         
 		
-        echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='0' class='fondotabla2'><tr class='fondotabla' ><td align='center' ><font color='green'>El nombre del fichero/directorio  <strong><font color='black'>".$_SESSION['nombreantiguo2']."</strong></font> ha cambiado por <font color='black'><strong>".$nombrenuevo."</strong> </font><font color='green'>correctamente</font></td></tr></table>";
+        echo "<tr class='fondotabla' ><td align='center'><font color='green'>El nombre del fichero/directorio  <strong><font color='black'>".$_SESSION['nombreantiguo2']."</strong></font> ha cambiado por <font color='black'><strong>".$nombrenuevo."</strong> </font><font color='green'>correctamente</font></td></tr>";
       }  
-       else {  echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='0' class='fondotabla2'><tr class='fondotabla' ><td  align='center'><font color='red'> No se ha podido cambiar el nombre del fichero/directorio </font><strong><font color='black'>".$_SESSION['nombreantiguo2']."</strong></font></td></tr></table>";
+       else {  echo "<tr class='fondotabla' ><td align='center'><font color='red'> No se ha podido cambiar el nombre del fichero/directorio </font><strong><font color='black'>".$_SESSION['nombreantiguo2']."</strong></font></td></tr>";
       }
                         
 

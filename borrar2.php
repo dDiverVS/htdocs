@@ -29,9 +29,9 @@ if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
    
 		          if (ftp_delete($conn, $borrar)==true) { 
       
-                           echo "<tr class='fondotabla' ><td ><font color='green'>El fichero <strong><font color='black'>".$borrar." </font></strong> se ha eliminado correctamente</font></td></tr>";
+                           echo "<tr class='fondotabla' ><td align='center'><font color='green'>El fichero <strong><font color='black'>".$borrar." </font></strong> se ha eliminado correctamente</font></td></tr>";
               }  
-               else {      echo "<tr class='fondotabla'><td ><font color='red'>El fichero <strong><font color='black'>".$borrar." </font></strong>  no se ha eliminado correctamente</font></td></tr>";
+               else {      echo "<tr class='fondotabla'><td align='center's ><font color='red'>El fichero <strong><font color='black'>".$borrar." </font></strong>  no se ha eliminado correctamente</font></td></tr>";
               }
 
       }
@@ -42,9 +42,9 @@ if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
       
 
                if (ftp_rmdir($conn, $borrar)==true) { 
-               echo "<tr class='fondotabla'><td ><font color='green'>El directorio <strong><font color='black'>".$borrar." </font></strong> se ha eliminado correctamente</font></td></tr>";
+               echo "<tr class='fondotabla'><td  align='center' ><font color='green'>El directorio <strong><font color='black'>".$borrar." </font></strong> se ha eliminado correctamente</font></td></tr>";
                }  
-               else {      echo "<tr class='fondotabla'><td ><font color='red'>El directorio <strong><font color='black'>".$borrar." </font></strong>  no se ha eliminado correctamente o no esta vacio</font></td></tr>";
+               else {      echo "<tr class='fondotabla'><td align='center' ><font color='red'>El directorio <strong><font color='black'>".$borrar." </font></strong>  no se ha eliminado correctamente o no esta vacio</font></td></tr>";
                }
                                    
     
