@@ -122,15 +122,16 @@ tr.tabla:hover{
 }
 .seleccionado{
 	background: rgba(179,220,237,1);
-	background: -moz-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179,220,237,1)), color-stop(50%, 				rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
-	background: -webkit-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-	background: -o-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-	background: -ms-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-	background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 );
+background: -moz-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179,220,237,1)), color-stop(50%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
+background: -webkit-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: -o-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: -ms-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 );
 	border-radius:10px;
 }
+
 .seleccionado2{
 	background:url(../img/ruido.PNG);
 	border-radius:5px 0px 0px 0px ;
@@ -138,6 +139,26 @@ tr.tabla:hover{
 	-webkit-border-radius: 5px ;
 	text-align: center;
 }
+.ajeno2:hover{
+
+	background:url(../img/ruido2.PNG);
+	border-radius:5px 0px 0px 0px ;
+	-moz-border-radius:5px;
+	-webkit-border-radius: 5px ;
+	text-align: center;
+}
+.ajeno{
+	background: rgba(243,226,199,1);
+background: -moz-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 24%, rgba(182,141,76,1) 71%, rgba(193,158,103,1) 84%, rgba(233,212,179,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(243,226,199,1)), color-stop(24%, rgba(193,158,103,1)), color-stop(71%, rgba(182,141,76,1)), color-stop(84%, rgba(193,158,103,1)), color-stop(100%, rgba(233,212,179,1)));
+background: -webkit-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 24%, rgba(182,141,76,1) 71%, rgba(193,158,103,1) 84%, rgba(233,212,179,1) 100%);
+background: -o-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 24%, rgba(182,141,76,1) 71%, rgba(193,158,103,1) 84%, rgba(233,212,179,1) 100%);
+background: -ms-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 24%, rgba(182,141,76,1) 71%, rgba(193,158,103,1) 84%, rgba(233,212,179,1) 100%);
+background: linear-gradient(to bottom, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 24%, rgba(182,141,76,1) 71%, rgba(193,158,103,1) 84%, rgba(233,212,179,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=0 );
+	border-radius:10px;
+}
+
 
 .contenido {
 	background-image:url(../img/ruido2.PNG) ;
@@ -151,10 +172,27 @@ tr.tabla:hover{
 	
 	padding: 10px 15px 11px !important;
 font-size: 18px !important;
-background-color: #57d6c7;
+background-color: #008C8C;
 font-weight: bold;
 text-shadow: 1px 1px #57D6C7;
-color: #ffffff;
+color: #242424;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: 1px solid #57D6C7;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+.link:hover{
+	
+	padding: 10px 15px 11px !important;
+font-size: 18px !important;
+background-color: green;
+font-weight: bold;
+text-shadow: 1px 1px #57D6C7;
+color: #242424;
 border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;

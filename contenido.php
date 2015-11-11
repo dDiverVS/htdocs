@@ -167,11 +167,16 @@ echo '
  
 }
 			if (strpos($url, 'borrar')!==false) {
-				echo '
+				echo '<p align="center">
+							<a href="javascript:seleccionar_todo()" class="link">Seleccionar todos</a>     
+							<a href="javascript:deseleccionar_todo()" class="link">Deseleccionar</a> 
+					  </p>
 			<p align="center">
+			
 			<button onclick="return borrar()"  title="Borrar fichero/s" alt="Borrar fichero/s" type="submit" value="" name="Borrar"><img src=img/check.PNG WIDTH="30"  HEIGHT="30"/></button>
 				
 			</p>
+			
 			</form>';
 			}
 		

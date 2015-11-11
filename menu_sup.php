@@ -31,35 +31,35 @@ echo '
 				<th class="enlaces';
 						if (strpos($url,'descargar')!== false) {
 							echo ' seleccionado';
-						}
+						}else echo' ajeno';
 						echo '">
 					Descargar fichero
 				</th>
 				<th class="enlaces';
 						if (strpos($url,'subida')!== false) {
 							echo ' seleccionado';
-						}
+						}else echo' ajeno';
 						echo '">
 					Subir fichero
 				</th>
 				<th class="enlaces';
 						if (strpos($url,'borrar')!== false) {
 							echo ' seleccionado';
-						}
+						}else echo' ajeno';
 						echo '">
 					Borrar
 				</th>
 				<th class="enlaces';
 						if (strpos($url,'crear')!== false) {
 							echo ' seleccionado';
-						}
+						}else echo' ajeno';
 						echo '">
 					Crear Directorio
 				</th>
 				<th class="enlaces';
 						if (strpos($url,'renombrar')!== false) {
 							echo ' seleccionado';
-						}
+						}else echo' ajeno';
 						echo '">
 					Renombrar
 				</th>
@@ -70,7 +70,7 @@ echo '
 						<a href="descargar.php" class="button"/><img class="zoomIt';
 						if (strpos($url,'descargar')!== false) {
 							echo ' seleccionado2';
-						}
+						}else echo' ajeno2';
 						echo ' " src="img/download.PNG" title="Descargar fichero" width="50" height="50" alt="Descargar fichero"></a>
 					</div>
 				</td>
@@ -79,7 +79,7 @@ echo '
 						<a href="subida.php" class="button"/><img class="zoomIt';
 						if (strpos($url,'subida')!== false) {
 							echo ' seleccionado2';
-						}
+						}else echo' ajeno2';
 						echo '" src="img/upload_file.PNG" title="Subir fichero" width="50" height="50" alt="Subir fichero"></a>
 					</div>
 				</td>
@@ -88,7 +88,7 @@ echo '
 						<a href="borrar.php" class="button"/><img class="zoomIt';
 						if (strpos($url,'borrar')!== false) {
 							echo ' seleccionado2';
-						}
+						}else echo' ajeno2';
 						echo ' " src="img/borrar.PNG" title="Borrar" width="50" height="50" alt="Borrar"></a>
 					</div>
 				</td>
@@ -97,7 +97,7 @@ echo '
 						<a href="crear.php" class="button"/><img class="zoomIt';
 						if (strpos($url,'crear')!== false) {
 							echo ' seleccionado2';
-						}
+						}else echo' ajeno2';
 						echo '"   src="img/directorio.PNG" title="Crear directorio" width="50" height="50" alt="Crear directorio"></a>
 					</div>
 				</td>
@@ -106,7 +106,7 @@ echo '
 						<a href="renombrar.php" class="button"/><img class="zoomIt';
 						if (strpos($url,'renombrar')!== false) {
 							echo ' seleccionado2';
-						}
+						}else echo' ajeno2';
 						echo '" src="img/modificar.PNG" title="Renombrar" width="50" height="50" alt="Renombrar"> </a>
 					</div>
 				</td>
