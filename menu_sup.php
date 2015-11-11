@@ -28,41 +28,41 @@ echo '
 		<br/>
 		<table width="30%" border="0" align="center" cellspacing="3" cellpadding="3" >
 			<tr>
-				<th class="enlaces';
+				<td align="center" class="enlaces';
 						if (strpos($url,'descargar')!== false) {
 							echo ' seleccionado';
 						}else echo' ajeno';
 						echo '">
 					Descargar fichero
-				</th>
-				<th class="enlaces';
+				</td>
+				<td align="center" class="enlaces';
 						if (strpos($url,'subida')!== false) {
 							echo ' seleccionado';
 						}else echo' ajeno';
 						echo '">
 					Subir fichero
-				</th>
-				<th class="enlaces';
+				</td>
+				<td align="center" class="enlaces';
 						if (strpos($url,'borrar')!== false) {
 							echo ' seleccionado';
 						}else echo' ajeno';
 						echo '">
 					Borrar
-				</th>
-				<th class="enlaces';
+				</td>
+				<td align="center" class="enlaces';
 						if (strpos($url,'crear')!== false) {
 							echo ' seleccionado';
 						}else echo' ajeno';
 						echo '">
 					Crear Directorio
-				</th>
-				<th class="enlaces';
+				</td>
+				<td align="center" class="enlaces';
 						if (strpos($url,'renombrar')!== false) {
 							echo ' seleccionado';
 						}else echo' ajeno';
 						echo '">
 					Renombrar
-				</th>
+				</td>
 			</tr>
 			<tr>
 				<td>
