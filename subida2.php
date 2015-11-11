@@ -80,7 +80,10 @@ if(!empty($_FILES["archivo3"]["name"]))
 }
 	
 
-?> 
-
+?>
+</table>
+<p align="center">
+<button class="link" onclick="window.location.href='/home.php'">Volver a Inicio</button>
+</p>
 </body>
 </html>
