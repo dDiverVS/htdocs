@@ -120,7 +120,7 @@ echo '
 					if (strpos($url,'descargar')!== false) {
 						echo '
 						<td WIDTH="16"  HEIGHT="30" >
-							<button "Descargar '.$objeto.'" alt="Descargar '.$objeto.'" class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.PNG WIDTH="16"  HEIGHT="16"/></button>
+							<button class="descargar"  type="submit" value="'.$objeto.'" name="id_descargar"><img src=img/download.PNG WIDTH="16"  HEIGHT="16"/></button>
 						</td>';
 					}
 					if (strpos($url,'renombrar')!== false) {
