@@ -92,7 +92,7 @@ echo '
 							<td class="contenido">
 								'.str_replace('./', '', $objeto2).'
 							</td>
-							<td class="contenido"><img src="img/normal_folder.PNG" width="20" height="20"</td>
+							<td class="contenido"><img src="img/normal_folder.PNG" width="20" height="20"/></td>
 							<td class="contenido">&nbsp;</td>
 							<td class="contenido">&nbsp;</td>
 						</tr>';
@@ -133,7 +133,7 @@ echo '
 						<td  class="contenido">
 							'.str_replace('./', '', $objeto).'
 						</td>
-						<td class="contenido"><img src="img/normal_file.PNG" width="20" height="20"></td>
+						<td class="contenido"><img src="img/normal_file.PNG" width="20" height="20"/></td>
 						<td class="contenido">
 							'.$tamano.'
 						</td>
