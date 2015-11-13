@@ -12,7 +12,7 @@ elseif (strpos($url,'crear')!==false) {
 elseif (strpos($url,'descargar')!==false) {
 	echo '
 	<h3 align="center">Seleccione el fichero que desea descargar</h3>
-	<form action="descargar2.php" method="post" name="descargar" id="descargar">';
+	<form action="descargar2.php" method="post" name="descargar" id="descargar" accept-charset="utf-8">';
 }
 elseif (strpos($url,'home')!==false) {
 	echo '
