@@ -1,18 +1,9 @@
 <?php
-//Create your connection
-$ftp_conn = ftp_ssl_connect( "192.168.1.102" );
-
-//Login
-$login_result = ftp_login($ftp_conn,"angel","inves");
-
-if( $login_result )
-   
-    {
-        echo "Success";
-    }
-    else
-    {
-        echo "An error occured";
-    }
-
+include 'seguridad.php';
+include 'conexion.php';
+$lista_bruta=ftp_rawlist($conn,'.');
+$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
+print_r($lista_bruta);
+echo "<br/>";
+print_r($lista);
 ?>
