@@ -162,10 +162,8 @@ echo '
 				<button class="subir"   type="submit" value="" name="subir"><img src=img/check.PNG WIDTH="30"  HEIGHT="30" title="Subir fichero/s" alt="Subir fichero/s"/></button>
 			</p>
 		</form>';
-	
+			}
 
- 
-}
 			if (strpos($url, 'borrar')!==false) {
 				echo '<p align="center">
 							<a href="javascript:seleccionar_todo()" class="link">Seleccionar todos</a>     
@@ -189,7 +187,7 @@ echo '
 				</p>
 			</form>";
 			}
-			if (strpos($url, 'renombrar')!==false) {
+			if (strpos($url, 'renombrar')!==false || strpos($url, 'descargar')!==false) {
 				echo '
 			</form>';
 			}
