@@ -54,6 +54,7 @@ if (isset($_POST['id_descargar'])) {
 			header('Content-Length: ' . filesize($fichero));
 			if (readfile($fichero)) {
 				exec('rm "'.$fichero.'"');
+				header ('location: ./descargar.php?descarga="correcta"');
 			}
 			else {
 				exec('rm "'.$fichero.'"');
@@ -61,7 +62,6 @@ if (isset($_POST['id_descargar'])) {
 			}
 		}
 	}
-	header ('location: ./descargar.php?descarga="correcta"');
 }
 }
 ?>
