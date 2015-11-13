@@ -4,15 +4,16 @@ include 'conexion.php';
 
 //Version Windows
 if (strpos(php_uname("s"),"Windows")!==false) {
-$ruta='C:"'.'xampp"'.'htdocs"'.'.hidden"';
-$ruta2=addslashes($ruta);
-$ruta3=str_replace('"', '', $ruta2);
+$ruta='.hidden\\';
+//$ruta2=addslashes($ruta);
+//$ruta3=str_replace('"', '\"', $ruta);
 
 if (isset($_POST['id_descargar'])) {
 	$id_descargar=$_POST['id_descargar'];
-	$id_descargar2=str_replace('./', '', $id_descargar);
-	if (ftp_get($conn, $ruta3.$id_descargar2, $id_descargar, FTP_BINARY)) {
-		$fichero=$ruta3.$id_descargar2;
+	$id_descargar2=str_replace("./"," ", $id_descargar);
+	if (ftp_get($conn, $ruta.$id_descargar2, $id_descargar, FTP_BINARY)) {
+		$fichero=$ruta.$id_descargar2;
+	//	header ('location: ./descargar.php?descarga='.$fichero.'');
 		if (file_exists($fichero)) {
 			header('Content-Description: File Transfer');
 			header('Content-Type: application/octet-stream');
@@ -21,6 +22,7 @@ if (isset($_POST['id_descargar'])) {
 			header('Cache-Control: must-revalidate');
 			header('Pragma: public');
 			header('Content-Length: ' . filesize($fichero));
+		}
 			if (readfile($fichero)) {
 				exec('del "'.$fichero.'" /Q /F');
 				header ('location: ./descargar.php?descarga="correcta"');
@@ -30,7 +32,7 @@ if (isset($_POST['id_descargar'])) {
 				header ('location: ./descargar.php');
 			}
 		}
-	}
+	
 }
 }
 else{
