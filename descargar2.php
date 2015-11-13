@@ -42,6 +42,7 @@ $ruta='/var/www/html/.hidden/';
 if (isset($_POST['id_descargar'])) {
 	$id_descargar=$_POST['id_descargar'];
 	$fichero=$ruta.$id_descargar;
+	echo $fichero;/*
 	if (ftp_get($conn, $fichero, $id_descargar, FTP_BINARY)) {
 		if (file_exists($fichero)) {
 			header('Content-Description: File Transfer');
@@ -60,7 +61,7 @@ if (isset($_POST['id_descargar'])) {
 				header ('location: ./descargar.php');
 			}
 		}
-	}
+	}*/
 }
 }
 ?>
