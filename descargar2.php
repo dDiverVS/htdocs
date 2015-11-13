@@ -1,6 +1,5 @@
 <?php
 include 'seguridad.php';
-include 'conexion.php';
 
 //Version Windows
 if (strpos(php_uname("s"),"Windows")!==false) {
@@ -40,10 +39,12 @@ else{
 $ruta='/var/www/html/.hidden/';
 
 if (isset($_POST['id_descargar'])) {
+	include 'conexion.php';
 	$id_descargar=$_POST['id_descargar'];
 	$fichero=$ruta.$id_descargar;
-	echo $fichero;/*
+	echo $fichero;
 	if (ftp_get($conn, $fichero, $id_descargar, FTP_BINARY)) {
+		ftp_close($conn);
 		if (file_exists($fichero)) {
 			header('Content-Description: File Transfer');
 			header('Content-Type: application/octet-stream');
@@ -61,7 +62,7 @@ if (isset($_POST['id_descargar'])) {
 				header ('location: ./descargar.php');
 			}
 		}
-	}*/
+	}
 }
 }
 ?>
