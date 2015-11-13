@@ -40,10 +40,9 @@ else{
 $ruta='/var/www/html/.hidden/';
 
 if (isset($_POST['id_descargar'])) {
-	$id_descargar=str_replace("./","",$_POST['id_descargar']);
-	if (ftp_get($conn, $ruta.$id_descargar, $id_descargar, FTP_BINARY)) {
-		$fichero=$ruta.$id_descargar;
-		$fichero=str_replace('%22', '', str_replace('%20', ' ', str_replace('"', '', $fichero)));
+	$id_descargar=$_POST['id_descargar'];
+	$fichero=$ruta.$id_descargar;
+	if (ftp_get($conn, $fichero, $id_descargar, FTP_BINARY)) {
 		if (file_exists($fichero)) {
 			header('Content-Description: File Transfer');
 			header('Content-Type: application/octet-stream');
