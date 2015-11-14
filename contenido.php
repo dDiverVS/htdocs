@@ -26,11 +26,7 @@ elseif (strpos($url,'renombrar')!==false) {
 elseif (strpos($url,'subida')!==false) {
 	echo '
 	<h3 align="center">Suba el fichero que desee</h3>';
-	$max_upload = (int)(ini_get('upload_max_filesize'));
-	$max_post = (int)(ini_get('post_max_size'));
-	$memory_limit = (int)(ini_get('memory_limit'));
-	$upload_mb = min($max_upload, $max_post, $memory_limit);
-	echo "<p align='center'>Tama&ntilde;o m&aacute;ximo permitido <strong>$upload_mb Mb</strong></p>";
+	echo "<p align='center'>Tama&ntilde;o m&aacute;ximo permitido <strong>200 Mb</strong></p>";
 }
 
 echo '
