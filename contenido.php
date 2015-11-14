@@ -25,6 +25,36 @@ elseif (strpos($url,'renombrar')!==false) {
 }
 elseif (strpos($url,'subida')!==false) {
 	echo '
+	<script>
+	var x = 1;
+	var y = x+1;
+	var z = x-1;
+	function anadir() {
+		if (document.getElementById("archivo"+x)) {
+			document.getElementById("archivo"+x).innerHTML=\'<input name="archivo\'+x+\'" type="file"/>\' +
+			\'<p id="archivo\'+y+\'"></p>\';
+			++x;
+			++y;
+			++z;
+		}
+		else {
+			document.getElementById("archivo"+z).innerHTML=\'<input name="archivo\'+z+\'" type="file"/>\' +
+			\'<p id="archivo\'+x+\'"></p>\';
+			document.getElementById("archivo"+x).innerHTML=\'<input name="archivo\'+x+\'" type="file"/>\' +
+			\'<p id="archivo\'+y+\'"></p>\';
+			++x;
+			++y;
+			++z;
+		}
+	}
+	function eliminar() {
+		--x;
+		var element = document.getElementById("archivo"+x);
+		element.parentNode.removeChild(element);
+		--y;
+		--z;
+	}
+	</script>
 	<h3 align="center">Suba el fichero que desee</h3>';
 	echo "<p align='center'>Tama&ntilde;o m&aacute;ximo permitido <strong>200 Mb</strong></p>";
 }
@@ -145,18 +175,11 @@ echo '
 			if (strpos($url, 'subida')!==false) {
 		echo '
 			<form action="subida2.php" method="post" name="subida" id="subida" enctype="multipart/form-data" >
-			<p align="center">
-				<label>Archivo 1</label>
-				<input name="archivo1" type="file" /><br/>
-				<label>Archivo 2</label>
-				<input name="archivo2" type="file"/><br/>
-				<label>Archivo 3</label>
-				<input name="archivo3" type="file"/><br/>
-				<br/>
-				<br/>
-				<br/>
+				<p id="archivo0"><input name="archivo0" type="file"/></p>
+				<p id="archivo1"></p>
+				<input type=\'button\' onclick="anadir()" value="A&ntilde;adir" />
+				<input type=\'button\' onclick="eliminar()" value="Eliminar" />
 				<button class="subir"   type="submit" value="" name="subir"><img src=img/check.PNG WIDTH="30"  HEIGHT="30" title="Subir fichero/s" alt="Subir fichero/s"/></button>
-			</p>
 		</form>';
 			}
 
