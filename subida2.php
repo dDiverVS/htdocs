@@ -84,6 +84,7 @@ if(!empty($_FILES["archivo3"]["name"]))
 </table>
 <p align="center">
 <button class="link" onclick="window.location.href='/home.php'">Volver a Inicio</button>
+<button class="link" onclick="window.location.href='/subida.php'">Volver a Subir</button>
 </p>
 </body>
 </html>

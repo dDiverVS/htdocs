@@ -57,5 +57,6 @@ if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
 </table>
 <p align="center">
 <button class="link" onclick="window.location.href='/home.php'">Volver a Inicio</button>
+<button class="link" onclick="window.location.href='/borrar.php'">Volver a Borrar</button>
 </p></body>
 </html>

@@ -39,6 +39,6 @@ else{header ("Location: crear.php?nocrear=si ");
 </table>
 <p align="center">
 <button class="link" onclick="window.location.href='/home.php'">Volver a Inicio</button>
-</p>
+<button class="link" onclick="window.location.href='/crear.php'">Volver a Crear</button></p>
 </body>
 </html>

@@ -42,6 +42,6 @@ echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='
 </table>
 <p align="center">
 <button class="link" onclick="window.location.href='/home.php'">Volver a Inicio</button>
-</p>
+<button class="link" onclick="window.location.href='/renombrar.php'">Volver a Renombrar</button></p>
 </body>
 </html>

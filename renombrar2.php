@@ -48,8 +48,13 @@ if ( isset($_POST['id_renombrar'])){
               
             </p>
     </form> 
-
+';
+?>
+	<p align="center">
+		<button class="link" onclick="window.location.href='/home.php'">Volver a Inicio</button>
+		<button class="link" onclick="window.location.href='/renombrar.php'">Volver a Renombrar</button>
+    </p>
   </body>
-</html>';
+</html>
 
-?> 
+
