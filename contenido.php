@@ -174,7 +174,7 @@ echo '
 			</table>';
 			if (strpos($url, 'subida')!==false) {
 		echo '
-			<form action="subida2.php" method="post" name="subida" id="subida" enctype="multipart/form-data" >
+			<form action="subida2.php"  align="center" method="post" name="subida" id="subida" enctype="multipart/form-data" >
 				<p id="archivo0"><input name="archivo0" type="file"/></p>
 				<p id="archivo1"></p>
 				<input type=\'button\' onclick="anadir()" value="A&ntilde;adir" />
