@@ -171,15 +171,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', end
 }
 .link{
 	
-	padding: 10px 15px 11px !important;
+	padding: 9px 11px 8px !important;
 font-size: 13px !important;
 background-color: #3CC;
 font-weight: bold;
 text-shadow: 1px 1px #57D6C7;
 color: #242424;
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
+border-radius: 2px;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
 border: 1px solid #57D6C7;
 cursor: pointer;
 box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
@@ -188,12 +188,12 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 .link:hover{
 	
-	padding: 10px 15px 11px !important;
-font-size: 13px !important;
+	padding: 7px 9px 6px !important;
+font-size: 12px !important;
 background-color: green;
 font-weight: bold;
 text-shadow: 1px 1px #57D6C7;
-color: #242424;
+color: white;
 border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
