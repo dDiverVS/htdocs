@@ -172,8 +172,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', end
 .link{
 	
 	padding: 10px 15px 11px !important;
-font-size: 18px !important;
-background-color: #008C8C;
+font-size: 13px !important;
+background-color: #3CC;
 font-weight: bold;
 text-shadow: 1px 1px #57D6C7;
 color: #242424;
@@ -189,7 +189,7 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 .link:hover{
 	
 	padding: 10px 15px 11px !important;
-font-size: 18px !important;
+font-size: 13px !important;
 background-color: green;
 font-weight: bold;
 text-shadow: 1px 1px #57D6C7;

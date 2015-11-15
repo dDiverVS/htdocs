@@ -28,7 +28,7 @@ if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
        
    
 		          if (ftp_delete($conn, $borrar)==true) { 
-      
+      						$borrar=str_replace("./","",$borrar);
                            echo "<tr class='fondotabla' ><td align='center'><font color='green'>El fichero <strong><font color='black'>".$borrar." </font></strong> se ha eliminado correctamente</font></td></tr>";
               }  
                else {      echo "<tr class='fondotabla'><td align='center's ><font color='red'>El fichero <strong><font color='black'>".$borrar." </font></strong>  no se ha eliminado correctamente</font></td></tr>";
