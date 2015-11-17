@@ -2,7 +2,6 @@
 echo '<!DOCTYPE html>
 <html>
 	<head>
-	 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>Crear directorios</title>
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
 		<link rel="icon" type="image/ico" href="img/favicon.ico" />

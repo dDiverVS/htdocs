@@ -20,7 +20,7 @@ echo '<!DOCTYPE html>
 				echo '
 		
 		<form action="acceso.php" method="POST" >
-					<p align="center" class="indique"> <b> ACCESO AL CLIENTE FTP</b></p></br>
+					<p align="center" class="indique"> <b> ACCESO AL CLIENTE FTP</b></p><br/>
 				
 				
 	 		
