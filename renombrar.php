@@ -8,7 +8,7 @@ echo '<!DOCTYPE html>
 		<script type="text/javascript" src="jscript/utiles.js"> </script>
 	</head>
 
-	<body bgcolor="#EFE4B0">';
+	<body>';
 	 //si no indica ni que fichero ni el nuevo nombre, es dirigido a esta pagina con este esto
 		if ( isset($_GET["norenombrar"])){
   		if ($_GET["norenombrar"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un fichero para renombrar</font></h2>";}

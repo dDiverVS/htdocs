@@ -7,7 +7,7 @@ echo '<!DOCTYPE html>
 		<link rel="icon" type="image/ico" href="img/favicon.ico" />
 		<script type="text/javascript" src="jscript/utiles.js"> </script>
 	</head>
-	<body bgcolor="#EFE4B0">';
+	<body>';
 		#Incluye el archivo de seguridad para mantener la sesion activa
 		include 'seguridad.php';
 		include 'conexion.php';

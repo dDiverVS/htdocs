@@ -8,7 +8,7 @@ echo '<!DOCTYPE html>
 		<script type="text/javascript" src="jscript/utiles.js"> </script>
 	</head>
 
-	<body bgcolor="#EFE4B0">';
+	<body>';
 		//si no se introduce un nombre de directorio para crear, se indica el mensaje de abajo
 		if ( isset($_GET["nocrear"])){
 		if ($_GET["nocrear"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un nombre de directorio a crear</font></h2>";}

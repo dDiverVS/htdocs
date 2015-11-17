@@ -8,7 +8,7 @@ echo '<!DOCTYPE html>
 	<script type="text/javascript" src="jscript/utiles.js"> </script>
   </head>
 
-  <body bgcolor="#EFE4B0">';
+  <body>';
   
      include 'seguridad.php';
      include 'conexion.php';

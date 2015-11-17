@@ -8,7 +8,7 @@ echo '<!DOCTYPE html>
 		<script type="text/javascript" src="jscript/utiles.js"> </script>
 	</head>
 
-	<body bgcolor="#EFE4B0">';
+	<body>';
 		//si no se ha indicado un fichero para subir, el usuario es reenviado aqui con el siguiente texto:
 		if ( isset($_GET["noarchivo"])){
 			
