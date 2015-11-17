@@ -8,7 +8,7 @@ echo '<!DOCTYPE html>
 		<script type="text/javascript" src="jscript/utiles.js"> </script>
 	</head>
 
-	<body bgcolor="#EFE4B0">';
+	<body>';
 		// Si no se selecciona un fichero, salta el siguiente texto
 		if ( isset($_GET["noborrar"])){
 		if ($_GET["noborrar"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un fichero para eliminar</font></h2>";}
