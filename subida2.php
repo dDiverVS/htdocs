@@ -18,180 +18,39 @@ echo '<!DOCTYPE html>
 		define('MB', 1048576);
 
 //Opcion a modificar para controlar el tamaño total de las subidas
-if (!empty($_FILES['archivo0'])) {
-	$tamanototal=$_FILES['archivo0']['size'];
-}
-if (!empty($_FILES['archivo1'])) {
-	$tamanototal=$tamanototal+$_FILES['archivo1']['size'];
-}
-if (!empty($_FILES['archivo2'])) {
-	$tamanototal=$tamanototal+$_FILES['archivo2']['size'];
-}
-if (!empty($_FILES['archivo3'])) {
-	$tamanototal=$tamanototal+$_FILES['archivo3']['size'];
-}
-if (!empty($_FILES['archivo4'])) {
-	$tamanototal=$tamanototal+$_FILES['archivo4']['size'];
-}
-if (!empty($_FILES['archivo5'])) {
-	$tamanototal=$tamanototal+$_FILES['archivo5']['size'];
-}
-if (!empty($_FILES['archivo6'])) {
-	$tamanototal=$tamanototal+$_FILES['archivo6']['size'];
-}
-if (!empty($_FILES['archivo7'])) {
-	$tamanototal=$tamanototal+$_FILES['archivo7']['size'];
-}
-if (!empty($_FILES['archivo8'])) {
-	$tamanototal=$tamanototal+$_FILES['archivo8']['size'];
-}
-if (!empty($_FILES['archivo9'])) {
-	$tamanototal=$tamanototal+$_FILES['archivo9']['size'];
+$tamanototal=0;
+for ($x=0; $x < 10; $x++) {
+	if (!empty($_FILES['archivo'.$x])) {
+		$tamanototal=$tamanototal+$_FILES['archivo'.$x]['size'];
+	}
 }
 
 if ($tamanototal>=200*MB) {
 	header('location:./subida.php?tamanototal=max');
 	exit();
 }
+if ($tamanototal==0) {
+	header ("Location: subida.php?noarchivo=si ");
+}
 
 //si el array $_FILES["archivo"] contiene un nombre, osea,  se va a subir ningun fichero:
-if ((empty($_FILES["archivo0"]["name"])) &&(empty($_FILES["archivo1"]["name"])) && (empty($_FILES["archivo2"]["name"])) && (empty($_FILES["archivo3"]["name"])) && (empty($_FILES["archivo4"]["name"])) && (empty($_FILES["archivo5"]["name"])) && (empty($_FILES["archivo6"]["name"])) && (empty($_FILES["archivo7"]["name"])) && (empty($_FILES["archivo8"]["name"])) && (empty($_FILES["archivo9"]["name"]))) header ("Location: subida.php?noarchivo=si ");
-echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='2' class='fondotabla'><tr class='fondotabla' >";
-
-	if(!empty($_FILES["archivo0"]["name"])) 
-   
-	{
+$correcto=0;
+for ($x=0; $x < 10; $x++) { 
+	if(!empty($_FILES["archivo".$x]["name"])) {
 		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo0"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo0"]["name"]);
-
-		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		//unset($_FILES["archivo0"]);
-		if(empty($_FILES["archivo1"]["name"]) && empty($_FILES["archivo2"]["name"]) && empty($_FILES["archivo3"]["name"]) && empty($_FILES["archivo4"]["name"]) && empty($_FILES["archivo5"]["name"]) && empty($_FILES["archivo6"]["name"]) && empty($_FILES["archivo7"]["name"]) && empty($_FILES["archivo8"]["name"]) && empty($_FILES["archivo9"]["name"])) ftp_quit($conn);
-			if ($upload==true) {echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
-			else echo "<tr class='fondotabla' ><td align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
-	} 
-
-if(!empty($_FILES["archivo1"]["name"]))
-	{
-		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo1"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo1"]["name"]);
-
-		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo1"]);
-		if(empty($_FILES["archivo2"]["name"]) && empty($_FILES["archivo3"]["name"]) && empty($_FILES["archivo4"]["name"]) && empty($_FILES["archivo5"]["name"]) && empty($_FILES["archivo6"]["name"]) && empty($_FILES["archivo7"]["name"]) && empty($_FILES["archivo8"]["name"]) && empty($_FILES["archivo9"]["name"])) ftp_quit($conn);
-			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
-			else echo "<tr class='fondotabla' ><td align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
+		$file = $_FILES["archivo".$x]["tmp_name"];
+		$base_archivo = basename($_FILES["archivo".$x]["name"]);
+		if (!$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY)) {
+			$correcto=1;
+		}
 	}
-
-if(!empty($_FILES["archivo2"]["name"]))
-	{
-		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo2"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo2"]["name"]);
-
-		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo2"]);
-		if(empty($_FILES["archivo3"]["name"]) && empty($_FILES["archivo4"]["name"]) && empty($_FILES["archivo5"]["name"]) && empty($_FILES["archivo6"]["name"]) && empty($_FILES["archivo7"]["name"]) && empty($_FILES["archivo8"]["name"]) && empty($_FILES["archivo9"]["name"])) ftp_quit($conn);
-			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
-			else echo "<tr class='fondotabla' ><td align='center'><font color='red>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
-	
 }
-	
-	if(!empty($_FILES["archivo3"]["name"]))
-	{
-		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo3"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo3"]["name"]);
-
-		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo3"]);
-		if( empty($_FILES["archivo4"]["name"]) && empty($_FILES["archivo5"]["name"]) && empty($_FILES["archivo6"]["name"]) && empty($_FILES["archivo7"]["name"]) && empty($_FILES["archivo8"]["name"]) && empty($_FILES["archivo9"]["name"])) ftp_quit($conn);
-			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
-			else echo "<tr class='fondotabla' ><td align='center'><font color='red>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
-	
+if ($correcto==0) {
+	//Angel aquí lo que sea si funcionan todas las subidas
 }
-	if(!empty($_FILES["archivo4"]["name"]))
-	{
-		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo4"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo4"]["name"]);
-
-		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo4"]);
-		if(empty($_FILES["archivo5"]["name"])  && empty($_FILES["archivo6"]["name"]) && empty($_FILES["archivo7"]["name"]) && empty($_FILES["archivo8"]["name"]) && empty($_FILES["archivo9"]["name"])) ftp_quit($conn);
-			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
-			else echo "<tr class='fondotabla' ><td align='center'><font color='red>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
-	
+else {
+	//Aquí lo que sea si falla alguna subida
 }
-	
-if(!empty($_FILES["archivo5"]["name"]))
-	{
-		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo5"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo5"]["name"]);
-
-		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo5"]);
-		if(empty($_FILES["archivo6"]["name"]) && empty($_FILES["archivo7"]["name"]) && empty($_FILES["archivo8"]["name"]) && empty($_FILES["archivo9"]["name"])) ftp_quit($conn);
-			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
-			else echo "<tr class='fondotabla' ><td align='center'><font color='red>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
-	
-}
-if(!empty($_FILES["archivo6"]["name"]))
-	{
-		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo6"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo6"]["name"]);
-
-		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo6"]);
-		if( empty($_FILES["archivo7"]["name"]) && empty($_FILES["archivo8"]["name"]) && empty($_FILES["archivo9"]["name"])) ftp_quit($conn);
-			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
-			else echo "<tr class='fondotabla' ><td align='center'><font color='red>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
-	
-}
-	if(!empty($_FILES["archivo7"]["name"]))
-	{
-		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo7"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo7"]["name"]);
-
-		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo7"]);
-		if( empty($_FILES["archivo8"]["name"]) && empty($_FILES["archivo9"]["name"])) ftp_quit($conn);
-			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
-			else echo "<tr class='fondotabla' ><td align='center'><font color='red>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
-	
-}
-	if(!empty($_FILES["archivo8"]["name"]))
-	{
-		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo8"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo8"]["name"]);
-
-		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo8"]);
-		if( empty($_FILES["archivo9"]["name"])) ftp_quit($conn);
-			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
-			else echo "<tr class='fondotabla' ><td align='center'><font color='red>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
-	
-}
-	if(!empty($_FILES["archivo9"]["name"]))
-	{
-		//almacenamos el nombre temporal del archivo y su nombre y lo subimos a la carpeta actual
-		$file = $_FILES["archivo9"]["tmp_name"];
-		$base_archivo = basename($_FILES["archivo9"]["name"]);
-
-		$upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY);
-		unset($_FILES["archivo9"]);
-		ftp_quit($conn);
-			if ($upload==true){ echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";}
-			else echo "<tr class='fondotabla' ><td align='center'><font color='red>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
-	
-}
-	
 	
 ?>
 </table>
