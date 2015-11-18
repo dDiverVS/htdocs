@@ -30,29 +30,33 @@ elseif (strpos($url,'subida')!==false) {
 	var y = x+1;
 	var z = x-1;
 	function anadir() {
-		if (document.getElementById("archivo"+x)) {
-			document.getElementById("archivo"+x).innerHTML=\'<input name="archivo\'+x+\'" type="file"/>\' +
-			\'<p id="archivo\'+y+\'"></p>\';
-			++x;
-			++y;
-			++z;
-		}
-		else {
-			document.getElementById("archivo"+z).innerHTML=\'<input name="archivo\'+z+\'" type="file"/>\' +
-			\'<p id="archivo\'+x+\'"></p>\';
-			document.getElementById("archivo"+x).innerHTML=\'<input name="archivo\'+x+\'" type="file"/>\' +
-			\'<p id="archivo\'+y+\'"></p>\';
-			++x;
-			++y;
-			++z;
+		if (x<10) {
+			if (document.getElementById("archivo"+x)) {
+				document.getElementById("archivo"+x).innerHTML=\'<input name="archivo\'+x+\'" type="file"/>\' +
+				\'<p id="archivo\'+y+\'"></p>\';
+				++x;
+				y=x+1;
+				z=x-1;
+			}
+			else {
+				document.getElementById("archivo"+z).innerHTML=\'<input name="archivo\'+z+\'" type="file"/>\' +
+				\'<p id="archivo\'+x+\'"></p>\';
+				document.getElementById("archivo"+x).innerHTML=\'<input name="archivo\'+x+\'" type="file"/>\' +
+				\'<p id="archivo\'+y+\'"></p>\';
+				++x;
+				y=x+1;
+				z=x-1;
+			}
 		}
 	}
 	function eliminar() {
-		--x;
-		var element = document.getElementById("archivo"+x);
-		element.parentNode.removeChild(element);
-		--y;
-		--z;
+		if (x>1) {
+			--x;
+			var element = document.getElementById("archivo"+x);
+			element.parentNode.removeChild(element);
+			y=x+1;
+			z=x-1;
+		}
 	}
 	</script>
 	<h3 align="center">Suba el fichero que desee</h3>';
