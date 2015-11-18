@@ -26,7 +26,7 @@ elseif (strpos($url,'renombrar')!==false) {
 elseif (strpos($url,'subida')!==false) {
 	echo '
 	<script>
-	var x = 1;
+	var x = 0;
 	var y = x+1;
 	var z = x-1;
 	function anadir() {
