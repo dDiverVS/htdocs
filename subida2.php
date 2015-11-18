@@ -18,9 +18,11 @@ echo '<!DOCTYPE html>
 		define('MB', 1048576);
 
 //Opcion a modificar para controlar el tamaño total de las subidas
-
+if (!empty($_FILES['archivo0'])) {
+	$tamanototal=$_FILES['archivo0']['size'];
+}
 if (!empty($_FILES['archivo1'])) {
-	$tamanototal=$_FILES['archivo1']['size'];
+	$tamanototal=$tamanototal+$_FILES['archivo1']['size'];
 }
 if (!empty($_FILES['archivo2'])) {
 	$tamanototal=$tamanototal+$_FILES['archivo2']['size'];
@@ -46,16 +48,14 @@ if (!empty($_FILES['archivo8'])) {
 if (!empty($_FILES['archivo9'])) {
 	$tamanototal=$tamanototal+$_FILES['archivo9']['size'];
 }
-if (!empty($_FILES['archivo10'])) {
-	$tamanototal=$tamanototal+$_FILES['archivo10']['size'];
-}
+
 if ($tamanototal>=200*MB) {
 	header('location:./subida.php?tamanototal=max');
 	exit();
 }
 
 //si el array $_FILES["archivo"] contiene un nombre, osea,  se va a subir ningun fichero:
-if ((empty($_FILES["archivo1"]["name"])) && (empty($_FILES["archivo2"]["name"])) && (empty($_FILES["archivo3"]["name"]))) header ("Location: subida.php?noarchivo=si ");
+if ((empty($_FILES["archivo0"]["name"])) &&(empty($_FILES["archivo1"]["name"])) && (empty($_FILES["archivo2"]["name"])) && (empty($_FILES["archivo3"]["name"])) && (empty($_FILES["archivo4"]["name"])) && (empty($_FILES["archivo5"]["name"])) && (empty($_FILES["archivo6"]["name"])) && (empty($_FILES["archivo7"]["name"])) && (empty($_FILES["archivo8"]["name"])) && (empty($_FILES["archivo9"]["name"]))) header ("Location: subida.php?noarchivo=si ");
 echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='2' class='fondotabla'><tr class='fondotabla' >";
 
 	if(!empty($_FILES["archivo1"]["name"])) 
