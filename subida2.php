@@ -31,6 +31,7 @@ if ($tamanototal>=200*MB) {
 }
 if ($tamanototal==0) {
 	header ("Location: subida.php?noarchivo=si ");
+	exit();
 }
 
 //si el array $_FILES["archivo"] contiene un nombre, osea,  se va a subir ningun fichero:
