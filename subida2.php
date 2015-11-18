@@ -28,7 +28,27 @@ if (!empty($_FILES['archivo2'])) {
 if (!empty($_FILES['archivo3'])) {
 	$tamanototal=$tamanototal+$_FILES['archivo3']['size'];
 }
-
+if (!empty($_FILES['archivo4'])) {
+	$tamanototal=$tamanototal+$_FILES['archivo4']['size'];
+}
+if (!empty($_FILES['archivo5'])) {
+	$tamanototal=$tamanototal+$_FILES['archivo5']['size'];
+}
+if (!empty($_FILES['archivo6'])) {
+	$tamanototal=$tamanototal+$_FILES['archivo6']['size'];
+}
+if (!empty($_FILES['archivo7'])) {
+	$tamanototal=$tamanototal+$_FILES['archivo7']['size'];
+}
+if (!empty($_FILES['archivo8'])) {
+	$tamanototal=$tamanototal+$_FILES['archivo8']['size'];
+}
+if (!empty($_FILES['archivo9'])) {
+	$tamanototal=$tamanototal+$_FILES['archivo9']['size'];
+}
+if (!empty($_FILES['archivo10'])) {
+	$tamanototal=$tamanototal+$_FILES['archivo10']['size'];
+}
 if ($tamanototal>=200*MB) {
 	header('location:./subida.php?tamanototal=max');
 	exit();
