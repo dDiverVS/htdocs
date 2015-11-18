@@ -179,8 +179,8 @@ echo '
 			if (strpos($url, 'subida')!==false) {
 		echo '
 			<form action="subida2.php"  align="center" method="post" name="subida" id="subida" enctype="multipart/form-data" >
-				<div align="center"><p id="archivo1" align="center"><input name="archivo1" type="file"/></p>
-				<p id="archivo2" align="center"></p>
+				<div align="center"><p id="archivo0" align="center"><input name="archivo0" type="file"/></p>
+				<p id="archivo1" align="center"></p>
 				<a href="javascript:anadir()" class="link">A&ntilde;adir</a> 
 				<a href="javascript:eliminar()" class="link">Eliminar</a> <br/><br/>
 				<button class="subir"  align="center"  type="submit" value="" name="subir"><img src=img/check.PNG WIDTH="30"  HEIGHT="30" title="Subir fichero/s" alt="Subir fichero/s"/></button></div>
