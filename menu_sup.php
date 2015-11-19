@@ -1,4 +1,5 @@
-﻿<?php
+﻿
+<?php
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 echo '			
 				<div class="datos">
@@ -10,16 +11,16 @@ echo '
 				</span>
 				</div>
 				<span class="logo" >
-						<a href="home.php"> <img src="img/logo.PNG" title="Volver a Inicio" width="350" height="100" alt="Volver a Inicio"> </a>
+						<a href="home.php" class="logotipo"> <h1 align="center"> FTP-WEB</h1> </a>
 				</span>
-				<span class="enlaces" >
-					<b>Cerrar Sesi&oacute;n</b>
-				</span>
-				<span class="iconocerrar" >
 				
-					<a href="cerrar.php" class="button" onclick="return confirmar()">    
-					<img class="zoomIt"   src="img/exit.PNG" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
+				<span  align="center" class="cerrar" >
+					<b>Cerrar Sesi&oacute;n</b><br/>
+				
+					<a href="cerrar.php" align="center"  onclick="return confirmar()">    
+					<img    src="img/exit.PNG" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
 				</span>
+			
 		<br/>
 		<br/>
 		<br/>
