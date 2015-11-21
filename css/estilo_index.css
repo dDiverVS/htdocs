@@ -2,6 +2,14 @@ body {
 	background-color: #FFFFB9;
 	
 	}
+	
+input[type=checkbox] {
+  /* All browsers except webkit*/
+  transform: scale(1.5);
+
+  /* Webkit browsers*/
+  -webkit-transform: scale(1.5);
+}
 input.barra{
     background-color: #FFFFCC;
     border-radius: 10px;

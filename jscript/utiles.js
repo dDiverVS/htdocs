@@ -1,14 +1,23 @@
 function confirmar()
 {
-	if(confirm('¿Estas seguro de cerrar la sesion?'))
+	if(confirm('Estas seguro de cerrar la sesion?'))
 		return true;
 	else
 		return false;
 }
 
+ 
 function borrar()
 {
-	if(confirm('¿Estas seguro de borrar los ficheros seleccionados?'))
+	if(confirm('Estas seguro de borrar los ficheros seleccionados?'))
+		return true;
+	else
+		return false;
+}
+
+function subidafichero()
+{
+	if(confirm('Subir ficheros seleccionados?(Si ya existen en el servidor, se sobreescribiran)'))
 		return true;
 	else
 		return false;

@@ -25,6 +25,8 @@ elseif (strpos($url,'renombrar')!==false) {
 }
 elseif (strpos($url,'subida')!==false) {
 	echo '
+			<form action="subida2.php"  align="center" method="post"  name="subida" id="subida" enctype="multipart/form-data" >';
+	echo '
 	<script>
 	var x = 0;
 	var y = x+1;
@@ -58,11 +60,10 @@ elseif (strpos($url,'subida')!==false) {
 			z=x-1;
 		}
 	}
+	
 	</script>
 	<h3 align="center">Suba el fichero o ficheros que desee</h3>';
-	echo "<p align='center'>
-	Hasta <strong>10</strong> ficheros<br/>
-	Tama&ntilde;o m&aacute;ximo permitido <strong>200 Mb</strong></p>";
+	
 }
 
 echo '
@@ -179,13 +180,16 @@ echo '
 			echo '
 			</table>';
 			if (strpos($url, 'subida')!==false) {
-		echo '
-			<form action="subida2.php"  align="center" method="post" name="subida" id="subida" enctype="multipart/form-data" >
-				<div align="center"><p id="archivo0" align="center"><input name="archivo0" type="file"/></p>
+			echo "<p align='center'>
+			Hasta <strong>10</strong> ficheros<br/>
+			Tama&ntilde;o m&aacute;ximo permitido <strong>200 Mb</strong></p>";
+			echo'
+				<p id="archivo0" align="center"><input name="archivo0" type="file"/></p>
 				<p id="archivo1" align="center"></p>
 				<a href="javascript:anadir()" class="link">A&ntilde;adir</a> 
 				<a href="javascript:eliminar()" class="link">Eliminar</a> <br/><br/>
-				<button class="subir"  align="center"  type="submit" value="" name="subir"><img src=img/check.PNG WIDTH="30"  HEIGHT="30" title="Subir fichero/s" alt="Subir fichero/s"/></button></div>
+				<button onclick="return subidafichero()" title="Subir fichero/s" alt="Subir fichero/s"/  type="submit" value="" name="subir"><img src=img/check.PNG WIDTH="30" HEIGHT="30"/></button>
+				
 		</form>';
 			}
 
@@ -196,7 +200,7 @@ echo '
 					  </p>
 			<p align="center">
 			
-			<button onclick="return borrar()"  title="Borrar fichero/s" alt="Borrar fichero/s" type="submit" value="" name="Borrar"><img src=img/check.PNG WIDTH="30"  HEIGHT="30"/></button>
+			<button onclick="return borrar()"  title="Borrar fichero/s" alt="Borrar fichero/s" type="submit" value="" name="Borrar"><img src=img/check.PNG WIDTH="30" HEIGHT="30"/></button>
 				
 			</p>
 			
@@ -215,5 +219,5 @@ echo '
 			if (strpos($url, 'renombrar')!==false || strpos($url, 'descargar')!==false) {
 				echo '
 			</form>';
-			}echo'</div>';
+			}
 ?>

@@ -2,7 +2,7 @@
 <?php
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 echo '				
-		  		<div class="todo">
+		  	
 				<table width="80%" border="0" class="petarda" align="center" cellspacing="3" cellpadding="3" >
 					<tr>		
 						<td width="25%"  class="datos">

@@ -29,9 +29,9 @@ echo '<!DOCTYPE html>
 				
 					<input type="text" class="barra" name="servidor" size="15" maxlength="50" required title="Introduzca el nombre o direcci&oacute;n del servidor">
 				</p>				
-				<p align="left" class="color">Puerto: (21 por defecto)
+				<p align="left" class="color">Puerto:
 				
-					<input type="text" class="barra" name="puerto" size="15" maxlength="50" Value="21">
+					<input type="text" class="barra" name="puerto" size="15" maxlength="50" required title="Introduzca el numero de puerto de conexi&oacute;n al servidor FTP" Value="21">
 				</p>
 				
 				<p align="left" class="color"> Usuario:

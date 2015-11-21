@@ -166,6 +166,13 @@ background: linear-gradient(to bottom, rgba(147,206,222,1) 0%, rgba(117,189,209,
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=0 );
 
 }
+input[type=checkbox] {
+  /* All browsers except webkit*/
+  transform: scale(1.5);
+
+  /* Webkit browsers*/
+  -webkit-transform: scale(1.5);
+}
 .link:hover{
 	
 	padding: 7px 9px 6px !important;
