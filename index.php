@@ -16,7 +16,7 @@ echo '<!DOCTYPE html>
 		  		if ($_GET["errorconexion"]=="si") echo "<h2 align='center'><font color='red'>No se ha podido realizar la conexion a dicha direcci&oacute;n</font></h2>";}
 				#Si el usuario o contraseña de dicho servidor son erroneas, aparece este mensaje 
 				if ( isset($_GET["errorusuario"])){
-	 			if ($_GET["errorusuario"]=="si") echo "<h2 align='center' ><font color='red'>Datos incorrectos.Introduzca usuario o contrase&ntilde;a correcta</font></h2>";}
+	 			if ($_GET["errorusuario"]=="si") echo "<h2 align='center' ><font color='red'>Introduzca usuario o contrase&ntilde;a correcta</font></h2>";}
 				echo '
 		
 		<form action="acceso.php" method="POST" >
@@ -27,7 +27,7 @@ echo '<!DOCTYPE html>
 				<p align="left" class="color">			
 				 Nombre o direcci&oacute;n del servidor FTP:
 				
-					<input type="text" class="barra" name="servidor" size="15" maxlength="50">
+					<input type="text" class="barra" name="servidor" size="15" maxlength="50" required title="Introduzca el nombre o direcci&oacute;n del servidor">
 				</p>				
 				<p align="left" class="color">Puerto: (21 por defecto)
 				
@@ -36,7 +36,7 @@ echo '<!DOCTYPE html>
 				
 				<p align="left" class="color"> Usuario:
 				
-					<input type="Text" class="barra" name="usuario" size="15" maxlength="50">
+					<input type="Text" class="barra" name="usuario" size="15" maxlength="50" required title="Introduzca un nombre de usuario">
 				</p>
 							
 				<p align="left" class="color">Contrase&ntilde;a:

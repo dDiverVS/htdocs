@@ -1,5 +1,5 @@
 body {
-	background-color: #EFE4B0;
+	background-color: #FFFFB9;
 	
 	}
 input.barra{
@@ -12,10 +12,10 @@ input.barra{
 }
 h1 {position:relative;
 	top:1%;
-	left:30%;
+	left:33%;
 	width:450px;
 	font: 200% sans-serif; 
-	color: green; 
+	color: #00A653; ; 
 	text-shadow: black 0.1em 0.1em 0.1em;
 	}
 h2 {
@@ -43,14 +43,17 @@ background: url(../img/login.PNG);
 }
 #form {position:relative;
 	top:5%;
-	left:30%;
+	left:33%;
 	text-align:left;
 	font:75% sans-serif;	
 	float:left;
-	width:500px;
+	padding-left:3%;
+	padding-right:2%;
+	width:400px;
 	background-image:url(../img/ruido-index.PNG);
 	background-size: 100%; 
-	color: green; 
+	color:#00A653;
+	font-weight:bold; 
 	text-shadow: white 0.1em 0.1em 0.1em;
 	border-radius: 10px;
 	-moz-border-radius: 10px;

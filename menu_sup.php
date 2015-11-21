@@ -1,63 +1,65 @@
 ﻿
 <?php
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-echo '			
-				<div class="datos">
-		  		<span class="datos" >
-						
+echo '				
+		  		<div class="todo">
+				<table width="80%" border="0" class="petarda" align="center" cellspacing="3" cellpadding="3" >
+					<tr>		
+						<td width="25%"  class="datos">
 						SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
 						USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
 						DIRECTORIO ACTUAL: <b>'.str_replace('//', '/',$_SESSION["carpeta_actual"]).'</b><br/><br/>
-				</span>
-				</div>
-				<span class="logo" >
+						</td>
+				
+						<td width="50%" align="center">	
+				
 						<a href="home.php" class="logotipo"> <h1 align="center"> FTP-WEB</h1> </a>
-				</span>
 				
-				<span  align="center" class="cerrar" >
-					<b>Cerrar Sesi&oacute;n</b><br/>
+						</td>
+						<td witdth="25%" align="center">
 				
-					<a href="cerrar.php" align="center"  onclick="return confirmar()">    
-					<img    src="img/exit.PNG" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
-				</span>
+							<font color="green">	<b>Cerrar Sesi&oacute;n</b></font><br/>
+						
+							<a href="cerrar.php" align="center"  onclick="return confirmar()">    
+							<img src="img/exit.PNG" alignt="center" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
+						</td>
+					</tr>
+				</table>
 			
+		
 		<br/>
 		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<table width="30%" border="0" align="center" cellspacing="3" cellpadding="3" >
+		<table width="80%" border="0" align="center" cellspacing="3" cellpadding="3" >
 			<tr>
-				<td align="center" class="enlaces';
+				<td width="20%"align="center" class="enlaces';
 						if (strpos($url,'descargar')!== false) {
 							echo ' seleccionado';
 						}else echo' ajeno';
 						echo '">
 					Descargar fichero
 				</td>
-				<td align="center" class="enlaces';
+				<td width="20%" align="center" class="enlaces';
 						if (strpos($url,'subida')!== false) {
 							echo ' seleccionado';
 						}else echo' ajeno';
 						echo '">
 					Subir fichero
 				</td>
-				<td align="center" class="enlaces';
+				<td width="20%" align="center" class="enlaces';
 						if (strpos($url,'borrar')!== false) {
 							echo ' seleccionado';
 						}else echo' ajeno';
 						echo '">
 					Borrar
 				</td>
-				<td align="center" class="enlaces';
+				<td width="20%" align="center" class="enlaces';
 						if (strpos($url,'crear')!== false) {
 							echo ' seleccionado';
 						}else echo' ajeno';
 						echo '">
 					Crear Directorio
 				</td>
-				<td align="center" class="enlaces';
+				<td width="20%" align="center" class="enlaces';
 						if (strpos($url,'renombrar')!== false) {
 							echo ' seleccionado';
 						}else echo' ajeno';

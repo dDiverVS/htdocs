@@ -59,8 +59,10 @@ elseif (strpos($url,'subida')!==false) {
 		}
 	}
 	</script>
-	<h3 align="center">Suba el fichero que desee</h3>';
-	echo "<p align='center'>Tama&ntilde;o m&aacute;ximo permitido <strong>200 Mb</strong></p>";
+	<h3 align="center">Suba el fichero o ficheros que desee</h3>';
+	echo "<p align='center'>
+	Hasta <strong>10</strong> ficheros<br/>
+	Tama&ntilde;o m&aacute;ximo permitido <strong>200 Mb</strong></p>";
 }
 
 echo '
@@ -213,5 +215,5 @@ echo '
 			if (strpos($url, 'renombrar')!==false || strpos($url, 'descargar')!==false) {
 				echo '
 			</form>';
-			}
+			}echo'</div>';
 ?>
