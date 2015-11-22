@@ -17,7 +17,7 @@ function borrar()
 
 function subidafichero()
 {
-	if(confirm('Subir ficheros seleccionados?(Si ya existen en el servidor, se sobreescribiran)'))
+	if(confirm('Subir ficheros seleccionados?(Si ya existen en el servidor, se sobreescribir&aacute;n)'))
 		return true;
 	else
 		return false;

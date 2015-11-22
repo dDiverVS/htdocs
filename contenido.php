@@ -186,9 +186,10 @@ echo '
 			echo'
 				<p id="archivo0" align="center"><input name="archivo0" type="file"/></p>
 				<p id="archivo1" align="center"></p>
+				<p align="center">
 				<a href="javascript:anadir()" class="link">A&ntilde;adir</a> 
 				<a href="javascript:eliminar()" class="link">Eliminar</a> <br/><br/>
-				<button onclick="return subidafichero()" title="Subir fichero/s" alt="Subir fichero/s"/  type="submit" value="" name="subir"><img src=img/check.PNG WIDTH="30" HEIGHT="30"/></button>
+				<button onclick="return subidafichero()" title="Subir fichero/s" alt="Subir fichero/s"/  type="submit" value="" name="subir"><img src=img/check.PNG WIDTH="30" HEIGHT="30"/></button></p>
 				
 		</form>';
 			}
@@ -211,7 +212,7 @@ echo '
 			echo "
 			<form action='crear2.php' method='post' name='crear_ftp' id='crear_ftp'>
 				<p align='center'>
-					<input class='barra' name='crear' align='center' type='text' title='El nombre de los directorios no pueden contener \\/:?*><\"|' pattern='[^\"\\x5c\"\x22\"\x2f\"\x3a\"\x3f\"\x2a\"\x3c\"\x3e\"\x7c]+' /> <br/><br/>
+					<input class='barra' name='crear' align='center' type='text' title='El nombre de los directorios no pueden contener \\/:?*><\"|' required pattern='[^\"\\x5c\"\x22\"\x2f\"\x3a\"\x3f\"\x2a\"\x3c\"\x3e\"\x7c]+' /> <br/><br/>
 					<button  title='Crear directorio' alt='Crear directorio' type='submit' value='' name='envio'><img src=img/check.PNG WIDTH='30'  HEIGHT='30'/></button>
 				</p>
 			</form>";

@@ -18,7 +18,7 @@ echo '<!DOCTYPE html>
 //si se ha pulsado el boton de enviar en renombrar2.php y el nuevo nombre no esta vacio:
 echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='2' class='fondotabla'><tr class='fondotabla' >";
 
-  if ( isset($_POST['id_renombrar2']) && $_POST['id_renombrar2']!='') {
+  if ( isset($_POST['id_renombrar2']) && $_POST['id_renombrar2']!='con') {
 
   $nombrenuevo=$_POST['id_renombrar2'];
 
