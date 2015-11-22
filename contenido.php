@@ -182,7 +182,7 @@ echo '
 			if (strpos($url, 'subida')!==false) {
 			echo "<p align='center'>
 			Hasta <strong>10</strong> ficheros<br/>
-			Tama&ntilde;o m&aacute;ximo permitido <strong>200 Mb</strong></p>";
+			Tama&ntilde;o m&aacute;ximo permitido <strong>50Mb</strong></p>";
 			echo'
 				<p id="archivo0" align="center"><input name="archivo0" type="file"/></p>
 				<p id="archivo1" align="center"></p>

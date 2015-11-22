@@ -27,7 +27,7 @@ for ($x=0; $x < 10; $x++) {
 	}
 }
 
-if ($tamanototal>=200*MB) {
+if ($tamanototal>=50*MB) {
 	header('location:./subida.php?tamanototal=max');
 	exit();
 }
