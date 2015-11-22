@@ -18,7 +18,7 @@ echo '<!DOCTYPE html>
    include 'menu_sup.php';
 
 // si se ha indicado algun fichero y se ha pulsado a enviar, recoge cada elemento indicado para borrar del array y por cada valor, se introduce en la variable  $borrar
-echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='2' class='fondotabla'><tr class='fondotabla' >";
+echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='0' class='fondotabla'><tr class='fondotabla' >";
 if (isset($_POST['Borrar']) && isset($_POST['id_borrar'])){
 	foreach ($_POST['id_borrar'] as $borrar)  {
 
