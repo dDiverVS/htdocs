@@ -10,14 +10,15 @@ echo '<!DOCTYPE html>
 
 	<body>';
 	//si no indica ni que fichero ni el nuevo nombre, es dirigido a esta pagina con este esto
-	if ( isset($_GET["nodescargar"])){
-	if ($_GET["nodescargar"]=="si") echo "<h2 align='center'><font color='red'>No ha indicado un fichero para descargar</font></h2>";}
-		
+	
 	//Incluye el archivo de seguridad para mantener la sesion activa
 	include 'seguridad.php';
 	include 'conexion.php';
 	include 'menu_sup.php';
 	include  'contenido.php';
+	if ( isset($_GET["descarga"])){
+	if ($_GET["descarga"]=="incorrecta") echo "<script>alert('No puede descargar el fichero')</script>";}
+		
 	echo '
 	</body>
 </html>';

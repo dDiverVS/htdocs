@@ -30,9 +30,9 @@ if (isset($_POST['id_descargar'])) {
 				header ('location: ./descargar.php');
 			}
 		}
-	}
+	}else header ('location: ./descargar.php?descarga=incorrecta');
 }
-else  ('location: ./descargar.php?descarga="correcta"');
+
 }
 else{
 
@@ -82,9 +82,7 @@ if (isset($_POST['id_descargar'])) {
 
 		}
 
-	}
-
-	//header ('location: ./descargar.php?descarga="correcta"');
+	}	else header ('location: ./descargar.php?descarga=incorrecta');
 
 }
 
