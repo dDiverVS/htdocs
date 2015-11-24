@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+set_time_limit(0);
 	if (isset($_SESSION['SSL'])) {
 		#Conecto con las variables de sesion para mantener la conexion y no solicitar la peticion al cliente de nuevo
 		$conn=ftp_ssl_connect($_SESSION['servidor'],$_SESSION['puerto'],30);//conexion ftp sobre ssl al servidor indicado
