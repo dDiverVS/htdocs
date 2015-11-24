@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-set_time_limit(0);
+
 	//Inicio la sesión
 	session_start();
 

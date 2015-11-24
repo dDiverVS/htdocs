@@ -27,7 +27,7 @@ if (isset($_POST['SSL'])) {
 		$_SESSION['servidor']=$_POST['servidor'];
 		$_SESSION['puerto']=$_POST['puerto'];
 		$_SESSION['SSL']=$_POST['SSL'];
-		$_SESSION['conn']=ftp_ssl_connect($_SESSION['servidor'],$_SESSION['puerto']);
+		$_SESSION['conn']=ftp_ssl_connect($_SESSION['servidor'],$_SESSION['puerto'],150);
 
 		//defino la sesión que demuestra que el usuario está autorizado
 		$_SESSION["autentificado"]= "SI";
@@ -58,7 +58,7 @@ else {
 		$_SESSION['contrasena']=$_REQUEST['contrasena'];
 		$_SESSION['servidor']=$_POST['servidor'];
 		$_SESSION['puerto']=$_POST['puerto'];
-		$_SESSION['conn']=ftp_connect($_SESSION['servidor'],$_SESSION['puerto']);
+		$_SESSION['conn']=ftp_connect($_SESSION['servidor'],$_SESSION['puerto'],150);
 
 		//defino la sesión que demuestra que el usuario está autorizado
 		$_SESSION["autentificado"]= "SI";
