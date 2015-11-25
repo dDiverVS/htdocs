@@ -30,7 +30,7 @@ echo '<!DOCTYPE html>
 				</p>				
 				<p align="left" class="color">
 					Puerto:			
-					<input type="text" class="barra" name="puerto" size="15" maxlength="50" required title="Introduzca el numero de puerto de conexi&oacute;n al servidor FTP" Value="21">
+					<input type="number" class="barra" name="puerto" size="15" maxlength="50" required title="Introduzca el numero de puerto de conexi&oacute;n al servidor FTP" Value="21">
 				</p>
 				<p align="left" class="color"> 
 					Usuario:

@@ -26,7 +26,7 @@ elseif (strpos($url,'renombrar')!==false) {
 }
 elseif (strpos($url,'subida')!==false) {
 	echo '
-			<form action="subida2.php"  align="center" method="post"  name="subida" id="subida" enctype="multipart/form-data" >';
+	<form action="subida2.php"  align="center" method="post"  name="subida" id="subida" enctype="multipart/form-data" >';
 	//Funciones de javascript que permiten añadir o eliminar input file
 	echo '
 	<script>
