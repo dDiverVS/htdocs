@@ -5,21 +5,20 @@ echo '<!DOCTYPE html>
     <title>Crear directorios</title>
     <link href="css/estilo.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/ico" href="img/favicon.ico" />
-	<script type="text/javascript" src="jscript/utiles.js"> </script>
+    <script type="text/javascript" src="jscript/utiles.js"> </script>
   </head>
 
   <body>';
   
      include 'seguridad.php';
      include 'conexion.php';
-    
     //Enlaces para acceder a diferentes opciones
-    include 'menu_sup.php';
+     include 'menu_sup.php';
 echo "<table width='60%' border='0' align='center' cellspacing='0' cellpadding='2' class='fondotabla'><tr class='fondotabla' >";
 
 //recogemos el nombre introducido en formulario
 $crear=$_POST['crear'];
-// si hay un valor y no es un valor vacio 
+// si hay un valor y no es un valor igual a con(valor no permitido en windows): 
 if ( isset($crear) and $crear!="con"){
 //si se ha creado correctamente muestra un texto y si no otro diferente
 		if (ftp_mkdir($conn, $crear)) {
@@ -36,9 +35,10 @@ else{header ("Location: crear.php?nocrear=si ");
 
 
 ?> 
-</table>
-<p align="center">
-<button class="link" onclick="window.location.href='/home.php'">Volver a Inicio</button>
-<button class="link" onclick="window.location.href='/crear.php'">Volver a Crear</button></p>
-</body>
+    </table>
+    <p align="center">
+      <button class="link" onclick="window.location.href='/home.php'">Volver a Inicio</button>
+      <button class="link" onclick="window.location.href='/crear.php'">Volver a Crear</button>
+    </p>
+  </body>
 </html>

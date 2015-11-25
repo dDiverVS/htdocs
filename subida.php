@@ -9,16 +9,17 @@ echo '<!DOCTYPE html>
 	</head>
 
 	<body>';
-		//si no se ha indicado un fichero para subir, el usuario es reenviado aqui con el siguiente texto:
 		include 'seguridad.php';
 		include 'conexion.php';
 		
 		//Enlaces para acceder a diferentes opciones
 		include 'menu_sup.php';
 		include 'contenido.php';
-	if ( isset($_GET["noarchivo"])){
-		
-		if ($_GET["noarchivo"]=="si") echo "<script>alert('No ha indicado un fichero para subir')</script>";}
+		//si no se ha indicado un fichero para subir, el usuario es reenviado aquí con el siguiente texto:
+		if ( isset($_GET["noarchivo"])){
+		if ($_GET["noarchivo"]=="si") echo "<script>alert('No ha indicado un fichero para subir')</script>";
+		}
+		//Si el total de subidas supera el limite, aparecerá el siguiente mensaje:
 		if ( isset($_GET["tamanototal"])){echo"<script>alert('Capacidad de subida superada')</script>";}
 echo'
 	</body>	

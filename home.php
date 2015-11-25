@@ -8,7 +8,6 @@ echo '<!DOCTYPE html>
 		<script type="text/javascript" src="jscript/utiles.js"> </script>
 	</head>
 	<body>';
-		#Incluye el archivo de seguridad para mantener la sesion activa
 		include 'seguridad.php';
 		include 'conexion.php';
 		

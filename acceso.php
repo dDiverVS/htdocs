@@ -4,10 +4,10 @@ $usuario=$_REQUEST["usuario"];
 $contrasena=$_REQUEST["contrasena"];
 $servidor=$_POST["servidor"];
 $puerto=$_POST["puerto"];
-
+//si elige la conexion SSL:
 if (isset($_POST['SSL'])) {
 	$SSL=$_POST['SSL'];
-
+	//si la conexion con la dirección del servidor indicada no es exitosa, se le redirige a index.php donde verá un mensaje:
 	if (!$conn=@ftp_ssl_connect($servidor,$puerto)){
 		header ("Location: index.php?errorconexion=si");
 		exit();
@@ -21,7 +21,7 @@ if (isset($_POST['SSL'])) {
 	//Finalmente si todo es correcto iniciamos sesión y definimos las variables de sesión
 	else {
 		session_start();
-		//almacenamos los datos introducidos por el usuario en variables de sesion que será usado por el fichero seguridad.php para mantener la sesion activa
+		//almacenamos los datos introducidos por el usuario en variables de sesion que será usado por el fichero conexion.php para mantener la sesion activa
 		$_SESSION['usuario']=$_REQUEST['usuario'];
 		$_SESSION['contrasena']=$_REQUEST['contrasena'];
 		$_SESSION['servidor']=$_POST['servidor'];
@@ -36,9 +36,9 @@ if (isset($_POST['SSL'])) {
 		header ("Location: home.php");
 	}
 }
-
+//si no elige la conexión SSL:
 else {
-//se verifica que existe conexion con la direccion indicada por el usuario.En caso contrario lo redirigimos a la pagina principal con su correspondiente mensaje de error
+//se verifica que existe conexión con la dirección indicada por el usuario.En caso contrario lo redirigimos a la pagina principal con su correspondiente mensaje de error
 	if (!$conn=@ftp_connect($servidor,$puerto)){
 		header ("Location: index.php?errorconexion=si");
 		exit();
@@ -53,7 +53,7 @@ else {
 	//Finalmente si todo es correcto iniciamos sesión y definimos las variables de sesión
 	else {
 		session_start();
-		//almacenamos los datos introducidos por el usuario en variables de sesion que será usado por el fichero seguridad.php para mantener la sesion activa
+		//almacenamos los datos introducidos por el usuario en variables de sesion que será usado por el fichero conexion.php para mantener la sesion activa
 		$_SESSION['usuario']=$_REQUEST['usuario'];
 		$_SESSION['contrasena']=$_REQUEST['contrasena'];
 		$_SESSION['servidor']=$_POST['servidor'];

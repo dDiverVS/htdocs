@@ -1,4 +1,5 @@
 ﻿<?php
+//En función del fichero seleccionado y por tanto que se muestre en la url,se mostrará un contenido u otro:
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 if (strpos($url,'borrar')!== false) {
 	echo '
@@ -26,6 +27,7 @@ elseif (strpos($url,'renombrar')!==false) {
 elseif (strpos($url,'subida')!==false) {
 	echo '
 			<form action="subida2.php"  align="center" method="post"  name="subida" id="subida" enctype="multipart/form-data" >';
+	//Funciones de javascript que permiten añadir o eliminar input file
 	echo '
 	<script>
 	var x = 0;
@@ -102,7 +104,7 @@ echo '
 			if (strpos($url,'borrar')!==false || strpos($url,'crear')!==false || strpos($url,'home')!==false || strpos($url,'renombrar')!==false || strpos($url,'subida')!==false) {
 				$x=0;
 				$lista_bruta=ftp_rawlist($conn,'.');
-				$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
+				$lista=ftp_nlist($conn,'.'); //Devuelve un array con los nombres de ficheros
 				foreach ($lista_bruta as $comprobacion) {
 					if ($comprobacion[0]=='d') { //Compruebo si es un directorio
 						$objeto=str_replace('./', '',$lista[$x]);
@@ -134,10 +136,11 @@ echo '
 				}
 			}
 			//Obtenemos ficheros y aplicamos función dependiendo de la URL
+			//En cada sección, mostramos un contenido diferente y se ejecutarán unos formularios diferentes con sus propias funciones y CSS
 			$x=0;
 			$lista_bruta=ftp_rawlist($conn,'.');
-			$lista=ftp_nlist($conn,'.'); #Devuelve un array con los nombres de ficheros
-			foreach ($lista_bruta as $comprobacion) {
+			$lista=ftp_nlist($conn,'.'); //Devuelve un array con los nombres de ficheros
+			foreach ($lista_bruta as $comprobacion) {//Comprobamos que los valores obtenidos son ficheros y no directorios:
 				if ($comprobacion[0]=='-') {
 					$objeto=$lista[$x];
 					$tamano=number_format(((ftp_size($conn,$objeto))/1024),2)." Kb";

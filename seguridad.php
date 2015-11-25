@@ -1,4 +1,5 @@
 <?php
+//evitamos que aparezcan advertencias a los usuarios
 error_reporting(0);
 
 	//Inicio la sesión
