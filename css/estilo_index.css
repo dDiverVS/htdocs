@@ -18,11 +18,8 @@ input.barra{
 	float:right;
 	text-align:right;
 }
-h1 {position:relative;
-	top:1%;
-	left:30%;
-	width:450px;
-	font: 200% sans-serif; 
+h1 {
+	font: 220% sans-serif; 
 	color: #00A653; ; 
 	text-shadow: black 0.1em 0.1em 0.1em;
 	}

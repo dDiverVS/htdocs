@@ -1,7 +1,7 @@
 ﻿<?php
 //En función de la sección en la que estemos,el valor de la variable url variará:
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-echo '				<!--Datos, Logotipo e Icono de cierre de sesión-->		  	
+echo '			<!--Datos, Logotipo e Icono de cierre de sesión-->		  	
 				<table width="80%" border="0" class="petarda" align="center" cellspacing="3" cellpadding="3" >
 					<tr>		
 						<td width="25%"  class="datos">

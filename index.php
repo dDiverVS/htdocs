@@ -12,8 +12,9 @@ echo '<!DOCTYPE html>
 	<!--Formulario de acceso al servidor FTP-->
 	
 	
-		<h1 align="center"> FTP-WEB</h1>
-		<div id="form">';
+		
+		<div id="form">
+		<h1 align="center"> FTP-WEB</h1>';
 		if ( isset($_GET["errorconexion"])){// Si la dirección FTP es erronea o no hay acceso al servidor, aparece este mensaje
 		  		if ($_GET["errorconexion"]=="si") echo "<h2 align='center'><font color='red'>No se ha podido realizar la conexion a dicha direcci&oacute;n</font></h2>";}
 				//Si el usuario o contraseña de dicho servidor son erroneas, aparece este mensaje 
@@ -25,7 +26,7 @@ echo '<!DOCTYPE html>
 				<p align="center" class="indique"> <b> ACCESO AL CLIENTE FTP</b></p><br/>
 				
 				<p align="left" class="color">			
-					 Nombre o direcci&oacute;n del servidor FTP:
+					 Nombre/direcci&oacute;n del servidor FTP:
 					<input type="text" class="barra" name="servidor" size="15" maxlength="50" required title="Introduzca el nombre o direcci&oacute;n del servidor">
 				</p>				
 				<p align="left" class="color">
@@ -48,6 +49,7 @@ echo '<!DOCTYPE html>
 				<p align="center" class="color">		
 					<input type="Submit" value="" class="botonlogin">
 				</p>
+
 	</form>
 	</div>
 </body>
