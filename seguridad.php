@@ -20,8 +20,8 @@ error_reporting(0);
 		$tiempo_transcurrido = (strtotime($ahora)-strtotime($fechaGuardada));
 
 		//comparamos el tiempo transcurrido
-		if($tiempo_transcurrido >= 300) {
-			//si pasaron 5 minutos o más
+		if($tiempo_transcurrido >= 600) {
+			//si pasaron 10 minutos o más
 			session_destroy(); // destruyo la sesión
 			header("Location: index.php"); //envío al usuario a la pag. de autenticación
 		}
