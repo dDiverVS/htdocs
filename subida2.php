@@ -45,7 +45,7 @@ for ($x=0; $x < 10; $x++) {
 		//Por cada fichero subido correcta o erroneamente, se indicará con un mensaje si se ha subido o no acompañado del nombre de cada fichero:
 		if ($upload = ftp_put($conn, $base_archivo, $file, FTP_BINARY)) {
 			echo "<tr class='fondotabla' ><td align='center'><font color='green'>Se ha subido </font>".$base_archivo." <font color='green'> correctamente</font></td></tr>";
-		}else echo "<tr class='fondotabla' ><td align='center'><font color='red>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
+		}else echo "<tr class='fondotabla' ><td align='center'><font color='red'>No se ha subido </font>".$base_archivo." <font color='red'> correctamente. Compruebe que tiene permiso para subir.</font></td></tr>";
 	}
 }
 
