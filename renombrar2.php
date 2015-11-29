@@ -5,7 +5,7 @@ echo '<!DOCTYPE html>
     <title>Renombrar ficheros</title>
     <link href="css/estilo.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/ico" href="img/favicon.ico" />
-  	<script type="text/javascript" src="jscript/utiles.js"> </script>
+    <script type="text/javascript" src="jscript/utiles.js"> </script>
   </head>
   <body>';
     include 'seguridad.php';
@@ -19,9 +19,9 @@ echo '<!DOCTYPE html>
 
 if ( isset($_POST['id_renombrar'])){
 
-//recogemos el nombre antiguo del fichero en una variable de sesiçon que se conservará para el siguiente fichero:
+//recogemos el nombre antiguo del fichero en una variable de sesión que se conservará para el siguiente fichero:
 
-	$_SESSION['nombreantiguo']=$_POST['id_renombrar'];
+  $_SESSION['nombreantiguo']=$_POST['id_renombrar'];
   $_SESSION['nombreantiguo2']=str_replace('./', '', $_SESSION['nombreantiguo']);
 
 echo "  <p align='center'><b>Nombre antiguo del fichero/directorio:</b>".$_SESSION['nombreantiguo2']."<br/>
@@ -31,7 +31,7 @@ echo "  <p align='center'><b>Nombre antiguo del fichero/directorio:</b>".$_SESSI
 //el nuevo nombre es enviado a renombrar3.php
 echo '
         <p align="center">
-    			<button title="Renombrar" alt="Renombrar"  type="submit" value="" name="renombrar2"><img src=img/check.PNG WIDTH="30"  HEIGHT="30"/></button>
+          <button title="Renombrar" alt="Renombrar"  type="submit" value="" name="renombrar2"><img src=img/check.PNG WIDTH="30"  HEIGHT="30"/></button>
         </p>
     </form> 
 
@@ -39,13 +39,10 @@ echo '
 
 ?>
 
-	 <p align="center">
+   <p align="center">
 <!--Enlaces a Inicio o volver a renombrar-->
-  		<button class="link" onclick="window.location.href='/home.php'">Volver a Inicio</button>
-  		<button class="link" onclick="window.location.href='/renombrar.php'">Volver a Renombrar</button>
+      <button class="link" onclick="window.location.href='/home.php'">Volver a Inicio</button>
+      <button class="link" onclick="window.location.href='/renombrar.php'">Volver a Renombrar</button>
     </p>
   </body>
 </html>
-
-
-

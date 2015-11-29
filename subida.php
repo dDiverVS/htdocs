@@ -19,7 +19,7 @@ echo '<!DOCTYPE html>
 		if ( isset($_GET["noarchivo"])){
 		if ($_GET["noarchivo"]=="si") echo "<script>alert('No ha indicado un fichero para subir')</script>";
 		}
-		//Si el total de subidas supera el limite, aparecerá el siguiente mensaje:
+		//Si el total de subidas supera el límite, aparecerá el siguiente mensaje:
 		if ( isset($_GET["tamanototal"])){echo"<script>alert('Capacidad de subida superada')</script>";}
 echo'
 	</body>	

@@ -1,21 +1,24 @@
 <?php
 error_reporting(0);
 	if (isset($_SESSION['SSL'])) {
-		//Conecto con las variables de sesión para mantener la conexión y no solicitar la peticion al cliente de nuevo
-		$conn=ftp_ssl_connect($_SESSION['servidor'],$_SESSION['puerto'],150);//Conexión ftp sobre ssl al servidor indicado
+		//Conecto con las variables de sesión para mantener la conexión y no solicitar la petición al cliente de nuevo
+		$conn=ftp_ssl_connect($_SESSION['servidor'],$_SESSION['puerto'],150);//Conexión ftp sobre SSL al servidor indicado
 		ftp_pasv($conn,true); //modo pasivo
 		ftp_login($conn,$_SESSION['usuario'],$_SESSION['contrasena']); //Acceso al servidor indicando usuario y contraseña
-		//Ahora mostramos el directorio donde esta situado el usuario
+		//Ahora mostramos el directorio donde está situado el usuario
 		//Si se ha indicado una nueva carpeta desde la interfaz:
+		
 		if (isset($_GET['carpeta_destino'])) {
+
 			//La nueva carpeta actual será la anterior concatenada con la nueva:
 			if (isset($_SESSION['carpeta_actual'])) {
 				$_SESSION['carpeta_actual']=$_SESSION['carpeta_actual'].'/'.$_GET['carpeta_destino'];
+				header ("Location: home.php");
 			}
 			else {
 				$_SESSION['carpeta_actual']='/'.$_GET['carpeta_destino'];
 			}
-		}//Nada más acceder a la interfaz, el valor de carpeta actual es el directorio raiz del usuario:
+		}//Nada más acceder a la interfaz, el valor de carpeta actual es el directorio raíz del usuario:
 		elseif (!isset($_SESSION['carpeta_actual'])) {
 			$_SESSION['carpeta_actual']=ftp_pwd($conn);
 		}
@@ -42,17 +45,19 @@ error_reporting(0);
 		$conn=ftp_connect($_SESSION['servidor'],$_SESSION['puerto'],150);//Conexión ftp al servidor indicado
 		ftp_pasv($conn,true); //modo pasivo
 		ftp_login($conn,$_SESSION['usuario'],$_SESSION['contrasena']); //Acceso al servidor indicando usuario y contraseña
-		//Ahora mostramos el directorio donde esta situado el usuario
+		//Ahora mostramos el directorio donde está situado el usuario
 		//Si se ha indicado una nueva carpeta desde la interfaz:
 		if (isset($_GET['carpeta_destino'])) {
 			//La nueva carpeta actual será la anterior concatenada con la nueva:
 			if (isset($_SESSION['carpeta_actual'])) {
 				$_SESSION['carpeta_actual']=$_SESSION['carpeta_actual'].'/'.$_GET['carpeta_destino'];
+			header ("Location: home.php");
+			
 			}
 			else {
 				$_SESSION['carpeta_actual']='/'.$_GET['carpeta_destino'];
 			}
-		}//Nada más acceder a la interfaz, el valor de carpeta actual es el directorio raiz del usuario:
+		}//Nada más acceder a la interfaz, el valor de carpeta actual es el directorio raíz del usuario:
 		elseif (!isset($_SESSION['carpeta_actual'])) {
 			$_SESSION['carpeta_actual']=ftp_pwd($conn);
 		}

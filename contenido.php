@@ -1,5 +1,5 @@
 ﻿<?php
-//En función del fichero seleccionado y por tanto que se muestre en la url,se mostrará un contenido u otro:
+//En función del fichero seleccionado y por tanto que se muestre en la url, se mostrará un contenido u otro:
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 if (strpos($url,'borrar')!== false) {
 	echo '
@@ -17,7 +17,7 @@ elseif (strpos($url,'descargar')!==false) {
 }
 elseif (strpos($url,'home')!==false) {
 	echo '
-	<h3 align="center">Elija otro directorio o continue con el directorio actual</h3>';
+	<h3 align="center">Elija otro directorio o contin&uacute;e con el directorio actual</h3>';
 }
 elseif (strpos($url,'renombrar')!==false) {
 	echo '
@@ -108,7 +108,9 @@ echo '
 				foreach ($lista_bruta as $comprobacion) {
 					if ($comprobacion[0]=='d') { //Compruebo si es un directorio
 						$objeto=str_replace('./', '',$lista[$x]);
-						$objeto2="<i><a href='home.php?carpeta_destino=".str_replace('./', '',$lista[$x])."' class='lila'>".str_replace('./', '',$lista[$x])." </a></i>";
+						$objeto2="<i><a href='home.php?carpeta_destino=".str_replace('./', '',$lista[$x])."'  class='lila'>".str_replace('./', '',$lista[$x])." </a></i>";
+						
+
 						echo '
 						<tr class="tabla">';
 						if (strpos($url,'borrar')!== false) {

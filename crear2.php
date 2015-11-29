@@ -21,13 +21,13 @@ $crear=$_POST['crear'];
 // si hay un valor y no es un valor igual a con(valor no permitido en windows): 
 if ( isset($crear) and $crear!="con"){
 //si se ha creado correctamente muestra un texto y si no otro diferente
-		if (ftp_mkdir($conn, $crear)) {
+    if (ftp_mkdir($conn, $crear)) {
       echo "<tr class='fondotabla' ><td align='center'><font color='green'>El directorio <strong><font color='black'>".$crear." </font></strong> se ha creado correctamente</font></td></tr>";
-     								  }
-		else {
-      echo "<tr class='fondotabla' ><td align='center'><font color='red'>El directorio <strong><font color='black'>".$crear."</font> </strong>  no se ha creado correctamente</font></td></tr>"	;}
+                      }
+    else {
+      echo "<tr class='fondotabla' ><td align='center'><font color='red'>El directorio <strong><font color='black'>".$crear."</font> </strong>  no se ha creado correctamente</font></td></tr>" ;}
     }
-//si no se ha escrito ningun  nombre de directorio, se le redirige a la pagina de crear.php con su correspondiente mensaje aclaratorio
+//si no se ha escrito ningún  nombre de directorio, se le redirige a la página de crear.php con su correspondiente mensaje aclaratorio
 else{header ("Location: crear.php?nocrear=si ");
 
 }

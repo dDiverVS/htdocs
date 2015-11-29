@@ -12,7 +12,7 @@ echo '<!DOCTYPE html>
 		include 'conexion.php'; 
 		//Enlaces para acceder a diferentes opciones
 		include 'menu_sup.php';
-		//Seleccion fichero/directorio a renombrar
+		//Selección fichero/directorio a renombrar
 		include 'contenido.php';
 if ( isset($_GET["norenombrar2"])){
         if ($_GET["norenombrar2"]=="si") echo "<script>alert('Nombre indicado no permitido')</script>";}

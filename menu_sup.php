@@ -1,5 +1,5 @@
 ﻿<?php
-//En función de la sección en la que estemos,el valor de la variable url variará:
+//En función de la sección en la que estemos, el valor de la variable url variará:
 $url='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 echo '			<!--Datos, Logotipo e Icono de cierre de sesión-->		  	
 				<table width="80%" border="0" class="petarda" align="center" cellspacing="3" cellpadding="3" >
@@ -15,7 +15,7 @@ echo '			<!--Datos, Logotipo e Icono de cierre de sesión-->
 						<td witdth="25%" align="center">
 							<font color="green">	<b>Cerrar Sesi&oacute;n</b></font><br/>
 							<a href="cerrar.php" align="center"  onclick="return confirmar()">    
-							<img src="img/exit.PNG" alignt="center" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
+							<img src="img/exit.PNG" align="center" title="Cerrar Sesion" width="50" height="50" alt="Cerrar Sesion"></a>
 						</td>
 					</tr>
 				</table>
