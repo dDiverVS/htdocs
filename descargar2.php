@@ -5,7 +5,7 @@ include 'conexion.php';
 //Version Windows
 //Si la versión del servidor web está en Windows,indicamos una ruta donde se enviarán los ficheros FTP:
 if (strpos(php_uname("s"),"Windows")!==false) {
-$ruta='C:"'.'xampp"'.'htdocs"'.'.hidden"';
+$ruta='C:"'.'xampp"'.'html"'.'.hidden"';
 $ruta2=addslashes($ruta);
 $ruta3=str_replace('"', '', $ruta2);
 //Si se ha pulsado la descarga de un fichero:

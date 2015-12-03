@@ -17,7 +17,7 @@ echo '<!DOCTYPE html>
 //si se ha pulsado el boton de enviar en renombrar2.php y el nuevo nombre no es "con":
 echo "<table width='80%' border='0' align='center' cellspacing='0' cellpadding='2' class='fondotabla'><tr class='fondotabla' >";
 
-  if ( isset($_POST['id_renombrar2']) && $_POST['id_renombrar2']!='con') {
+  if ( isset($_POST['id_renombrar2']) && $_POST['id_renombrar2']!='con' && $_POST['id_renombrar2']!=' '){
   $nombrenuevo=$_POST['id_renombrar2'];
 
   //si es renombrable, mostramos un texto afirmativo, en caso contrario indicamos que no se ha realizado

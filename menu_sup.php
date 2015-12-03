@@ -7,7 +7,7 @@ echo '			<!--Datos, Logotipo e Icono de cierre de sesión-->
 						<td width="25%"  class="datos">
 							SERVIDOR:  <b>'.$_SESSION["servidor"].'</b><br/><br/>
 							USUARIO ACTUAL: <b>'.$_SESSION["usuario"].'</b><br/><br/>
-							DIRECTORIO ACTUAL: <b>'.str_replace('//', '/',$_SESSION["carpeta_actual"]).'</b><br/><br/>
+							
 						</td>
 						<td width="50%" align="center">	
 							<a href="home.php" class="logotipo"> <h1 align="center"> FTP-WEB</h1> </a>
@@ -21,6 +21,13 @@ echo '			<!--Datos, Logotipo e Icono de cierre de sesión-->
 				</table>
 				<br/>
 				<br/>
+				<table width="80%" border="0" class="petarda" align="center" cellspacing="3" cellpadding="3" >
+					<tr>
+						<td class="datos">
+							DIRECTORIO ACTUAL: <b>'.str_replace('//', '/',$_SESSION["carpeta_actual"]).'</b><br/><br/>
+						</td>
+					</tr>
+				</table>
 				<!--Tabla con los botones que dirigen a las diferentes secciones-->
 				<table width="80%" border="0" align="center" cellspacing="3" cellpadding="3" >
 					<tr>

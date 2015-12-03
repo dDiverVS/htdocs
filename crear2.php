@@ -19,7 +19,7 @@ echo "<table width='60%' border='0' align='center' cellspacing='0' cellpadding='
 //recogemos el nombre introducido en formulario
 $crear=$_POST['crear'];
 // si hay un valor y no es un valor igual a con(valor no permitido en windows): 
-if ( isset($crear) and $crear!="con"){
+if ( isset($crear) and  $crear!="con" and $crear!=" " ) {
 //si se ha creado correctamente muestra un texto y si no otro diferente
     if (ftp_mkdir($conn, $crear)) {
       echo "<tr class='fondotabla' ><td align='center'><font color='green'>El directorio <strong><font color='black'>".$crear." </font></strong> se ha creado correctamente</font></td></tr>";
@@ -31,8 +31,6 @@ if ( isset($crear) and $crear!="con"){
 else{header ("Location: crear.php?nocrear=si ");
 
 }
-
-
 
 ?> 
     </table>

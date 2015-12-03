@@ -26,7 +26,7 @@ if ( isset($_POST['id_renombrar'])){
 
 echo "  <p align='center'><b>Nombre antiguo del fichero/directorio:</b>".$_SESSION['nombreantiguo2']."<br/>
           <b>Nombre Nuevo del fichero/directorio:</b>
-          <input type='text' class='barra' name='id_renombrar2' size='25' maxlength='100' title='El nombre de los directorios no pueden contener \/:?*><\"|' required pattern='[^ \"\x22 \"\\x5c \"\x2f \"\x3a \"\x3f \"\x2a \"\x3c \"\x3e \"\x7c ]+' /></br></p>";
+          <input type='text' class='barra' name='id_renombrar2' size='25' maxlength='100' title='El nombre de los directorios no pueden contener \/:?*><\"|' required pattern='[^\"\x22\"\\x5c\"\x2f\"\x3a\"\x3f\"\x2a\"\x3c\"\x3e\"\x7c]+' /></br></p>";
 }
 //el nuevo nombre es enviado a renombrar3.php
 echo '

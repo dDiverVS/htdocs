@@ -15,7 +15,7 @@ echo '<!DOCTYPE html>
 		include 'contenido.php';
 		//si no se introduce un nombre de directorio para crear, se indica el mensaje de abajo
 		if ( isset($_GET["nocrear"])){
-		if ($_GET["nocrear"]=="si") echo "<script>alert('No ha indicado un nombre de directorio a crear')</script>";}
+		if ($_GET["nocrear"]=="si") echo "<script>alert('No ha indicado un nombre de directorio a crear v\u00e1lido')</script>";}
 		
 	echo'
 	</body>

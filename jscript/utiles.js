@@ -1,6 +1,6 @@
 function confirmar()
 {
-	if(confirm('Estas seguro de cerrar la sesion?'))
+	if(confirm(' \u00bfCerrar la sesi\u00f3n?'))
 		return true;
 	else
 		return false;
@@ -9,7 +9,7 @@ function confirmar()
  
 function borrar()
 {
-	if(confirm('Estas seguro de borrar los ficheros seleccionados?'))
+	if(confirm(' \u00bfBorrar los ficheros seleccionados?'))
 		return true;
 	else
 		return false;
@@ -17,7 +17,7 @@ function borrar()
 
 function subidafichero()
 {
-	if(confirm('Subir ficheros seleccionados?(Si ya existen en el servidor, se sobreescribiran)'))
+	if(confirm(' \u00bfSubir ficheros seleccionados?(Si ya existen en el servidor, se sobreescribir\u00e1n)'))
 		return true;
 	else
 		return false;
